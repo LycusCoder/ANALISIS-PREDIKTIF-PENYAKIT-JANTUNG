@@ -135,7 +135,64 @@ Pastikan kamu sudah menginstal Python (versi 3.10 atau lebih baru direkomendasik
      [ 3 25]]
     ```
 
-*(Lycus, kamu bisa tambahkan juga hasil untuk Random Forest Optimized sebagai perbandingan jika mau)*
+## 📈 Hasil Evaluasi Model pada Test Set
+
+Berikut adalah perbandingan hasil evaluasi untuk model Logistic Regression Optimized dan Random Forest Optimized pada data uji:
+
+### Logistic Regression Optimized (Model Terbaik untuk Deployment)
+
+* **Akurasi**: 0.8852
+* **Presisi (kelas 1 - Risiko Penyakit Jantung)**: 0.8621
+* **Recall (kelas 1 - Risiko Penyakit Jantung)**: 0.8929
+* **F1-Score (kelas 1 - Risiko Penyakit Jantung)**: 0.8772
+* **ROC-AUC**: 0.9513
+* **Confusion Matrix**:
+    ```
+    [[29  4]
+     [ 3 25]]
+    ```
+    * True Negative: 29 | False Positive: 4
+    * False Negative: 3  | True Positive: 25
+* **Classification Report**:
+    ```
+                   precision    recall  f1-score   support
+
+               0       0.91      0.88      0.89        33
+               1       0.86      0.89      0.88        28
+
+        accuracy                           0.89        61
+       macro avg       0.88      0.89      0.88        61
+    weighted avg       0.89      0.89      0.89        61
+    ```
+
+### Random Forest Optimized (Sebagai Perbandingan)
+
+* **Akurasi**: 0.8197
+* **Presisi (kelas 1 - Risiko Penyakit Jantung)**: 0.7742
+* **Recall (kelas 1 - Risiko Penyakit Jantung)**: 0.8571
+* **F1-Score (kelas 1 - Risiko Penyakit Jantung)**: 0.8136
+* **ROC-AUC**: 0.9383
+* **Confusion Matrix**:
+    ```
+    [[26  7]
+     [ 4 24]]
+    ```
+    * True Negative: 26 | False Positive: 7
+    * False Negative: 4  | True Positive: 24
+* **Classification Report**:
+    ```
+                   precision    recall  f1-score   support
+
+               0       0.87      0.79      0.83        33
+               1       0.77      0.86      0.81        28
+
+        accuracy                           0.82        61
+       macro avg       0.82      0.82      0.82        61
+    weighted avg       0.82      0.82      0.82        61
+    ```
+
+**Kesimpulan Pemilihan Model:**
+Berdasarkan metrik ROC-AUC pada data uji, **Logistic Regression Optimized (ROC-AUC: 0.9513)** menunjukkan performa yang lebih unggul dibandingkan Random Forest Optimized (ROC-AUC: 0.9383) dan dipilih sebagai model utama untuk deployment aplikasi ini.
 
 ## 👨‍💻 Kontributor
 
