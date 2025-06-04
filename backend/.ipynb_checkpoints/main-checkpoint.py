@@ -56,7 +56,7 @@ class HeartDiseaseInput(BaseModel):
     thal: Literal['normal', 'fixed defect', 'reversable defect'] = Field(..., example='normal', description="Kelainan darah Thalassemia")
 
     class Config:
-        json_schema_extra = {
+        schema_extra = {
             "example": {
                 "age": 63, "sex": "Male", "cp": "typical angina", "trestbps": 145.0, "chol": 233.0,
                 "fbs": True, "restecg": "lv hypertrophy", "thalch": 150.0, "exang": False,
