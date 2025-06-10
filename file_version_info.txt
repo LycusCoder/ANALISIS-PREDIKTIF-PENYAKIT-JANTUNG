@@ -1,0 +1,33 @@
+# file_version_info.txt
+
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    # Versi file. Bisa diubah-ubah.
+    filevers=(1, 0, 0, 0),
+    prodvers=(1, 0, 0, 0),
+    # Selalu 0
+    mask=0x3f,
+    flags=0x0,
+    # Selalu 0x409 untuk bahasa Inggris (US)
+    OS=0x40004,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+    ),
+  kids=[
+    StringFileInfo(
+      [
+      StringTable(
+        u'040904B0',
+        [StringStruct(u'CompanyName', u'Nourivex Tech'),
+        StringStruct(u'FileDescription', u'Aplikasi Prediktif Penyakit Jantung'),
+        StringStruct(u'FileVersion', u'1.0.0'),
+        StringStruct(u'InternalName', u'PrediksiJantung'),
+        StringStruct(u'LegalCopyright', u'© 2025 Nourivex Tech. All rights reserved.'),
+        StringStruct(u'OriginalFilename', u'PrediksiJantung.exe'),
+        StringStruct(u'ProductName', u'Sistem Prediksi Penyakit Jantung'),
+        StringStruct(u'ProductVersion', u'1.0.0')])
+      ]), 
+    VarFileInfo([VarStruct(u'Translation', [1033, 1200])])
+  ]
+)

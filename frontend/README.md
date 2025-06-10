@@ -1,73 +1,68 @@
-# Welcome to your Lovable project
+# Frontend: Aplikasi Prediksi Penyakit Jantung
 
-## Project info
+Ini adalah antarmuka pengguna (frontend) untuk aplikasi web prediksi penyakit jantung. Aplikasi ini dibangun untuk menyediakan pengalaman pengguna yang interaktif dan mudah digunakan dalam memasukkan data pasien dan melihat hasil prediksi.
 
-**URL**: https://lovable.dev/projects/adfcf444-f1ac-4e54-9acc-c4f0d63b91db
+## Tampilan Aplikasi
 
-## How can I edit this code?
+![Tampilan Aplikasi](public/screenshot/screen.jpg) 
 
-There are several ways of editing your application.
+## ✨ Fitur Utama
 
-**Use Lovable**
+-   **Formulir Interaktif**: Input data pasien dengan validasi real-time untuk meminimalisir kesalahan input.
+-   **Hasil Prediksi Real-time**: Menampilkan hasil prediksi risiko penyakit jantung secara langsung setelah data dikirim.
+-   **Visualisasi Skor**: Menampilkan skor probabilitas dalam bentuk yang mudah dipahami (misalnya, menggunakan grafik).
+-   **Desain Modern & Responsif**: Antarmuka yang bersih dan dapat diakses dengan baik di berbagai ukuran layar (desktop maupun mobile).
+-   **Panduan Pengguna**: Halaman panduan singkat untuk membantu pengguna memahami cara kerja aplikasi.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/adfcf444-f1ac-4e54-9acc-c4f0d63b91db) and start prompting.
+## 🚀 Teknologi yang Digunakan
 
-Changes made via Lovable will be committed automatically to this repo.
+-   **Framework**: [React](https://reactjs.org/)
+-   **Build Tool**: [Vite](https://vitejs.dev/)
+-   **Bahasa**: [TypeScript](https://www.typescriptlang.org/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+-   **Routing**: [React Router DOM](https://reactrouter.com/)
+-   **Manajemen Form**: [React Hook Form](https://react-hook-form.com/) & [Zod](https://zod.dev/)
+-   **Grafik & Chart**: [Recharts](https://recharts.org/)
+-   **Manajemen State/Cache**: [TanStack Query](https://tanstack.com/query/latest)
 
-**Use your preferred IDE**
+## ⚙️ Instalasi dan Menjalankan Proyek
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Untuk menjalankan proyek ini di lingkungan development lokal, ikuti langkah-langkah berikut:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1.  **Clone Repository** 
+    ```bash
+    git clone [https://github.com/LycusCoder/ANALISIS-PREDIKTIF-PENYAKIT-JANTUNG.git](https://github.com/LycusCoder/ANALISIS-PREDIKTIF-PENYAKIT-JANTUNG.git)
+    cd nama-repo
+    ```
 
-Follow these steps:
+2.  **Masuk ke Direktori Frontend**
+    ```bash
+    cd frontend
+    ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3.  **Install Dependencies**
+    Pastikan Node.js dan npm ter-install. Jalankan perintah berikut untuk meng-install semua paket yang dibutuhkan.
+    ```bash
+    npm install
+    ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+4.  **Jalankan Server Development**
+    Perintah ini akan menjalankan aplikasi pada mode development dengan fitur *hot-reload*.
+    ```bash
+    npm run dev
+    ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+5.  **Buka di Browser**
+    Buka browser dan akses [http://localhost:5173](http://localhost:5173) (atau port lain yang muncul di terminal).
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+**Penting**: Aplikasi frontend ini membutuhkan backend API untuk berfungsi sepenuhnya. Pastikan server backend sudah berjalan sebelum menjalankan frontend.
 
-**Edit a file directly in GitHub**
+## 📜 Skrip yang Tersedia
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Di dalam direktori proyek ini, Anda dapat menjalankan beberapa skrip:
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/adfcf444-f1ac-4e54-9acc-c4f0d63b91db) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+-   `npm run dev`: Menjalankan aplikasi dalam mode development.
+-   `npm run build`: Membuat *build* aplikasi yang siap untuk produksi di dalam folder `dist`.
+-   `npm run lint`: Mengecek dan memperbaiki masalah *linting* pada kode.
+-   `npm run preview`: Menjalankan server lokal untuk melihat hasil *build* produksi.

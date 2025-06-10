@@ -1,0 +1,64 @@
+('D:\\Kuliah\\Semester 4\\Machine Learning\\Persiapan UAS + Tugas '
+ '2\\projek_UAS\\build\\build\\PrediksiJantung.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True,
+  'SYMLINK': False},
+ [('pyi-contents-directory _internal', '', 'OPTION'),
+  ('PYZ-00.pyz',
+   'D:\\Kuliah\\Semester 4\\Machine Learning\\Persiapan UAS + Tugas '
+   '2\\projek_UAS\\build\\build\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'D:\\Kuliah\\Semester 4\\Machine Learning\\Persiapan UAS + Tugas '
+   '2\\projek_UAS\\build\\build\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'D:\\Kuliah\\Semester 4\\Machine Learning\\Persiapan UAS + Tugas '
+   '2\\projek_UAS\\build\\build\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'D:\\Kuliah\\Semester 4\\Machine Learning\\Persiapan UAS + Tugas '
+   '2\\projek_UAS\\build\\build\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'D:\\Kuliah\\Semester 4\\Machine Learning\\Persiapan UAS + Tugas '
+   '2\\projek_UAS\\build\\build\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'D:\\Kuliah\\Semester 4\\Machine Learning\\Persiapan UAS + Tugas '
+   '2\\projek_UAS\\build\\build\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'D:\\Kuliah\\Semester 4\\Machine Learning\\Persiapan UAS + Tugas '
+   '2\\venv\\lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'D:\\Kuliah\\Semester 4\\Machine Learning\\Persiapan UAS + Tugas '
+   '2\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'D:\\Kuliah\\Semester 4\\Machine Learning\\Persiapan UAS + Tugas '
+   '2\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'D:\\Kuliah\\Semester 4\\Machine Learning\\Persiapan UAS + Tugas '
+   '2\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('main',
+   'D:\\Kuliah\\Semester 4\\Machine Learning\\Persiapan UAS + Tugas '
+   '2\\projek_UAS\\backend\\main.py',
+   'PYSOURCE')],
+ 'python310.dll',
+ True,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)
