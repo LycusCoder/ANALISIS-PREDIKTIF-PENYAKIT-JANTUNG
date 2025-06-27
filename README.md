@@ -1,43 +1,56 @@
-# 🩺 Aplikasi Prediksi Risiko Penyakit Jantung
+# 🩺 Aplikasi Prediksi Risiko Penyakit Jantung (v2.0)
 
-Sebuah aplikasi web interaktif untuk memprediksi risiko penyakit jantung menggunakan model Machine Learning. Proyek ini dibangun sebagai bagian dari Ujian Akhir Semester (UAS) mata kuliah Machine Learning, menggabungkan backend API yang andal dengan frontend yang modern dan responsif.
+Sebuah aplikasi web interaktif untuk memprediksi risiko penyakit jantung menggunakan berbagai model Machine Learning. Proyek ini dibangun sebagai bagian dari Ujian Akhir Semester (UAS) mata kuliah Machine Learning, menggabungkan backend API yang andal dengan frontend yang modern dan responsif.
 
 ## 🖼️ Tampilan Aplikasi
 
 ![Tampilan Aplikasi](gambar/tampilan_aplikasi.jpg)
 
-
 ## 📝 Deskripsi Proyek
 
 Tujuan utama proyek ini adalah untuk menganalisis dan membandingkan performa berbagai algoritma Machine Learning dalam memprediksi penyakit jantung. Proses ini mencakup pra-pemrosesan data, pelatihan model, optimasi hyperparameter, dan evaluasi mendalam untuk memilih model dengan performa terbaik.
 
-Model yang terpilih kemudian di-deploy ke dalam arsitektur aplikasi web modern yang terdiri dari:
-
-  * **Backend**: Sebuah REST API yang dibuat dengan **FastAPI** untuk menangani logika machine learning dan menyajikan prediksi.
-  * **Frontend**: Sebuah *Single Page Application* (SPA) yang dibuat dengan **React** untuk menyediakan antarmuka pengguna yang dinamis dan interaktif.
+Aplikasi ini memungkinkan pengguna untuk memasukkan data medis dan memilih salah satu dari empat model AI yang telah dilatih (Logistic Regression, Random Forest, SVC, XGBoost) untuk mendapatkan prediksi risiko penyakit jantung secara real-time.
 
 **Dataset yang Digunakan:**
 
-  * **Nama**: Heart Disease UCI (Cleveland subset)
-  * **Sumber**: [Kaggle - Heart Disease UCI](https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data)
-  * **Target**: Klasifikasi biner (0 = Risiko Rendah, 1 = Risiko Penyakit Jantung).
+* **Nama**: Heart Disease UCI (Gabungan dari 4 sumber, difokuskan pada data bersih)
+* **Sumber**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/45/heart+disease)
+* **Target**: Klasifikasi biner (0 = Risiko Rendah, 1 = Risiko Penyakit Jantung).
 
 ## 📂 Struktur Proyek
 
 ```
 
 projek\_UAS/
-|
-|-- backend/
-|   |-- data/
-|   |   ` -- heart_disease_uci.csv   # Dataset asli |   |-- models/ |   |   |-- heart_disease_scaler.pkl  # Scaler yang disimpan |   |    `-- lr\_model\_optimized.pkl    \# Model terbaik untuk deployment
-|   |-- main.py                     \# Script API FastAPI
-|   ` -- train_model.ipynb           # Notebook untuk training & evaluasi | |-- frontend/ |   |-- public/ |   |-- src/                        # Kode sumber komponen React |   |   |-- App.tsx                 # Komponen utama aplikasi |   |   |-- components/             # Komponen UI (form, hasil, dll) |   |    `-- main.tsx                \# Titik masuk aplikasi React
-|   |-- index.html                  \# Template HTML utama
-|   |-- package.json                \# KTP & skrip proyek frontend
-|   ` -- vite.config.ts              # Konfigurasi Vite | |-- gambar/ |    `-- tampilan\_aplikasi.jpg
-|
-\`-- README.md                       \# File ini
+├── backend/
+│   ├── models/
+│   │   └── jantung/
+│   │       ├── optimize\_non\_pca/  \# Model terbaik (Non-PCA)
+│   │       │   ├── svc\_optimized.pkl
+│   │       │   └── ... (model lainnya)
+│   │       └── optimize\_pca/      \# Model eksperimen (PCA)
+│   ├── notebooks/
+│   │   ├── cek\_data\_jantung.ipynb
+│   │   ├── train\_model\_jantung\_NON\_PCA.ipynb
+│   │   ├── train\_model\_jantung\_DENGAN\_PCA.ipynb
+│   │   └── final\_report\_jantung.ipynb
+│   ├── training/
+│   │   ├── X\_test\_non\_pca.csv     \# Data uji untuk evaluasi
+│   │   └── y\_test\_non\_pca.csv
+│   └── main.py                    \# Script API Flask
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── HeartPredictionForm.tsx
+│   │   │   └── PredictionResult.tsx
+│   │   └── pages/
+│   │       └── Index.tsx
+│   ├── package.json               \# KTP & skrip proyek frontend
+│   └── ... (file konfigurasi lainnya)
+├── venv/                          \# Virtual environment Python (di luar folder ini)
+└── README.md                      \# File ini
 
 ````
 
@@ -45,118 +58,109 @@ projek\_UAS/
 
 ### Backend
 
-  * **Bahasa**: Python 3.10+
-  * **Framework API**: FastAPI
-  * **Server ASGI**: Uvicorn
-  * **Machine Learning**: Scikit-learn
-  * **Data Handling**: Pandas, NumPy
+* **Bahasa**: Python 3.10+
+* **Framework API**: **Flask**
+* **Server WSGI**: Werkzeug (Development Server bawaan Flask)
+* **Machine Learning**: Scikit-learn, XGBoost
+* **Data Handling**: Pandas, NumPy
 
 ### Frontend
 
-  * **Framework**: React.js
-  * **Bahasa**: TypeScript
-  * **Build Tool**: Vite
-  * **Styling**: Tailwind CSS
-  * **UI Components**: shadcn/ui
-  * **State Management**: TanStack Query (untuk fetching data API)
-  * **Form**: React Hook Form & Zod
+* **Framework**: React.js
+* **Bahasa**: TypeScript
+* **Build Tool**: Vite
+* **Styling**: Tailwind CSS
+* **UI Components**: shadcn/ui
+* **HTTP Client**: Axios
 
 ## ⚙️ Instalasi dan Cara Menjalankan
 
 ### Prasyarat
 
-  * Node.js (versi 18 atau lebih baru)
-  * Python (versi 3.10 atau lebih baru)
-  * Git
+* Node.js (versi 18 atau lebih baru)
+* Python (versi 3.10 atau lebih baru)
+* Git
 
-### 1\. Setup Proyek
+### 1. Setup Proyek
 
 ```bash
 # Clone repositori
 git clone [https://github.com/LycusCoder/ANALISIS-PREDIKTIF-PENYAKIT-JANTUNG.git](https://github.com/LycusCoder/ANALISIS-PREDIKTIF-PENYAKIT-JANTUNG.git)
 cd ANALISIS-PREDIKTIF-PENYAKIT-JANTUNG
 
-# Setup virtual environment untuk Python (sangat disarankan)
-python -m venv venv
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-# source venv/bin/activate
+# Setup virtual environment untuk Python di luar folder proyek
+python -m venv ../venv 
+# (Sesuaikan path jika perlu)
 
-# Install dependencies untuk backend
+# Aktifkan virtual environment
+# Windows:
+# ..\venv\Scripts\activate
+# macOS/Linux:
+# source ../venv/bin/activate
+
+# Install dependencies untuk backend dari dalam folder 'backend'
+cd backend
 pip install -r requirements.txt
+cd ..
+
+# Install dependencies untuk frontend dari dalam folder 'frontend'
+cd frontend
+npm install
 ````
 
-### 2\. Menjalankan Backend (API)
+*(Catatan: Buat file `requirements.txt` di folder `backend` dengan isi: `Flask`, `Flask-Cors`, `pandas`, `numpy`, `scikit-learn`, `xgboost`)*
 
-Buka terminal **pertama**, pastikan venv aktif, lalu jalankan:
+### 2\. Menjalankan Aplikasi (Cara Mudah)
 
-```bash
-# Masuk ke direktori backend
-cd backend
-
-# Jalankan server API dengan Uvicorn
-uvicorn main:app --reload
-```
-
-API akan berjalan di `http://127.0.0.1:8000`. Anda bisa cek dokumentasi interaktifnya di `http://127.0.0.1:8000/docs`.
-
-### 3\. Menjalankan Frontend (Aplikasi Web)
-
-Buka terminal **kedua**, lalu jalankan:
+Kita menggunakan `concurrently` untuk menjalankan backend dan frontend sekaligus dari satu terminal.
 
 ```bash
-# Masuk ke direktori frontend
+# Pastikan Anda berada di dalam direktori 'frontend'
 cd frontend
 
-# Install dependencies Node.js
-npm install
-
-# Jalankan server development Vite
-npm run dev
+# Jalankan kedua server dengan satu perintah
+npm run start:dev
 ```
 
-Aplikasi web akan otomatis terbuka di browser, biasanya di `http://localhost:5173`.
+Aplikasi akan otomatis berjalan dan bisa diakses di alamat yang ditampilkan oleh Vite (biasanya `http://localhost:5173` atau `http://localhost:8080`).
 
 ## 📈 Hasil Evaluasi Model
 
-Bagian ini merangkum perbandingan performa antara model **Logistic Regression** dan **Random Forest** setelah optimasi pada data uji.
+Setelah melakukan perbandingan antara 4 model yang telah dioptimasi, **Support Vector Classifier (SVC)** terpilih sebagai model terbaik untuk di-deploy karena menunjukkan keseimbangan performa yang paling unggul pada data Non-PCA.
 
-### Model Terbaik: Logistic Regression (Optimized)
+### Model Terbaik: SVC (Optimized, Non-PCA)
 
-Model ini dipilih untuk deployment karena memiliki skor ROC-AUC tertinggi dan performa keseluruhan yang lebih baik.
-
-  * **Akurasi**: `0.8852`
-  * **Presisi** (Risiko): `0.8621`
-  * **Recall** (Risiko): `0.8929`
-  * **F1-Score** (Risiko): `0.8772`
-  * **ROC-AUC**: `0.9513`
+  * **F1-Score**: `0.818` (Keseimbangan terbaik antara Precision & Recall)
+  * **ROC-AUC**: `0.940` (Kemampuan membedakan kelas yang sangat baik)
+  * **Recall** (Sensitivitas): `0.771`
+  * **Precision** (Akurasi Prediksi Positif): `0.871`
   * **Confusion Matrix**:
     ```
       Prediksi 0 | Prediksi 1
-    [[    29    |      4    ]]  <- Aktual 0
-    [[     3    |     25    ]]  <- Aktual 1
+    [[    39     |      5     ]]  <- Aktual 0 (Tidak Sakit)
+    [[     8     |     27     ]]  <- Aktual 1 (Sakit)
     ```
-      * **True Negative**: 29
-      * **False Positive**: 4
-      * **False Negative**: 3
-      * **True Positive**: 25
+      * **True Negative**: 39
+      * **False Positive**: 5 (Alarm Palsu)
+      * **False Negative**: 8 (Kasus Terlewatkan)
+      * **True Positive**: 27
 
-### Model Pembanding: Random Forest (Optimized)
+### Perbandingan dengan Model Lain
 
-  * **Akurasi**: `0.8197`
-  * **Presisi** (Risiko): `0.7742`
-  * **Recall** (Risiko): `0.8571`
-  * **F1-Score** (Risiko): `0.8136`
-  * **ROC-AUC**: `0.9383`
+| Model                 | F1-Score | ROC-AUC | Recall | Precision |
+| --------------------- | -------- | ------- | ------ | --------- |
+| **SVC (Juara)** | **0.818**| 0.940   | 0.771  | 0.871     |
+| Logistic Regression   | 0.800    | 0.938   | 0.800  | 0.800     |
+| XGBoost               | 0.769    | 0.916   | 0.714  | 0.833     |
+| Random Forest         | 0.762    | 0.918   | 0.686  | 0.857     |
+
+*(Catatan: Angka di atas adalah contoh, dari hasil akhir dari notebook `evaluate_model_jantung.ipynb` )*
 
 ## 👨‍💻 Kontributor
 
-| Nama                          | NIM         | Peran    |
-| ----------------------------- | ----------- | -------- |
-| Muhammad Affif                | `24225046`  | Ketua    |
-| Arif Nur Syifa                | `23215054`  | Anggota  |
-| Muhammad Yasir Ilham Nabil    | `23215040`  | Anggota  |
-| Muhamad Djafar ilyasa         | `23215028`  | Anggota  |
-
-
+| Nama                         | NIM        | Peran   |
+| ---------------------------- | ---------- | ------- |
+| Muhammad Affif               | `24225046` | Ketua   |
+| Arif Nur Syifa               | `23215054` | Anggota |
+| Muhammad Yasir Ilham Nabil   | `23215040` | Anggota |
+| Muhamad Djafar Ilyasa        | `23215028` | Anggota |
