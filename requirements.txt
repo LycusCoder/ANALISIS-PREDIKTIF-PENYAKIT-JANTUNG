@@ -9,6 +9,8 @@ matplotlib
 
 # --- Backend API ---
 fastapi
+flask
+flask_cors
 uvicorn[standard]
 pydantic
 python-multipart
@@ -16,6 +18,7 @@ python-multipart
 # --- Frontend (Alternatif) ---
 streamlit
 requests
+jsonify
 
 pyinstaller
 
