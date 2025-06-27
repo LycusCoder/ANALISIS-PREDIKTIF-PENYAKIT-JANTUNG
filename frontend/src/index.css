@@ -1,0 +1,106 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Medical Application Color Scheme */
+
+@layer base {
+  :root {
+    --background: 240 10% 98%;
+    --foreground: 210 40% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 12%;
+
+    --primary: 197 100% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 197 20% 95%;
+    --secondary-foreground: 210 40% 12%;
+
+    --muted: 197 20% 95%;
+    --muted-foreground: 210 20% 50%;
+
+    --accent: 142 100% 45%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --warning: 45 100% 50%;
+    --warning-foreground: 210 40% 12%;
+
+    --success: 142 100% 45%;
+    --success-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 197 100% 45%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 210 40% 8%;
+    --foreground: 210 40% 98%;
+    --card: 210 40% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 210 40% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 197 100% 55%;
+    --primary-foreground: 210 40% 8%;
+    --secondary: 210 40% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 40% 15%;
+    --muted-foreground: 210 20% 70%;
+    --accent: 142 100% 55%;
+    --accent-foreground: 210 40% 8%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --warning: 45 100% 60%;
+    --warning-foreground: 210 40% 8%;
+    --success: 142 100% 55%;
+    --success-foreground: 210 40% 8%;
+    --border: 210 40% 18%;
+    --input: 210 40% 18%;
+    --ring: 197 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .medical-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  }
+  
+  .medical-gradient-soft {
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--accent) / 0.1) 100%);
+  }
+
+  .pulse-soft {
+    animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+}
