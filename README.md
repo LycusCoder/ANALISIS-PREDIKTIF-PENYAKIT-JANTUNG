@@ -94,7 +94,7 @@ python -m venv ../venv
 
 # Aktifkan virtual environment
 # Windows:
-# ..\venv\Scripts\activate
+# ../venv/Scripts/activate
 # macOS/Linux:
 # source ../venv/bin/activate
 
