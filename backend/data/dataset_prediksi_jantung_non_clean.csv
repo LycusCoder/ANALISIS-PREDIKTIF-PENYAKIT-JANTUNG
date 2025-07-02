@@ -1,0 +1,921 @@
+age,sex,cp,dataset,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal,num
+63.0,Laki-laki,Angina Tipikal,Cleveland,145.0,233.0,YA,Hipertrofi Ventrikel Kiri,150.0,TIDAK,2.3,Menurun,0.0,Cacat Tetap,0
+67.0,Laki-laki,Asimtomatik,Cleveland,160.0,286.0,TIDAK,Hipertrofi Ventrikel Kiri,108.0,YA,1.5,Datar,3.0,Normal,2
+67.0,Laki-laki,Asimtomatik,Cleveland,120.0,229.0,TIDAK,Hipertrofi Ventrikel Kiri,129.0,YA,2.6,Datar,2.0,Cacat Reversibel,1
+37.0,Laki-laki,Non-Angina,Cleveland,130.0,250.0,TIDAK,Normal,187.0,TIDAK,3.5,Menurun,0.0,Normal,0
+41.0,Perempuan,Angina Atipikal,Cleveland,130.0,204.0,TIDAK,Hipertrofi Ventrikel Kiri,172.0,TIDAK,1.4,Meningkat,0.0,Normal,0
+56.0,Laki-laki,Angina Atipikal,Cleveland,120.0,236.0,TIDAK,Normal,178.0,TIDAK,0.8,Meningkat,0.0,Normal,0
+62.0,Perempuan,Asimtomatik,Cleveland,140.0,268.0,TIDAK,Hipertrofi Ventrikel Kiri,160.0,TIDAK,3.6,Menurun,2.0,Normal,3
+57.0,Perempuan,Asimtomatik,Cleveland,120.0,354.0,TIDAK,Normal,163.0,YA,0.6,Meningkat,0.0,Normal,0
+63.0,Laki-laki,Asimtomatik,Cleveland,130.0,254.0,TIDAK,Hipertrofi Ventrikel Kiri,147.0,TIDAK,1.4,Datar,1.0,Cacat Reversibel,2
+53.0,Laki-laki,Asimtomatik,Cleveland,140.0,203.0,YA,Hipertrofi Ventrikel Kiri,155.0,YA,3.1,Menurun,0.0,Cacat Reversibel,1
+57.0,Laki-laki,Asimtomatik,Cleveland,140.0,192.0,TIDAK,Normal,148.0,TIDAK,0.4,Datar,0.0,Cacat Tetap,0
+56.0,Perempuan,Angina Atipikal,Cleveland,140.0,294.0,TIDAK,Hipertrofi Ventrikel Kiri,153.0,TIDAK,1.3,Datar,0.0,Normal,0
+56.0,Laki-laki,Non-Angina,Cleveland,130.0,256.0,YA,Hipertrofi Ventrikel Kiri,142.0,YA,0.6,Datar,1.0,Cacat Tetap,2
+44.0,Laki-laki,Angina Atipikal,Cleveland,120.0,263.0,TIDAK,Normal,173.0,TIDAK,0.0,Meningkat,0.0,Cacat Reversibel,0
+52.0,Laki-laki,Non-Angina,Cleveland,172.0,199.0,YA,Normal,162.0,TIDAK,0.5,Meningkat,0.0,Cacat Reversibel,0
+57.0,Laki-laki,Non-Angina,Cleveland,150.0,168.0,TIDAK,Normal,174.0,TIDAK,1.6,Meningkat,0.0,Normal,0
+48.0,Laki-laki,Angina Atipikal,Cleveland,110.0,229.0,TIDAK,Normal,168.0,TIDAK,1.0,Menurun,0.0,Cacat Reversibel,1
+54.0,Laki-laki,Asimtomatik,Cleveland,140.0,239.0,TIDAK,Normal,160.0,TIDAK,1.2,Meningkat,0.0,Normal,0
+48.0,Perempuan,Non-Angina,Cleveland,130.0,275.0,TIDAK,Normal,139.0,TIDAK,0.2,Meningkat,0.0,Normal,0
+49.0,Laki-laki,Angina Atipikal,Cleveland,130.0,266.0,TIDAK,Normal,171.0,TIDAK,0.6,Meningkat,0.0,Normal,0
+64.0,Laki-laki,Angina Tipikal,Cleveland,110.0,211.0,TIDAK,Hipertrofi Ventrikel Kiri,144.0,YA,1.8,Datar,0.0,Normal,0
+58.0,Perempuan,Angina Tipikal,Cleveland,150.0,283.0,YA,Hipertrofi Ventrikel Kiri,162.0,TIDAK,1.0,Meningkat,0.0,Normal,0
+58.0,Laki-laki,Angina Atipikal,Cleveland,120.0,284.0,TIDAK,Hipertrofi Ventrikel Kiri,160.0,TIDAK,1.8,Datar,0.0,Normal,1
+58.0,Laki-laki,Non-Angina,Cleveland,132.0,224.0,TIDAK,Hipertrofi Ventrikel Kiri,173.0,TIDAK,3.2,Meningkat,2.0,Cacat Reversibel,3
+60.0,Laki-laki,Asimtomatik,Cleveland,130.0,206.0,TIDAK,Hipertrofi Ventrikel Kiri,132.0,YA,2.4,Datar,2.0,Cacat Reversibel,4
+50.0,Perempuan,Non-Angina,Cleveland,120.0,219.0,TIDAK,Normal,158.0,TIDAK,1.6,Datar,0.0,Normal,0
+58.0,Perempuan,Non-Angina,Cleveland,120.0,340.0,TIDAK,Normal,172.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+66.0,Perempuan,Angina Tipikal,Cleveland,150.0,226.0,TIDAK,Normal,114.0,TIDAK,2.6,Menurun,0.0,Normal,0
+43.0,Laki-laki,Asimtomatik,Cleveland,150.0,247.0,TIDAK,Normal,171.0,TIDAK,1.5,Meningkat,0.0,Normal,0
+40.0,Laki-laki,Asimtomatik,Cleveland,110.0,167.0,TIDAK,Hipertrofi Ventrikel Kiri,114.0,YA,2.0,Datar,0.0,Cacat Reversibel,3
+69.0,Perempuan,Angina Tipikal,Cleveland,140.0,239.0,TIDAK,Normal,151.0,TIDAK,1.8,Meningkat,2.0,Normal,0
+60.0,Laki-laki,Asimtomatik,Cleveland,117.0,230.0,YA,Normal,160.0,YA,1.4,Meningkat,2.0,Cacat Reversibel,2
+64.0,Laki-laki,Non-Angina,Cleveland,140.0,335.0,TIDAK,Normal,158.0,TIDAK,0.0,Meningkat,0.0,Normal,1
+59.0,Laki-laki,Asimtomatik,Cleveland,135.0,234.0,TIDAK,Normal,161.0,TIDAK,0.5,Datar,0.0,Cacat Reversibel,0
+44.0,Laki-laki,Non-Angina,Cleveland,130.0,233.0,TIDAK,Normal,179.0,YA,0.4,Meningkat,0.0,Normal,0
+42.0,Laki-laki,Asimtomatik,Cleveland,140.0,226.0,TIDAK,Normal,178.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+43.0,Laki-laki,Asimtomatik,Cleveland,120.0,177.0,TIDAK,Hipertrofi Ventrikel Kiri,120.0,YA,2.5,Datar,0.0,Cacat Reversibel,3
+57.0,Laki-laki,Asimtomatik,Cleveland,150.0,276.0,TIDAK,Hipertrofi Ventrikel Kiri,112.0,YA,0.6,Datar,1.0,Cacat Tetap,1
+55.0,Laki-laki,Asimtomatik,Cleveland,132.0,353.0,TIDAK,Normal,132.0,YA,1.2,Datar,1.0,Cacat Reversibel,3
+61.0,Laki-laki,Non-Angina,Cleveland,150.0,243.0,YA,Normal,137.0,YA,1.0,Datar,0.0,Normal,0
+65.0,Perempuan,Asimtomatik,Cleveland,150.0,225.0,TIDAK,Hipertrofi Ventrikel Kiri,114.0,TIDAK,1.0,Datar,3.0,Cacat Reversibel,4
+40.0,Laki-laki,Angina Tipikal,Cleveland,140.0,199.0,TIDAK,Normal,178.0,YA,1.4,Meningkat,0.0,Cacat Reversibel,0
+71.0,Perempuan,Angina Atipikal,Cleveland,160.0,302.0,TIDAK,Normal,162.0,TIDAK,0.4,Meningkat,2.0,Normal,0
+59.0,Laki-laki,Non-Angina,Cleveland,150.0,212.0,YA,Normal,157.0,TIDAK,1.6,Meningkat,0.0,Normal,0
+61.0,Perempuan,Asimtomatik,Cleveland,130.0,330.0,TIDAK,Hipertrofi Ventrikel Kiri,169.0,TIDAK,0.0,Meningkat,0.0,Normal,1
+58.0,Laki-laki,Non-Angina,Cleveland,112.0,230.0,TIDAK,Hipertrofi Ventrikel Kiri,165.0,TIDAK,2.5,Datar,1.0,Cacat Reversibel,4
+51.0,Laki-laki,Non-Angina,Cleveland,110.0,175.0,TIDAK,Normal,123.0,TIDAK,0.6,Meningkat,0.0,Normal,0
+50.0,Laki-laki,Asimtomatik,Cleveland,150.0,243.0,TIDAK,Hipertrofi Ventrikel Kiri,128.0,TIDAK,2.6,Datar,0.0,Cacat Reversibel,4
+65.0,Perempuan,Non-Angina,Cleveland,140.0,417.0,YA,Hipertrofi Ventrikel Kiri,157.0,TIDAK,0.8,Meningkat,1.0,Normal,0
+53.0,Laki-laki,Non-Angina,Cleveland,130.0,197.0,YA,Hipertrofi Ventrikel Kiri,152.0,TIDAK,1.2,Menurun,0.0,Normal,0
+41.0,Perempuan,Angina Atipikal,Cleveland,105.0,198.0,TIDAK,Normal,168.0,TIDAK,0.0,Meningkat,1.0,Normal,0
+65.0,Laki-laki,Asimtomatik,Cleveland,120.0,177.0,TIDAK,Normal,140.0,TIDAK,0.4,Meningkat,0.0,Cacat Reversibel,0
+44.0,Laki-laki,Asimtomatik,Cleveland,112.0,290.0,TIDAK,Hipertrofi Ventrikel Kiri,153.0,TIDAK,0.0,Meningkat,1.0,Normal,2
+44.0,Laki-laki,Angina Atipikal,Cleveland,130.0,219.0,TIDAK,Hipertrofi Ventrikel Kiri,188.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+60.0,Laki-laki,Asimtomatik,Cleveland,130.0,253.0,TIDAK,Normal,144.0,YA,1.4,Meningkat,1.0,Cacat Reversibel,1
+54.0,Laki-laki,Asimtomatik,Cleveland,124.0,266.0,TIDAK,Hipertrofi Ventrikel Kiri,109.0,YA,2.2,Datar,1.0,Cacat Reversibel,1
+50.0,Laki-laki,Non-Angina,Cleveland,140.0,233.0,TIDAK,Normal,163.0,TIDAK,0.6,Datar,1.0,Cacat Reversibel,1
+41.0,Laki-laki,Asimtomatik,Cleveland,110.0,172.0,TIDAK,Hipertrofi Ventrikel Kiri,158.0,TIDAK,0.0,Meningkat,0.0,Cacat Reversibel,1
+54.0,Laki-laki,Non-Angina,Cleveland,125.0,273.0,TIDAK,Hipertrofi Ventrikel Kiri,152.0,TIDAK,0.5,Menurun,1.0,Normal,0
+51.0,Laki-laki,Angina Tipikal,Cleveland,125.0,213.0,TIDAK,Hipertrofi Ventrikel Kiri,125.0,YA,1.4,Meningkat,1.0,Normal,0
+51.0,Perempuan,Asimtomatik,Cleveland,130.0,305.0,TIDAK,Normal,142.0,YA,1.2,Datar,0.0,Cacat Reversibel,2
+46.0,Perempuan,Non-Angina,Cleveland,142.0,177.0,TIDAK,Hipertrofi Ventrikel Kiri,160.0,YA,1.4,Menurun,0.0,Normal,0
+58.0,Laki-laki,Asimtomatik,Cleveland,128.0,216.0,TIDAK,Hipertrofi Ventrikel Kiri,131.0,YA,2.2,Datar,3.0,Cacat Reversibel,1
+54.0,Perempuan,Non-Angina,Cleveland,135.0,304.0,YA,Normal,170.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+54.0,Laki-laki,Asimtomatik,Cleveland,120.0,188.0,TIDAK,Normal,113.0,TIDAK,1.4,Datar,1.0,Cacat Reversibel,2
+60.0,Laki-laki,Asimtomatik,Cleveland,145.0,282.0,TIDAK,Hipertrofi Ventrikel Kiri,142.0,YA,2.8,Datar,2.0,Cacat Reversibel,2
+60.0,Laki-laki,Non-Angina,Cleveland,140.0,185.0,TIDAK,Hipertrofi Ventrikel Kiri,155.0,TIDAK,3.0,Datar,0.0,Normal,1
+54.0,Laki-laki,Non-Angina,Cleveland,150.0,232.0,TIDAK,Hipertrofi Ventrikel Kiri,165.0,TIDAK,1.6,Meningkat,0.0,Cacat Reversibel,0
+59.0,Laki-laki,Asimtomatik,Cleveland,170.0,326.0,TIDAK,Hipertrofi Ventrikel Kiri,140.0,YA,3.4,Menurun,0.0,Cacat Reversibel,2
+46.0,Laki-laki,Non-Angina,Cleveland,150.0,231.0,TIDAK,Normal,147.0,TIDAK,3.6,Datar,0.0,Normal,1
+65.0,Perempuan,Non-Angina,Cleveland,155.0,269.0,TIDAK,Normal,148.0,TIDAK,0.8,Meningkat,0.0,Normal,0
+67.0,Laki-laki,Asimtomatik,Cleveland,125.0,254.0,YA,Normal,163.0,TIDAK,0.2,Datar,2.0,Cacat Reversibel,3
+62.0,Laki-laki,Asimtomatik,Cleveland,120.0,267.0,TIDAK,Normal,99.0,YA,1.8,Datar,2.0,Cacat Reversibel,1
+65.0,Laki-laki,Asimtomatik,Cleveland,110.0,248.0,TIDAK,Hipertrofi Ventrikel Kiri,158.0,TIDAK,0.6,Meningkat,2.0,Cacat Tetap,1
+44.0,Laki-laki,Asimtomatik,Cleveland,110.0,197.0,TIDAK,Hipertrofi Ventrikel Kiri,177.0,TIDAK,0.0,Meningkat,1.0,Normal,1
+65.0,Perempuan,Non-Angina,Cleveland,160.0,360.0,TIDAK,Hipertrofi Ventrikel Kiri,151.0,TIDAK,0.8,Meningkat,0.0,Normal,0
+60.0,Laki-laki,Asimtomatik,Cleveland,125.0,258.0,TIDAK,Hipertrofi Ventrikel Kiri,141.0,YA,2.8,Datar,1.0,Cacat Reversibel,1
+51.0,Perempuan,Non-Angina,Cleveland,140.0,308.0,TIDAK,Hipertrofi Ventrikel Kiri,142.0,TIDAK,1.5,Meningkat,1.0,Normal,0
+48.0,Laki-laki,Angina Atipikal,Cleveland,130.0,245.0,TIDAK,Hipertrofi Ventrikel Kiri,180.0,TIDAK,0.2,Datar,0.0,Normal,0
+58.0,Laki-laki,Asimtomatik,Cleveland,150.0,270.0,TIDAK,Hipertrofi Ventrikel Kiri,111.0,YA,0.8,Meningkat,0.0,Cacat Reversibel,3
+45.0,Laki-laki,Asimtomatik,Cleveland,104.0,208.0,TIDAK,Hipertrofi Ventrikel Kiri,148.0,YA,3.0,Datar,0.0,Normal,0
+53.0,Perempuan,Asimtomatik,Cleveland,130.0,264.0,TIDAK,Hipertrofi Ventrikel Kiri,143.0,TIDAK,0.4,Datar,0.0,Normal,0
+39.0,Laki-laki,Non-Angina,Cleveland,140.0,321.0,TIDAK,Hipertrofi Ventrikel Kiri,182.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+68.0,Laki-laki,Non-Angina,Cleveland,180.0,274.0,YA,Hipertrofi Ventrikel Kiri,150.0,YA,1.6,Datar,0.0,Cacat Reversibel,3
+52.0,Laki-laki,Angina Atipikal,Cleveland,120.0,325.0,TIDAK,Normal,172.0,TIDAK,0.2,Meningkat,0.0,Normal,0
+44.0,Laki-laki,Non-Angina,Cleveland,140.0,235.0,TIDAK,Hipertrofi Ventrikel Kiri,180.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+47.0,Laki-laki,Non-Angina,Cleveland,138.0,257.0,TIDAK,Hipertrofi Ventrikel Kiri,156.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+53.0,Perempuan,Non-Angina,Cleveland,128.0,216.0,TIDAK,Hipertrofi Ventrikel Kiri,115.0,TIDAK,0.0,Meningkat,0.0,,0
+53.0,Perempuan,Asimtomatik,Cleveland,138.0,234.0,TIDAK,Hipertrofi Ventrikel Kiri,160.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+51.0,Perempuan,Non-Angina,Cleveland,130.0,256.0,TIDAK,Hipertrofi Ventrikel Kiri,149.0,TIDAK,0.5,Meningkat,0.0,Normal,0
+66.0,Laki-laki,Asimtomatik,Cleveland,120.0,302.0,TIDAK,Hipertrofi Ventrikel Kiri,151.0,TIDAK,0.4,Datar,0.0,Normal,0
+62.0,Perempuan,Asimtomatik,Cleveland,160.0,164.0,TIDAK,Hipertrofi Ventrikel Kiri,145.0,TIDAK,6.2,Menurun,3.0,Cacat Reversibel,3
+62.0,Laki-laki,Non-Angina,Cleveland,130.0,231.0,TIDAK,Normal,146.0,TIDAK,1.8,Datar,3.0,Cacat Reversibel,0
+44.0,Perempuan,Non-Angina,Cleveland,108.0,141.0,TIDAK,Normal,175.0,TIDAK,0.6,Datar,0.0,Normal,0
+63.0,Perempuan,Non-Angina,Cleveland,135.0,252.0,TIDAK,Hipertrofi Ventrikel Kiri,172.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+52.0,Laki-laki,Asimtomatik,Cleveland,128.0,255.0,TIDAK,Normal,161.0,YA,0.0,Meningkat,1.0,Cacat Reversibel,1
+59.0,Laki-laki,Asimtomatik,Cleveland,110.0,239.0,TIDAK,Hipertrofi Ventrikel Kiri,142.0,YA,1.2,Datar,1.0,Cacat Reversibel,2
+60.0,Perempuan,Asimtomatik,Cleveland,150.0,258.0,TIDAK,Hipertrofi Ventrikel Kiri,157.0,TIDAK,2.6,Datar,2.0,Cacat Reversibel,3
+52.0,Laki-laki,Angina Atipikal,Cleveland,134.0,201.0,TIDAK,Normal,158.0,TIDAK,0.8,Meningkat,1.0,Normal,0
+48.0,Laki-laki,Asimtomatik,Cleveland,122.0,222.0,TIDAK,Hipertrofi Ventrikel Kiri,186.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+45.0,Laki-laki,Asimtomatik,Cleveland,115.0,260.0,TIDAK,Hipertrofi Ventrikel Kiri,185.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+34.0,Laki-laki,Angina Tipikal,Cleveland,118.0,182.0,TIDAK,Hipertrofi Ventrikel Kiri,174.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+57.0,Perempuan,Asimtomatik,Cleveland,128.0,303.0,TIDAK,Hipertrofi Ventrikel Kiri,159.0,TIDAK,0.0,Meningkat,1.0,Normal,0
+71.0,Perempuan,Non-Angina,Cleveland,110.0,265.0,YA,Hipertrofi Ventrikel Kiri,130.0,TIDAK,0.0,Meningkat,1.0,Normal,0
+49.0,Laki-laki,Non-Angina,Cleveland,120.0,188.0,TIDAK,Normal,139.0,TIDAK,2.0,Datar,3.0,Cacat Reversibel,3
+54.0,Laki-laki,Angina Atipikal,Cleveland,108.0,309.0,TIDAK,Normal,156.0,TIDAK,0.0,Meningkat,0.0,Cacat Reversibel,0
+59.0,Laki-laki,Asimtomatik,Cleveland,140.0,177.0,TIDAK,Normal,162.0,YA,0.0,Meningkat,1.0,Cacat Reversibel,2
+57.0,Laki-laki,Non-Angina,Cleveland,128.0,229.0,TIDAK,Hipertrofi Ventrikel Kiri,150.0,TIDAK,0.4,Datar,1.0,Cacat Reversibel,1
+61.0,Laki-laki,Asimtomatik,Cleveland,120.0,260.0,TIDAK,Normal,140.0,YA,3.6,Datar,1.0,Cacat Reversibel,2
+39.0,Laki-laki,Asimtomatik,Cleveland,118.0,219.0,TIDAK,Normal,140.0,TIDAK,1.2,Datar,0.0,Cacat Reversibel,3
+61.0,Perempuan,Asimtomatik,Cleveland,145.0,307.0,TIDAK,Hipertrofi Ventrikel Kiri,146.0,YA,1.0,Datar,0.0,Cacat Reversibel,1
+56.0,Laki-laki,Asimtomatik,Cleveland,125.0,249.0,YA,Hipertrofi Ventrikel Kiri,144.0,YA,1.2,Datar,1.0,Normal,1
+52.0,Laki-laki,Angina Tipikal,Cleveland,118.0,186.0,TIDAK,Hipertrofi Ventrikel Kiri,190.0,TIDAK,0.0,Datar,0.0,Cacat Tetap,0
+43.0,Perempuan,Asimtomatik,Cleveland,132.0,341.0,YA,Hipertrofi Ventrikel Kiri,136.0,YA,3.0,Datar,0.0,Cacat Reversibel,2
+62.0,Perempuan,Non-Angina,Cleveland,130.0,263.0,TIDAK,Normal,97.0,TIDAK,1.2,Datar,1.0,Cacat Reversibel,2
+41.0,Laki-laki,Angina Atipikal,Cleveland,135.0,203.0,TIDAK,Normal,132.0,TIDAK,0.0,Datar,0.0,Cacat Tetap,0
+58.0,Laki-laki,Non-Angina,Cleveland,140.0,211.0,YA,Hipertrofi Ventrikel Kiri,165.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+35.0,Perempuan,Asimtomatik,Cleveland,138.0,183.0,TIDAK,Normal,182.0,TIDAK,1.4,Meningkat,0.0,Normal,0
+63.0,Laki-laki,Asimtomatik,Cleveland,130.0,330.0,YA,Hipertrofi Ventrikel Kiri,132.0,YA,1.8,Meningkat,3.0,Cacat Reversibel,3
+65.0,Laki-laki,Asimtomatik,Cleveland,135.0,254.0,TIDAK,Hipertrofi Ventrikel Kiri,127.0,TIDAK,2.8,Datar,1.0,Cacat Reversibel,2
+48.0,Laki-laki,Asimtomatik,Cleveland,130.0,256.0,YA,Hipertrofi Ventrikel Kiri,150.0,YA,0.0,Meningkat,2.0,Cacat Reversibel,3
+63.0,Perempuan,Asimtomatik,Cleveland,150.0,407.0,TIDAK,Hipertrofi Ventrikel Kiri,154.0,TIDAK,4.0,Datar,3.0,Cacat Reversibel,4
+51.0,Laki-laki,Non-Angina,Cleveland,100.0,222.0,TIDAK,Normal,143.0,YA,1.2,Datar,0.0,Normal,0
+55.0,Laki-laki,Asimtomatik,Cleveland,140.0,217.0,TIDAK,Normal,111.0,YA,5.6,Menurun,0.0,Cacat Reversibel,3
+65.0,Laki-laki,Angina Tipikal,Cleveland,138.0,282.0,YA,Hipertrofi Ventrikel Kiri,174.0,TIDAK,1.4,Datar,1.0,Normal,1
+45.0,Perempuan,Angina Atipikal,Cleveland,130.0,234.0,TIDAK,Hipertrofi Ventrikel Kiri,175.0,TIDAK,0.6,Datar,0.0,Normal,0
+56.0,Perempuan,Asimtomatik,Cleveland,200.0,288.0,YA,Hipertrofi Ventrikel Kiri,133.0,YA,4.0,Menurun,2.0,Cacat Reversibel,3
+54.0,Laki-laki,Asimtomatik,Cleveland,110.0,239.0,TIDAK,Normal,126.0,YA,2.8,Datar,1.0,Cacat Reversibel,3
+44.0,Laki-laki,Angina Atipikal,Cleveland,120.0,220.0,TIDAK,Normal,170.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+62.0,Perempuan,Asimtomatik,Cleveland,124.0,209.0,TIDAK,Normal,163.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+54.0,Laki-laki,Non-Angina,Cleveland,120.0,258.0,TIDAK,Hipertrofi Ventrikel Kiri,147.0,TIDAK,0.4,Datar,0.0,Cacat Reversibel,0
+51.0,Laki-laki,Non-Angina,Cleveland,94.0,227.0,TIDAK,Normal,154.0,YA,0.0,Meningkat,1.0,Cacat Reversibel,0
+29.0,Laki-laki,Angina Atipikal,Cleveland,130.0,204.0,TIDAK,Hipertrofi Ventrikel Kiri,202.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+51.0,Laki-laki,Asimtomatik,Cleveland,140.0,261.0,TIDAK,Hipertrofi Ventrikel Kiri,186.0,YA,0.0,Meningkat,0.0,Normal,0
+43.0,Perempuan,Non-Angina,Cleveland,122.0,213.0,TIDAK,Normal,165.0,TIDAK,0.2,Datar,0.0,Normal,0
+55.0,Perempuan,Angina Atipikal,Cleveland,135.0,250.0,TIDAK,Hipertrofi Ventrikel Kiri,161.0,TIDAK,1.4,Datar,0.0,Normal,0
+70.0,Laki-laki,Asimtomatik,Cleveland,145.0,174.0,TIDAK,Normal,125.0,YA,2.6,Menurun,0.0,Cacat Reversibel,4
+62.0,Laki-laki,Angina Atipikal,Cleveland,120.0,281.0,TIDAK,Hipertrofi Ventrikel Kiri,103.0,TIDAK,1.4,Datar,1.0,Cacat Reversibel,3
+35.0,Laki-laki,Asimtomatik,Cleveland,120.0,198.0,TIDAK,Normal,130.0,YA,1.6,Datar,0.0,Cacat Reversibel,1
+51.0,Laki-laki,Non-Angina,Cleveland,125.0,245.0,YA,Hipertrofi Ventrikel Kiri,166.0,TIDAK,2.4,Datar,0.0,Normal,0
+59.0,Laki-laki,Angina Atipikal,Cleveland,140.0,221.0,TIDAK,Normal,164.0,YA,0.0,Meningkat,0.0,Normal,0
+59.0,Laki-laki,Angina Tipikal,Cleveland,170.0,288.0,TIDAK,Hipertrofi Ventrikel Kiri,159.0,TIDAK,0.2,Datar,0.0,Cacat Reversibel,1
+52.0,Laki-laki,Angina Atipikal,Cleveland,128.0,205.0,YA,Normal,184.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+64.0,Laki-laki,Non-Angina,Cleveland,125.0,309.0,TIDAK,Normal,131.0,YA,1.8,Datar,0.0,Cacat Reversibel,1
+58.0,Laki-laki,Non-Angina,Cleveland,105.0,240.0,TIDAK,Hipertrofi Ventrikel Kiri,154.0,YA,0.6,Datar,0.0,Cacat Reversibel,0
+47.0,Laki-laki,Non-Angina,Cleveland,108.0,243.0,TIDAK,Normal,152.0,TIDAK,0.0,Meningkat,0.0,Normal,1
+57.0,Laki-laki,Asimtomatik,Cleveland,165.0,289.0,YA,Hipertrofi Ventrikel Kiri,124.0,TIDAK,1.0,Datar,3.0,Cacat Reversibel,4
+41.0,Laki-laki,Non-Angina,Cleveland,112.0,250.0,TIDAK,Normal,179.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+45.0,Laki-laki,Angina Atipikal,Cleveland,128.0,308.0,TIDAK,Hipertrofi Ventrikel Kiri,170.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+60.0,Perempuan,Non-Angina,Cleveland,102.0,318.0,TIDAK,Normal,160.0,TIDAK,0.0,Meningkat,1.0,Normal,0
+52.0,Laki-laki,Angina Tipikal,Cleveland,152.0,298.0,YA,Normal,178.0,TIDAK,1.2,Datar,0.0,Cacat Reversibel,0
+42.0,Perempuan,Asimtomatik,Cleveland,102.0,265.0,TIDAK,Hipertrofi Ventrikel Kiri,122.0,TIDAK,0.6,Datar,0.0,Normal,0
+67.0,Perempuan,Non-Angina,Cleveland,115.0,564.0,TIDAK,Hipertrofi Ventrikel Kiri,160.0,TIDAK,1.6,Datar,0.0,Cacat Reversibel,0
+55.0,Laki-laki,Asimtomatik,Cleveland,160.0,289.0,TIDAK,Hipertrofi Ventrikel Kiri,145.0,YA,0.8,Datar,1.0,Cacat Reversibel,4
+64.0,Laki-laki,Asimtomatik,Cleveland,120.0,246.0,TIDAK,Hipertrofi Ventrikel Kiri,96.0,YA,2.2,Menurun,1.0,Normal,3
+70.0,Laki-laki,Asimtomatik,Cleveland,130.0,322.0,TIDAK,Hipertrofi Ventrikel Kiri,109.0,TIDAK,2.4,Datar,3.0,Normal,1
+51.0,Laki-laki,Asimtomatik,Cleveland,140.0,299.0,TIDAK,Normal,173.0,YA,1.6,Meningkat,0.0,Cacat Reversibel,1
+58.0,Laki-laki,Asimtomatik,Cleveland,125.0,300.0,TIDAK,Hipertrofi Ventrikel Kiri,171.0,TIDAK,0.0,Meningkat,2.0,Cacat Reversibel,1
+60.0,Laki-laki,Asimtomatik,Cleveland,140.0,293.0,TIDAK,Hipertrofi Ventrikel Kiri,170.0,TIDAK,1.2,Datar,2.0,Cacat Reversibel,2
+68.0,Laki-laki,Non-Angina,Cleveland,118.0,277.0,TIDAK,Normal,151.0,TIDAK,1.0,Meningkat,1.0,Cacat Reversibel,0
+46.0,Laki-laki,Angina Atipikal,Cleveland,101.0,197.0,YA,Normal,156.0,TIDAK,0.0,Meningkat,0.0,Cacat Reversibel,0
+77.0,Laki-laki,Asimtomatik,Cleveland,125.0,304.0,TIDAK,Hipertrofi Ventrikel Kiri,162.0,YA,0.0,Meningkat,3.0,Normal,4
+54.0,Perempuan,Non-Angina,Cleveland,110.0,214.0,TIDAK,Normal,158.0,TIDAK,1.6,Datar,0.0,Normal,0
+58.0,Perempuan,Asimtomatik,Cleveland,100.0,248.0,TIDAK,Hipertrofi Ventrikel Kiri,122.0,TIDAK,1.0,Datar,0.0,Normal,0
+48.0,Laki-laki,Non-Angina,Cleveland,124.0,255.0,YA,Normal,175.0,TIDAK,0.0,Meningkat,2.0,Normal,0
+57.0,Laki-laki,Asimtomatik,Cleveland,132.0,207.0,TIDAK,Normal,168.0,YA,0.0,Meningkat,0.0,Cacat Reversibel,0
+52.0,Laki-laki,Non-Angina,Cleveland,138.0,223.0,TIDAK,Normal,169.0,TIDAK,0.0,Meningkat,,Normal,0
+54.0,Perempuan,Angina Atipikal,Cleveland,132.0,288.0,YA,Hipertrofi Ventrikel Kiri,159.0,YA,0.0,Meningkat,1.0,Normal,0
+35.0,Laki-laki,Asimtomatik,Cleveland,126.0,282.0,TIDAK,Hipertrofi Ventrikel Kiri,156.0,YA,0.0,Meningkat,0.0,Cacat Reversibel,1
+45.0,Perempuan,Angina Atipikal,Cleveland,112.0,160.0,TIDAK,Normal,138.0,TIDAK,0.0,Datar,0.0,Normal,0
+70.0,Laki-laki,Non-Angina,Cleveland,160.0,269.0,TIDAK,Normal,112.0,YA,2.9,Datar,1.0,Cacat Reversibel,3
+53.0,Laki-laki,Asimtomatik,Cleveland,142.0,226.0,TIDAK,Hipertrofi Ventrikel Kiri,111.0,YA,0.0,Meningkat,0.0,Cacat Reversibel,0
+59.0,Perempuan,Asimtomatik,Cleveland,174.0,249.0,TIDAK,Normal,143.0,YA,0.0,Datar,0.0,Normal,1
+62.0,Perempuan,Asimtomatik,Cleveland,140.0,394.0,TIDAK,Hipertrofi Ventrikel Kiri,157.0,TIDAK,1.2,Datar,0.0,Normal,0
+64.0,Laki-laki,Asimtomatik,Cleveland,145.0,212.0,TIDAK,Hipertrofi Ventrikel Kiri,132.0,TIDAK,2.0,Datar,2.0,Cacat Tetap,4
+57.0,Laki-laki,Asimtomatik,Cleveland,152.0,274.0,TIDAK,Normal,88.0,YA,1.2,Datar,1.0,Cacat Reversibel,1
+52.0,Laki-laki,Asimtomatik,Cleveland,108.0,233.0,YA,Normal,147.0,TIDAK,0.1,Meningkat,3.0,Cacat Reversibel,0
+56.0,Laki-laki,Asimtomatik,Cleveland,132.0,184.0,TIDAK,Hipertrofi Ventrikel Kiri,105.0,YA,2.1,Datar,1.0,Cacat Tetap,1
+43.0,Laki-laki,Non-Angina,Cleveland,130.0,315.0,TIDAK,Normal,162.0,TIDAK,1.9,Meningkat,1.0,Normal,0
+53.0,Laki-laki,Non-Angina,Cleveland,130.0,246.0,YA,Hipertrofi Ventrikel Kiri,173.0,TIDAK,0.0,Meningkat,3.0,Normal,0
+48.0,Laki-laki,Asimtomatik,Cleveland,124.0,274.0,TIDAK,Hipertrofi Ventrikel Kiri,166.0,TIDAK,0.5,Datar,0.0,Cacat Reversibel,3
+56.0,Perempuan,Asimtomatik,Cleveland,134.0,409.0,TIDAK,Hipertrofi Ventrikel Kiri,150.0,YA,1.9,Datar,2.0,Cacat Reversibel,2
+42.0,Laki-laki,Angina Tipikal,Cleveland,148.0,244.0,TIDAK,Hipertrofi Ventrikel Kiri,178.0,TIDAK,0.8,Meningkat,2.0,Normal,0
+59.0,Laki-laki,Angina Tipikal,Cleveland,178.0,270.0,TIDAK,Hipertrofi Ventrikel Kiri,145.0,TIDAK,4.2,Menurun,0.0,Cacat Reversibel,0
+60.0,Perempuan,Asimtomatik,Cleveland,158.0,305.0,TIDAK,Hipertrofi Ventrikel Kiri,161.0,TIDAK,0.0,Meningkat,0.0,Normal,1
+63.0,Perempuan,Angina Atipikal,Cleveland,140.0,195.0,TIDAK,Normal,179.0,TIDAK,0.0,Meningkat,2.0,Normal,0
+42.0,Laki-laki,Non-Angina,Cleveland,120.0,240.0,YA,Normal,194.0,TIDAK,0.8,Menurun,0.0,Cacat Reversibel,0
+66.0,Laki-laki,Angina Atipikal,Cleveland,160.0,246.0,TIDAK,Normal,120.0,YA,0.0,Datar,3.0,Cacat Tetap,2
+54.0,Laki-laki,Angina Atipikal,Cleveland,192.0,283.0,TIDAK,Hipertrofi Ventrikel Kiri,195.0,TIDAK,0.0,Meningkat,1.0,Cacat Reversibel,1
+69.0,Laki-laki,Non-Angina,Cleveland,140.0,254.0,TIDAK,Hipertrofi Ventrikel Kiri,146.0,TIDAK,2.0,Datar,3.0,Cacat Reversibel,2
+50.0,Laki-laki,Non-Angina,Cleveland,129.0,196.0,TIDAK,Normal,163.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+51.0,Laki-laki,Asimtomatik,Cleveland,140.0,298.0,TIDAK,Normal,122.0,YA,4.2,Datar,3.0,Cacat Reversibel,3
+43.0,Laki-laki,Asimtomatik,Cleveland,132.0,247.0,YA,Hipertrofi Ventrikel Kiri,143.0,YA,0.1,Datar,,Cacat Reversibel,1
+62.0,Perempuan,Asimtomatik,Cleveland,138.0,294.0,YA,Normal,106.0,TIDAK,1.9,Datar,3.0,Normal,2
+68.0,Perempuan,Non-Angina,Cleveland,120.0,211.0,TIDAK,Hipertrofi Ventrikel Kiri,115.0,TIDAK,1.5,Datar,0.0,Normal,0
+67.0,Laki-laki,Asimtomatik,Cleveland,100.0,299.0,TIDAK,Hipertrofi Ventrikel Kiri,125.0,YA,0.9,Datar,2.0,Normal,3
+69.0,Laki-laki,Angina Tipikal,Cleveland,160.0,234.0,YA,Hipertrofi Ventrikel Kiri,131.0,TIDAK,0.1,Datar,1.0,Normal,0
+45.0,Perempuan,Asimtomatik,Cleveland,138.0,236.0,TIDAK,Hipertrofi Ventrikel Kiri,152.0,YA,0.2,Datar,0.0,Normal,0
+50.0,Perempuan,Angina Atipikal,Cleveland,120.0,244.0,TIDAK,Normal,162.0,TIDAK,1.1,Meningkat,0.0,Normal,0
+59.0,Laki-laki,Angina Tipikal,Cleveland,160.0,273.0,TIDAK,Hipertrofi Ventrikel Kiri,125.0,TIDAK,0.0,Meningkat,0.0,Normal,1
+50.0,Perempuan,Asimtomatik,Cleveland,110.0,254.0,TIDAK,Hipertrofi Ventrikel Kiri,159.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+64.0,Perempuan,Asimtomatik,Cleveland,180.0,325.0,TIDAK,Normal,154.0,YA,0.0,Meningkat,0.0,Normal,0
+57.0,Laki-laki,Non-Angina,Cleveland,150.0,126.0,YA,Normal,173.0,TIDAK,0.2,Meningkat,1.0,Cacat Reversibel,0
+64.0,Perempuan,Non-Angina,Cleveland,140.0,313.0,TIDAK,Normal,133.0,TIDAK,0.2,Meningkat,0.0,Cacat Reversibel,0
+43.0,Laki-laki,Asimtomatik,Cleveland,110.0,211.0,TIDAK,Normal,161.0,TIDAK,0.0,Meningkat,0.0,Cacat Reversibel,0
+45.0,Laki-laki,Asimtomatik,Cleveland,142.0,309.0,TIDAK,Hipertrofi Ventrikel Kiri,147.0,YA,0.0,Datar,3.0,Cacat Reversibel,3
+58.0,Laki-laki,Asimtomatik,Cleveland,128.0,259.0,TIDAK,Hipertrofi Ventrikel Kiri,130.0,YA,3.0,Datar,2.0,Cacat Reversibel,3
+50.0,Laki-laki,Asimtomatik,Cleveland,144.0,200.0,TIDAK,Hipertrofi Ventrikel Kiri,126.0,YA,0.9,Datar,0.0,Cacat Reversibel,3
+55.0,Laki-laki,Angina Atipikal,Cleveland,130.0,262.0,TIDAK,Normal,155.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+62.0,Perempuan,Asimtomatik,Cleveland,150.0,244.0,TIDAK,Normal,154.0,YA,1.4,Datar,0.0,Normal,1
+37.0,Perempuan,Non-Angina,Cleveland,120.0,215.0,TIDAK,Normal,170.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+38.0,Laki-laki,Angina Tipikal,Cleveland,120.0,231.0,TIDAK,Normal,182.0,YA,3.8,Datar,0.0,Cacat Reversibel,4
+41.0,Laki-laki,Non-Angina,Cleveland,130.0,214.0,TIDAK,Hipertrofi Ventrikel Kiri,168.0,TIDAK,2.0,Datar,0.0,Normal,0
+66.0,Perempuan,Asimtomatik,Cleveland,178.0,228.0,YA,Normal,165.0,YA,1.0,Datar,2.0,Cacat Reversibel,3
+52.0,Laki-laki,Asimtomatik,Cleveland,112.0,230.0,TIDAK,Normal,160.0,TIDAK,0.0,Meningkat,1.0,Normal,1
+56.0,Laki-laki,Angina Tipikal,Cleveland,120.0,193.0,TIDAK,Hipertrofi Ventrikel Kiri,162.0,TIDAK,1.9,Datar,0.0,Cacat Reversibel,0
+46.0,Perempuan,Angina Atipikal,Cleveland,105.0,204.0,TIDAK,Normal,172.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+46.0,Perempuan,Asimtomatik,Cleveland,138.0,243.0,TIDAK,Hipertrofi Ventrikel Kiri,152.0,YA,0.0,Datar,0.0,Normal,0
+64.0,Perempuan,Asimtomatik,Cleveland,130.0,303.0,TIDAK,Normal,122.0,TIDAK,2.0,Datar,2.0,Normal,0
+59.0,Laki-laki,Asimtomatik,Cleveland,138.0,271.0,TIDAK,Hipertrofi Ventrikel Kiri,182.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+41.0,Perempuan,Non-Angina,Cleveland,112.0,268.0,TIDAK,Hipertrofi Ventrikel Kiri,172.0,YA,0.0,Meningkat,0.0,Normal,0
+54.0,Perempuan,Non-Angina,Cleveland,108.0,267.0,TIDAK,Hipertrofi Ventrikel Kiri,167.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+39.0,Perempuan,Non-Angina,Cleveland,94.0,199.0,TIDAK,Normal,179.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+53.0,Laki-laki,Asimtomatik,Cleveland,123.0,282.0,TIDAK,Normal,95.0,YA,2.0,Datar,2.0,Cacat Reversibel,3
+63.0,Perempuan,Asimtomatik,Cleveland,108.0,269.0,TIDAK,Normal,169.0,YA,1.8,Datar,2.0,Normal,1
+34.0,Perempuan,Angina Atipikal,Cleveland,118.0,210.0,TIDAK,Normal,192.0,TIDAK,0.7,Meningkat,0.0,Normal,0
+47.0,Laki-laki,Asimtomatik,Cleveland,112.0,204.0,TIDAK,Normal,143.0,TIDAK,0.1,Meningkat,0.0,Normal,0
+67.0,Perempuan,Non-Angina,Cleveland,152.0,277.0,TIDAK,Normal,172.0,TIDAK,0.0,Meningkat,1.0,Normal,0
+54.0,Laki-laki,Asimtomatik,Cleveland,110.0,206.0,TIDAK,Hipertrofi Ventrikel Kiri,108.0,YA,0.0,Datar,1.0,Normal,3
+66.0,Laki-laki,Asimtomatik,Cleveland,112.0,212.0,TIDAK,Hipertrofi Ventrikel Kiri,132.0,YA,0.1,Meningkat,1.0,Normal,2
+52.0,Perempuan,Non-Angina,Cleveland,136.0,196.0,TIDAK,Hipertrofi Ventrikel Kiri,169.0,TIDAK,0.1,Datar,0.0,Normal,0
+55.0,Perempuan,Asimtomatik,Cleveland,180.0,327.0,TIDAK,Abnormalitas Gelombang ST-T,117.0,YA,3.4,Datar,0.0,Normal,2
+49.0,Laki-laki,Non-Angina,Cleveland,118.0,149.0,TIDAK,Hipertrofi Ventrikel Kiri,126.0,TIDAK,0.8,Meningkat,3.0,Normal,1
+74.0,Perempuan,Angina Atipikal,Cleveland,120.0,269.0,TIDAK,Hipertrofi Ventrikel Kiri,121.0,YA,0.2,Meningkat,1.0,Normal,0
+54.0,Perempuan,Non-Angina,Cleveland,160.0,201.0,TIDAK,Normal,163.0,TIDAK,0.0,Meningkat,1.0,Normal,0
+54.0,Laki-laki,Asimtomatik,Cleveland,122.0,286.0,TIDAK,Hipertrofi Ventrikel Kiri,116.0,YA,3.2,Datar,2.0,Normal,3
+56.0,Laki-laki,Asimtomatik,Cleveland,130.0,283.0,YA,Hipertrofi Ventrikel Kiri,103.0,YA,1.6,Menurun,0.0,Cacat Reversibel,2
+46.0,Laki-laki,Asimtomatik,Cleveland,120.0,249.0,TIDAK,Hipertrofi Ventrikel Kiri,144.0,TIDAK,0.8,Meningkat,0.0,Cacat Reversibel,1
+49.0,Perempuan,Angina Atipikal,Cleveland,134.0,271.0,TIDAK,Normal,162.0,TIDAK,0.0,Datar,0.0,Normal,0
+42.0,Laki-laki,Angina Atipikal,Cleveland,120.0,295.0,TIDAK,Normal,162.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+41.0,Laki-laki,Angina Atipikal,Cleveland,110.0,235.0,TIDAK,Normal,153.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+41.0,Perempuan,Angina Atipikal,Cleveland,126.0,306.0,TIDAK,Normal,163.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+49.0,Perempuan,Asimtomatik,Cleveland,130.0,269.0,TIDAK,Normal,163.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+61.0,Laki-laki,Angina Tipikal,Cleveland,134.0,234.0,TIDAK,Normal,145.0,TIDAK,2.6,Datar,2.0,Normal,2
+60.0,Perempuan,Non-Angina,Cleveland,120.0,178.0,YA,Normal,96.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+67.0,Laki-laki,Asimtomatik,Cleveland,120.0,237.0,TIDAK,Normal,71.0,TIDAK,1.0,Datar,0.0,Normal,2
+58.0,Laki-laki,Asimtomatik,Cleveland,100.0,234.0,TIDAK,Normal,156.0,TIDAK,0.1,Meningkat,1.0,Cacat Reversibel,2
+47.0,Laki-laki,Asimtomatik,Cleveland,110.0,275.0,TIDAK,Hipertrofi Ventrikel Kiri,118.0,YA,1.0,Datar,1.0,Normal,1
+52.0,Laki-laki,Asimtomatik,Cleveland,125.0,212.0,TIDAK,Normal,168.0,TIDAK,1.0,Meningkat,2.0,Cacat Reversibel,3
+62.0,Laki-laki,Angina Atipikal,Cleveland,128.0,208.0,YA,Hipertrofi Ventrikel Kiri,140.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+57.0,Laki-laki,Asimtomatik,Cleveland,110.0,201.0,TIDAK,Normal,126.0,YA,1.5,Datar,0.0,Cacat Tetap,0
+58.0,Laki-laki,Asimtomatik,Cleveland,146.0,218.0,TIDAK,Normal,105.0,TIDAK,2.0,Datar,1.0,Cacat Reversibel,1
+64.0,Laki-laki,Asimtomatik,Cleveland,128.0,263.0,TIDAK,Normal,105.0,YA,0.2,Datar,1.0,Cacat Reversibel,0
+51.0,Perempuan,Non-Angina,Cleveland,120.0,295.0,TIDAK,Hipertrofi Ventrikel Kiri,157.0,TIDAK,0.6,Meningkat,0.0,Normal,0
+43.0,Laki-laki,Asimtomatik,Cleveland,115.0,303.0,TIDAK,Normal,181.0,TIDAK,1.2,Datar,0.0,Normal,0
+42.0,Perempuan,Non-Angina,Cleveland,120.0,209.0,TIDAK,Normal,173.0,TIDAK,0.0,Datar,0.0,Normal,0
+67.0,Perempuan,Asimtomatik,Cleveland,106.0,223.0,TIDAK,Normal,142.0,TIDAK,0.3,Meningkat,2.0,Normal,0
+76.0,Perempuan,Non-Angina,Cleveland,140.0,197.0,TIDAK,Abnormalitas Gelombang ST-T,116.0,TIDAK,1.1,Datar,0.0,Normal,0
+70.0,Laki-laki,Angina Atipikal,Cleveland,156.0,245.0,TIDAK,Hipertrofi Ventrikel Kiri,143.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+57.0,Laki-laki,Angina Atipikal,Cleveland,124.0,261.0,TIDAK,Normal,141.0,TIDAK,0.3,Meningkat,0.0,Cacat Reversibel,1
+44.0,Perempuan,Non-Angina,Cleveland,118.0,242.0,TIDAK,Normal,149.0,TIDAK,0.3,Datar,1.0,Normal,0
+58.0,Perempuan,Angina Atipikal,Cleveland,136.0,319.0,YA,Hipertrofi Ventrikel Kiri,152.0,TIDAK,0.0,Meningkat,2.0,Normal,3
+60.0,Perempuan,Angina Tipikal,Cleveland,150.0,240.0,TIDAK,Normal,171.0,TIDAK,0.9,Meningkat,0.0,Normal,0
+44.0,Laki-laki,Non-Angina,Cleveland,120.0,226.0,TIDAK,Normal,169.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+61.0,Laki-laki,Asimtomatik,Cleveland,138.0,166.0,TIDAK,Hipertrofi Ventrikel Kiri,125.0,YA,3.6,Datar,1.0,Normal,4
+42.0,Laki-laki,Asimtomatik,Cleveland,136.0,315.0,TIDAK,Normal,125.0,YA,1.8,Datar,0.0,Cacat Tetap,2
+52.0,Laki-laki,Asimtomatik,Cleveland,128.0,204.0,YA,Normal,156.0,YA,1.0,Datar,0.0,,2
+59.0,Laki-laki,Non-Angina,Cleveland,126.0,218.0,YA,Normal,134.0,TIDAK,2.2,Datar,1.0,Cacat Tetap,2
+40.0,Laki-laki,Asimtomatik,Cleveland,152.0,223.0,TIDAK,Normal,181.0,TIDAK,0.0,Meningkat,0.0,Cacat Reversibel,1
+42.0,Laki-laki,Non-Angina,Cleveland,130.0,180.0,TIDAK,Normal,150.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+61.0,Laki-laki,Asimtomatik,Cleveland,140.0,207.0,TIDAK,Hipertrofi Ventrikel Kiri,138.0,YA,1.9,Meningkat,1.0,Cacat Reversibel,1
+66.0,Laki-laki,Asimtomatik,Cleveland,160.0,228.0,TIDAK,Hipertrofi Ventrikel Kiri,138.0,TIDAK,2.3,Meningkat,0.0,Cacat Tetap,0
+46.0,Laki-laki,Asimtomatik,Cleveland,140.0,311.0,TIDAK,Normal,120.0,YA,1.8,Datar,2.0,Cacat Reversibel,2
+71.0,Perempuan,Asimtomatik,Cleveland,112.0,149.0,TIDAK,Normal,125.0,TIDAK,1.6,Datar,0.0,Normal,0
+59.0,Laki-laki,Angina Tipikal,Cleveland,134.0,204.0,TIDAK,Normal,162.0,TIDAK,0.8,Meningkat,2.0,Normal,1
+64.0,Laki-laki,Angina Tipikal,Cleveland,170.0,227.0,TIDAK,Hipertrofi Ventrikel Kiri,155.0,TIDAK,0.6,Datar,0.0,Cacat Reversibel,0
+66.0,Perempuan,Non-Angina,Cleveland,146.0,278.0,TIDAK,Hipertrofi Ventrikel Kiri,152.0,TIDAK,0.0,Datar,1.0,Normal,0
+39.0,Perempuan,Non-Angina,Cleveland,138.0,220.0,TIDAK,Normal,152.0,TIDAK,0.0,Datar,0.0,Normal,0
+57.0,Laki-laki,Angina Atipikal,Cleveland,154.0,232.0,TIDAK,Hipertrofi Ventrikel Kiri,164.0,TIDAK,0.0,Meningkat,1.0,Normal,1
+58.0,Perempuan,Asimtomatik,Cleveland,130.0,197.0,TIDAK,Normal,131.0,TIDAK,0.6,Datar,0.0,Normal,0
+57.0,Laki-laki,Asimtomatik,Cleveland,110.0,335.0,TIDAK,Normal,143.0,YA,3.0,Datar,1.0,Cacat Reversibel,2
+47.0,Laki-laki,Non-Angina,Cleveland,130.0,253.0,TIDAK,Normal,179.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+55.0,Perempuan,Asimtomatik,Cleveland,128.0,205.0,TIDAK,Abnormalitas Gelombang ST-T,130.0,YA,2.0,Datar,1.0,Cacat Reversibel,3
+35.0,Laki-laki,Angina Atipikal,Cleveland,122.0,192.0,TIDAK,Normal,174.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+61.0,Laki-laki,Asimtomatik,Cleveland,148.0,203.0,TIDAK,Normal,161.0,TIDAK,0.0,Meningkat,1.0,Cacat Reversibel,2
+58.0,Laki-laki,Asimtomatik,Cleveland,114.0,318.0,TIDAK,Abnormalitas Gelombang ST-T,140.0,TIDAK,4.4,Menurun,3.0,Cacat Tetap,4
+58.0,Perempuan,Asimtomatik,Cleveland,170.0,225.0,YA,Hipertrofi Ventrikel Kiri,146.0,YA,2.8,Datar,2.0,Cacat Tetap,2
+58.0,Laki-laki,Angina Atipikal,Cleveland,125.0,220.0,TIDAK,Normal,144.0,TIDAK,0.4,Datar,,Cacat Reversibel,0
+56.0,Laki-laki,Angina Atipikal,Cleveland,130.0,221.0,TIDAK,Hipertrofi Ventrikel Kiri,163.0,TIDAK,0.0,Meningkat,0.0,Cacat Reversibel,0
+56.0,Laki-laki,Angina Atipikal,Cleveland,120.0,240.0,TIDAK,Normal,169.0,TIDAK,0.0,Menurun,0.0,Normal,0
+67.0,Laki-laki,Non-Angina,Cleveland,152.0,212.0,TIDAK,Hipertrofi Ventrikel Kiri,150.0,TIDAK,0.8,Datar,0.0,Cacat Reversibel,1
+55.0,Perempuan,Angina Atipikal,Cleveland,132.0,342.0,TIDAK,Normal,166.0,TIDAK,1.2,Meningkat,0.0,Normal,0
+44.0,Laki-laki,Asimtomatik,Cleveland,120.0,169.0,TIDAK,Normal,144.0,YA,2.8,Menurun,0.0,Cacat Tetap,2
+63.0,Laki-laki,Asimtomatik,Cleveland,140.0,187.0,TIDAK,Hipertrofi Ventrikel Kiri,144.0,YA,4.0,Meningkat,2.0,Cacat Reversibel,2
+63.0,Perempuan,Asimtomatik,Cleveland,124.0,197.0,TIDAK,Normal,136.0,YA,0.0,Datar,0.0,Normal,1
+41.0,Laki-laki,Angina Atipikal,Cleveland,120.0,157.0,TIDAK,Normal,182.0,TIDAK,0.0,Meningkat,0.0,Normal,0
+59.0,Laki-laki,Asimtomatik,Cleveland,164.0,176.0,YA,Hipertrofi Ventrikel Kiri,90.0,TIDAK,1.0,Datar,2.0,Cacat Tetap,3
+57.0,Perempuan,Asimtomatik,Cleveland,140.0,241.0,TIDAK,Normal,123.0,YA,0.2,Datar,0.0,Cacat Reversibel,1
+45.0,Laki-laki,Angina Tipikal,Cleveland,110.0,264.0,TIDAK,Normal,132.0,TIDAK,1.2,Datar,0.0,Cacat Reversibel,1
+68.0,Laki-laki,Asimtomatik,Cleveland,144.0,193.0,YA,Normal,141.0,TIDAK,3.4,Datar,2.0,Cacat Reversibel,2
+57.0,Laki-laki,Asimtomatik,Cleveland,130.0,131.0,TIDAK,Normal,115.0,YA,1.2,Datar,1.0,Cacat Reversibel,3
+57.0,Perempuan,Angina Atipikal,Cleveland,130.0,236.0,TIDAK,Hipertrofi Ventrikel Kiri,174.0,TIDAK,0.0,Datar,1.0,Normal,1
+38.0,Laki-laki,Non-Angina,Cleveland,138.0,175.0,TIDAK,Normal,173.0,TIDAK,0.0,Meningkat,,Normal,0
+28.0,Laki-laki,Angina Atipikal,Hungarian,130.0,132.0,TIDAK,Hipertrofi Ventrikel Kiri,185.0,TIDAK,0.0,,,,0
+29.0,Laki-laki,Angina Atipikal,Hungarian,120.0,243.0,TIDAK,Normal,160.0,TIDAK,0.0,,,,0
+29.0,Laki-laki,Angina Atipikal,Hungarian,140.0,,TIDAK,Normal,170.0,TIDAK,0.0,,,,0
+30.0,Perempuan,Angina Tipikal,Hungarian,170.0,237.0,TIDAK,Abnormalitas Gelombang ST-T,170.0,TIDAK,0.0,,,Cacat Tetap,0
+31.0,Perempuan,Angina Atipikal,Hungarian,100.0,219.0,TIDAK,Abnormalitas Gelombang ST-T,150.0,TIDAK,0.0,,,,0
+32.0,Perempuan,Angina Atipikal,Hungarian,105.0,198.0,TIDAK,Normal,165.0,TIDAK,0.0,,,,0
+32.0,Laki-laki,Angina Atipikal,Hungarian,110.0,225.0,TIDAK,Normal,184.0,TIDAK,0.0,,,,0
+32.0,Laki-laki,Angina Atipikal,Hungarian,125.0,254.0,TIDAK,Normal,155.0,TIDAK,0.0,,,,0
+33.0,Laki-laki,Non-Angina,Hungarian,120.0,298.0,TIDAK,Normal,185.0,TIDAK,0.0,,,,0
+34.0,Perempuan,Angina Atipikal,Hungarian,130.0,161.0,TIDAK,Normal,190.0,TIDAK,0.0,,,,0
+34.0,Laki-laki,Angina Atipikal,Hungarian,150.0,214.0,TIDAK,Abnormalitas Gelombang ST-T,168.0,TIDAK,0.0,,,,0
+34.0,Laki-laki,Angina Atipikal,Hungarian,98.0,220.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,0
+35.0,Perempuan,Angina Tipikal,Hungarian,120.0,160.0,TIDAK,Abnormalitas Gelombang ST-T,185.0,TIDAK,0.0,,,,0
+35.0,Perempuan,Asimtomatik,Hungarian,140.0,167.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,0
+35.0,Laki-laki,Angina Atipikal,Hungarian,120.0,308.0,TIDAK,Hipertrofi Ventrikel Kiri,180.0,TIDAK,0.0,,,,0
+35.0,Laki-laki,Angina Atipikal,Hungarian,150.0,264.0,TIDAK,Normal,168.0,TIDAK,0.0,,,,0
+36.0,Laki-laki,Angina Atipikal,Hungarian,120.0,166.0,TIDAK,Normal,180.0,TIDAK,0.0,,,,0
+36.0,Laki-laki,Non-Angina,Hungarian,112.0,340.0,TIDAK,Normal,184.0,TIDAK,1.0,Datar,,Normal,0
+36.0,Laki-laki,Non-Angina,Hungarian,130.0,209.0,TIDAK,Normal,178.0,TIDAK,0.0,,,,0
+36.0,Laki-laki,Non-Angina,Hungarian,150.0,160.0,TIDAK,Normal,172.0,TIDAK,0.0,,,,0
+37.0,Perempuan,Angina Atipikal,Hungarian,120.0,260.0,TIDAK,Normal,130.0,TIDAK,0.0,,,,0
+37.0,Perempuan,Non-Angina,Hungarian,130.0,211.0,TIDAK,Normal,142.0,TIDAK,0.0,,,,0
+37.0,Perempuan,Asimtomatik,Hungarian,130.0,173.0,TIDAK,Abnormalitas Gelombang ST-T,184.0,TIDAK,0.0,,,,0
+37.0,Laki-laki,Angina Atipikal,Hungarian,130.0,283.0,TIDAK,Abnormalitas Gelombang ST-T,98.0,TIDAK,0.0,,,,0
+37.0,Laki-laki,Non-Angina,Hungarian,130.0,194.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,0
+37.0,Laki-laki,Asimtomatik,Hungarian,120.0,223.0,TIDAK,Normal,168.0,TIDAK,0.0,,,Normal,0
+37.0,Laki-laki,Asimtomatik,Hungarian,130.0,315.0,TIDAK,Normal,158.0,TIDAK,0.0,,,,0
+38.0,Perempuan,Angina Atipikal,Hungarian,120.0,275.0,,Normal,129.0,TIDAK,0.0,,,,0
+38.0,Laki-laki,Angina Atipikal,Hungarian,140.0,297.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,0
+38.0,Laki-laki,Non-Angina,Hungarian,145.0,292.0,TIDAK,Normal,130.0,TIDAK,0.0,,,,0
+39.0,Perempuan,Non-Angina,Hungarian,110.0,182.0,TIDAK,Abnormalitas Gelombang ST-T,180.0,TIDAK,0.0,,,,0
+39.0,Laki-laki,Angina Atipikal,Hungarian,120.0,,TIDAK,Abnormalitas Gelombang ST-T,146.0,TIDAK,2.0,Meningkat,,,0
+39.0,Laki-laki,Angina Atipikal,Hungarian,120.0,200.0,TIDAK,Normal,160.0,YA,1.0,Datar,,,0
+39.0,Laki-laki,Angina Atipikal,Hungarian,120.0,204.0,TIDAK,Normal,145.0,TIDAK,0.0,,,,0
+39.0,Laki-laki,Angina Atipikal,Hungarian,130.0,,TIDAK,Normal,120.0,TIDAK,0.0,,,,0
+39.0,Laki-laki,Angina Atipikal,Hungarian,190.0,241.0,TIDAK,Normal,106.0,TIDAK,0.0,,,,0
+39.0,Laki-laki,Non-Angina,Hungarian,120.0,339.0,TIDAK,Normal,170.0,TIDAK,0.0,,,,0
+39.0,Laki-laki,Non-Angina,Hungarian,160.0,147.0,YA,Normal,160.0,TIDAK,0.0,,,,0
+39.0,Laki-laki,Asimtomatik,Hungarian,110.0,273.0,TIDAK,Normal,132.0,TIDAK,0.0,,,,0
+39.0,Laki-laki,Asimtomatik,Hungarian,130.0,307.0,TIDAK,Normal,140.0,TIDAK,0.0,,,,0
+40.0,Laki-laki,Angina Atipikal,Hungarian,130.0,275.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,0
+40.0,Laki-laki,Angina Atipikal,Hungarian,140.0,289.0,TIDAK,Normal,172.0,TIDAK,0.0,,,,0
+40.0,Laki-laki,Non-Angina,Hungarian,130.0,215.0,TIDAK,Normal,138.0,TIDAK,0.0,,,,0
+40.0,Laki-laki,Non-Angina,Hungarian,130.0,281.0,TIDAK,Normal,167.0,TIDAK,0.0,,,,0
+40.0,Laki-laki,Non-Angina,Hungarian,140.0,,TIDAK,Normal,188.0,TIDAK,0.0,,,,0
+41.0,Perempuan,Angina Atipikal,Hungarian,110.0,250.0,TIDAK,Abnormalitas Gelombang ST-T,142.0,TIDAK,0.0,,,,0
+41.0,Perempuan,Angina Atipikal,Hungarian,125.0,184.0,TIDAK,Normal,180.0,TIDAK,0.0,,,,0
+41.0,Perempuan,Angina Atipikal,Hungarian,130.0,245.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,0
+41.0,Laki-laki,Angina Atipikal,Hungarian,120.0,291.0,TIDAK,Abnormalitas Gelombang ST-T,160.0,TIDAK,0.0,,,,0
+41.0,Laki-laki,Angina Atipikal,Hungarian,120.0,295.0,TIDAK,Normal,170.0,TIDAK,0.0,,,,0
+41.0,Laki-laki,Angina Atipikal,Hungarian,125.0,269.0,TIDAK,Normal,144.0,TIDAK,0.0,,,,0
+41.0,Laki-laki,Asimtomatik,Hungarian,112.0,250.0,TIDAK,Normal,142.0,TIDAK,0.0,,,,0
+42.0,Perempuan,Non-Angina,Hungarian,115.0,211.0,TIDAK,Abnormalitas Gelombang ST-T,137.0,TIDAK,0.0,,,,0
+42.0,Laki-laki,Angina Atipikal,Hungarian,120.0,196.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,0
+42.0,Laki-laki,Angina Atipikal,Hungarian,120.0,198.0,TIDAK,Normal,155.0,TIDAK,0.0,,,,0
+42.0,Laki-laki,Angina Atipikal,Hungarian,150.0,268.0,TIDAK,Normal,136.0,TIDAK,0.0,,,,0
+42.0,Laki-laki,Non-Angina,Hungarian,120.0,228.0,TIDAK,Normal,152.0,YA,1.5,Datar,,,0
+42.0,Laki-laki,Non-Angina,Hungarian,160.0,147.0,TIDAK,Normal,146.0,TIDAK,0.0,,,,0
+42.0,Laki-laki,Asimtomatik,Hungarian,140.0,358.0,TIDAK,Normal,170.0,TIDAK,0.0,,,,0
+43.0,Perempuan,Angina Tipikal,Hungarian,100.0,223.0,TIDAK,Normal,142.0,TIDAK,0.0,,,,0
+43.0,Perempuan,Angina Atipikal,Hungarian,120.0,201.0,TIDAK,Normal,165.0,TIDAK,0.0,,,,0
+43.0,Perempuan,Angina Atipikal,Hungarian,120.0,215.0,TIDAK,Abnormalitas Gelombang ST-T,175.0,TIDAK,0.0,,,,0
+43.0,Perempuan,Angina Atipikal,Hungarian,120.0,249.0,TIDAK,Abnormalitas Gelombang ST-T,176.0,TIDAK,0.0,,,,0
+43.0,Perempuan,Angina Atipikal,Hungarian,120.0,266.0,TIDAK,Normal,118.0,TIDAK,0.0,,,,0
+43.0,Perempuan,Angina Atipikal,Hungarian,150.0,186.0,TIDAK,Normal,154.0,TIDAK,0.0,,,,0
+43.0,Perempuan,Non-Angina,Hungarian,150.0,,TIDAK,Normal,175.0,TIDAK,0.0,,,Normal,0
+43.0,Laki-laki,Angina Atipikal,Hungarian,142.0,207.0,TIDAK,Normal,138.0,TIDAK,0.0,,,,0
+44.0,Perempuan,Asimtomatik,Hungarian,120.0,218.0,TIDAK,Abnormalitas Gelombang ST-T,115.0,TIDAK,0.0,,,,0
+44.0,Laki-laki,Angina Atipikal,Hungarian,120.0,184.0,TIDAK,Normal,142.0,TIDAK,1.0,Datar,,,0
+44.0,Laki-laki,Angina Atipikal,Hungarian,130.0,215.0,TIDAK,Normal,135.0,TIDAK,0.0,,,,0
+44.0,Laki-laki,Asimtomatik,Hungarian,150.0,412.0,TIDAK,Normal,170.0,TIDAK,0.0,,,,0
+45.0,Perempuan,Angina Atipikal,Hungarian,130.0,237.0,TIDAK,Normal,170.0,TIDAK,0.0,,,,0
+45.0,Perempuan,Angina Atipikal,Hungarian,180.0,,TIDAK,Normal,180.0,TIDAK,0.0,,,,0
+45.0,Perempuan,Asimtomatik,Hungarian,132.0,297.0,TIDAK,Normal,144.0,TIDAK,0.0,,,,0
+45.0,Laki-laki,Angina Atipikal,Hungarian,140.0,224.0,YA,Normal,122.0,TIDAK,0.0,,,,0
+45.0,Laki-laki,Non-Angina,Hungarian,135.0,,TIDAK,Normal,110.0,TIDAK,0.0,,,,0
+45.0,Laki-laki,Asimtomatik,Hungarian,120.0,225.0,TIDAK,Normal,140.0,TIDAK,0.0,,,,0
+45.0,Laki-laki,Asimtomatik,Hungarian,140.0,224.0,TIDAK,Normal,144.0,TIDAK,0.0,,,,0
+46.0,Perempuan,Asimtomatik,Hungarian,130.0,238.0,TIDAK,Normal,90.0,TIDAK,0.0,,,,0
+46.0,Laki-laki,Angina Atipikal,Hungarian,140.0,275.0,TIDAK,Normal,165.0,YA,0.0,,,,0
+46.0,Laki-laki,Non-Angina,Hungarian,120.0,230.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,0
+46.0,Laki-laki,Non-Angina,Hungarian,150.0,163.0,,Normal,116.0,TIDAK,0.0,,,,0
+46.0,Laki-laki,Asimtomatik,Hungarian,110.0,238.0,TIDAK,Abnormalitas Gelombang ST-T,140.0,YA,1.0,Datar,,Normal,0
+46.0,Laki-laki,Asimtomatik,Hungarian,110.0,240.0,TIDAK,Abnormalitas Gelombang ST-T,140.0,TIDAK,0.0,,,Normal,0
+46.0,Laki-laki,Asimtomatik,Hungarian,180.0,280.0,TIDAK,Abnormalitas Gelombang ST-T,120.0,TIDAK,0.0,,,,0
+47.0,Perempuan,Angina Atipikal,Hungarian,140.0,257.0,TIDAK,Normal,135.0,TIDAK,1.0,Meningkat,,,0
+47.0,Perempuan,Non-Angina,Hungarian,130.0,,TIDAK,Normal,145.0,TIDAK,2.0,Datar,,,0
+47.0,Laki-laki,Angina Tipikal,Hungarian,110.0,249.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,0
+47.0,Laki-laki,Angina Atipikal,Hungarian,160.0,263.0,TIDAK,Normal,174.0,TIDAK,0.0,,,,0
+47.0,Laki-laki,Asimtomatik,Hungarian,140.0,276.0,YA,Normal,125.0,YA,0.0,,,,0
+48.0,Perempuan,Angina Atipikal,Hungarian,,308.0,TIDAK,Abnormalitas Gelombang ST-T,,,2.0,Meningkat,,,0
+48.0,Perempuan,Angina Atipikal,Hungarian,120.0,,YA,Abnormalitas Gelombang ST-T,148.0,TIDAK,0.0,,,,0
+48.0,Perempuan,Angina Atipikal,Hungarian,120.0,284.0,TIDAK,Normal,120.0,TIDAK,0.0,,,,0
+48.0,Perempuan,Non-Angina,Hungarian,120.0,195.0,TIDAK,Normal,125.0,TIDAK,0.0,,,,0
+48.0,Perempuan,Asimtomatik,Hungarian,108.0,163.0,TIDAK,Normal,175.0,TIDAK,2.0,Meningkat,,,0
+48.0,Perempuan,Asimtomatik,Hungarian,120.0,254.0,TIDAK,Abnormalitas Gelombang ST-T,110.0,TIDAK,0.0,,,,0
+48.0,Perempuan,Asimtomatik,Hungarian,150.0,227.0,TIDAK,Normal,130.0,YA,1.0,Datar,,,0
+48.0,Laki-laki,Angina Atipikal,Hungarian,100.0,,TIDAK,Normal,100.0,TIDAK,0.0,,,,0
+48.0,Laki-laki,Angina Atipikal,Hungarian,130.0,245.0,TIDAK,Normal,160.0,TIDAK,0.0,,,,0
+48.0,Laki-laki,Angina Atipikal,Hungarian,140.0,238.0,TIDAK,Normal,118.0,TIDAK,0.0,,,,0
+48.0,Laki-laki,Non-Angina,Hungarian,110.0,211.0,TIDAK,Normal,138.0,TIDAK,0.0,,,Cacat Tetap,0
+49.0,Perempuan,Angina Atipikal,Hungarian,110.0,,TIDAK,Normal,160.0,TIDAK,0.0,,,,0
+49.0,Perempuan,Angina Atipikal,Hungarian,110.0,,TIDAK,Normal,160.0,TIDAK,0.0,,,,0
+49.0,Perempuan,Angina Atipikal,Hungarian,124.0,201.0,TIDAK,Normal,164.0,TIDAK,0.0,,,,0
+49.0,Perempuan,Non-Angina,Hungarian,130.0,207.0,TIDAK,Abnormalitas Gelombang ST-T,135.0,TIDAK,0.0,,,,0
+49.0,Laki-laki,Angina Atipikal,Hungarian,100.0,253.0,TIDAK,Normal,174.0,TIDAK,0.0,,,,0
+49.0,Laki-laki,Non-Angina,Hungarian,140.0,187.0,TIDAK,Normal,172.0,TIDAK,0.0,,,,0
+49.0,Laki-laki,Asimtomatik,Hungarian,120.0,297.0,,Normal,132.0,TIDAK,1.0,Datar,,,0
+49.0,Laki-laki,Asimtomatik,Hungarian,140.0,,TIDAK,Normal,130.0,TIDAK,0.0,,,,0
+50.0,Perempuan,Angina Atipikal,Hungarian,110.0,202.0,TIDAK,Normal,145.0,TIDAK,0.0,,,,0
+50.0,Perempuan,Asimtomatik,Hungarian,120.0,328.0,TIDAK,Normal,110.0,YA,1.0,Datar,,,0
+50.0,Laki-laki,Angina Atipikal,Hungarian,120.0,168.0,TIDAK,Normal,160.0,TIDAK,0.0,,0.0,,0
+50.0,Laki-laki,Angina Atipikal,Hungarian,140.0,216.0,TIDAK,Normal,170.0,TIDAK,0.0,,,Normal,0
+50.0,Laki-laki,Angina Atipikal,Hungarian,170.0,209.0,TIDAK,Abnormalitas Gelombang ST-T,116.0,TIDAK,0.0,,,,0
+50.0,Laki-laki,Asimtomatik,Hungarian,140.0,129.0,TIDAK,Normal,135.0,TIDAK,0.0,,,,0
+50.0,Laki-laki,Asimtomatik,Hungarian,150.0,215.0,TIDAK,Normal,140.0,YA,0.0,,,,0
+51.0,Perempuan,Angina Atipikal,Hungarian,160.0,194.0,TIDAK,Normal,170.0,TIDAK,0.0,,,,0
+51.0,Perempuan,Non-Angina,Hungarian,110.0,190.0,TIDAK,Normal,120.0,TIDAK,0.0,,,,0
+51.0,Perempuan,Non-Angina,Hungarian,130.0,220.0,TIDAK,Normal,160.0,YA,2.0,Meningkat,,,0
+51.0,Perempuan,Non-Angina,Hungarian,150.0,200.0,TIDAK,Normal,120.0,TIDAK,0.5,Meningkat,,,0
+51.0,Laki-laki,Angina Atipikal,Hungarian,125.0,188.0,TIDAK,Normal,145.0,TIDAK,0.0,,,,0
+51.0,Laki-laki,Angina Atipikal,Hungarian,130.0,224.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,0
+51.0,Laki-laki,Asimtomatik,Hungarian,130.0,179.0,TIDAK,Normal,100.0,TIDAK,0.0,,,Cacat Reversibel,0
+52.0,Perempuan,Angina Atipikal,Hungarian,120.0,210.0,TIDAK,Normal,148.0,TIDAK,0.0,,,,0
+52.0,Perempuan,Angina Atipikal,Hungarian,140.0,,TIDAK,Normal,140.0,TIDAK,0.0,,,,0
+52.0,Perempuan,Non-Angina,Hungarian,125.0,272.0,TIDAK,Normal,139.0,TIDAK,0.0,,,,0
+52.0,Perempuan,Asimtomatik,Hungarian,130.0,180.0,TIDAK,Normal,140.0,YA,1.5,Datar,,,0
+52.0,Laki-laki,Angina Atipikal,Hungarian,120.0,284.0,TIDAK,Normal,118.0,TIDAK,0.0,,,,0
+52.0,Laki-laki,Angina Atipikal,Hungarian,140.0,100.0,TIDAK,Normal,138.0,YA,0.0,,,,0
+52.0,Laki-laki,Angina Atipikal,Hungarian,160.0,196.0,TIDAK,Normal,165.0,TIDAK,0.0,,,,0
+52.0,Laki-laki,Non-Angina,Hungarian,140.0,259.0,TIDAK,Abnormalitas Gelombang ST-T,170.0,TIDAK,0.0,,,,0
+53.0,Perempuan,Angina Atipikal,Hungarian,113.0,468.0,,Normal,127.0,TIDAK,0.0,,,,0
+53.0,Perempuan,Angina Atipikal,Hungarian,140.0,216.0,TIDAK,Normal,142.0,YA,2.0,Datar,,,0
+53.0,Perempuan,Non-Angina,Hungarian,120.0,274.0,TIDAK,Normal,130.0,TIDAK,0.0,,,,0
+53.0,Laki-laki,Angina Atipikal,Hungarian,120.0,,TIDAK,Normal,132.0,TIDAK,0.0,,,,0
+53.0,Laki-laki,Angina Atipikal,Hungarian,140.0,320.0,TIDAK,Normal,162.0,TIDAK,0.0,,,,0
+53.0,Laki-laki,Non-Angina,Hungarian,120.0,195.0,TIDAK,Normal,140.0,TIDAK,0.0,,,,0
+53.0,Laki-laki,Asimtomatik,Hungarian,124.0,260.0,TIDAK,Abnormalitas Gelombang ST-T,112.0,YA,3.0,Datar,,,0
+53.0,Laki-laki,Asimtomatik,Hungarian,130.0,182.0,TIDAK,Normal,148.0,TIDAK,0.0,,,,0
+53.0,Laki-laki,Asimtomatik,Hungarian,140.0,243.0,TIDAK,Normal,155.0,TIDAK,0.0,,,,0
+54.0,Perempuan,Angina Atipikal,Hungarian,120.0,221.0,TIDAK,Normal,138.0,TIDAK,1.0,Meningkat,,,0
+54.0,Perempuan,Angina Atipikal,Hungarian,120.0,230.0,YA,Normal,140.0,TIDAK,0.0,,,,0
+54.0,Perempuan,Angina Atipikal,Hungarian,120.0,273.0,TIDAK,Normal,150.0,TIDAK,1.5,Datar,,,0
+54.0,Perempuan,Angina Atipikal,Hungarian,130.0,253.0,TIDAK,Abnormalitas Gelombang ST-T,155.0,TIDAK,0.0,,,,0
+54.0,Perempuan,Angina Atipikal,Hungarian,140.0,309.0,,Abnormalitas Gelombang ST-T,140.0,TIDAK,0.0,,,,0
+54.0,Perempuan,Angina Atipikal,Hungarian,150.0,230.0,TIDAK,Normal,130.0,TIDAK,0.0,,,,0
+54.0,Perempuan,Angina Atipikal,Hungarian,160.0,312.0,TIDAK,Normal,130.0,TIDAK,0.0,,,,0
+54.0,Laki-laki,Angina Tipikal,Hungarian,120.0,171.0,TIDAK,Normal,137.0,TIDAK,2.0,Meningkat,,,0
+54.0,Laki-laki,Angina Atipikal,Hungarian,110.0,208.0,TIDAK,Normal,142.0,TIDAK,0.0,,,,0
+54.0,Laki-laki,Angina Atipikal,Hungarian,120.0,238.0,TIDAK,Normal,154.0,TIDAK,0.0,,,,0
+54.0,Laki-laki,Angina Atipikal,Hungarian,120.0,246.0,TIDAK,Normal,110.0,TIDAK,0.0,,,,0
+54.0,Laki-laki,Angina Atipikal,Hungarian,160.0,195.0,TIDAK,Abnormalitas Gelombang ST-T,130.0,TIDAK,1.0,Meningkat,,,0
+54.0,Laki-laki,Angina Atipikal,Hungarian,160.0,305.0,TIDAK,Normal,175.0,TIDAK,0.0,,,,0
+54.0,Laki-laki,Non-Angina,Hungarian,120.0,217.0,TIDAK,Normal,137.0,TIDAK,0.0,,,,0
+54.0,Laki-laki,Non-Angina,Hungarian,150.0,,TIDAK,Normal,122.0,TIDAK,0.0,,,,0
+54.0,Laki-laki,Asimtomatik,Hungarian,150.0,365.0,TIDAK,Abnormalitas Gelombang ST-T,134.0,TIDAK,1.0,Meningkat,,,0
+55.0,Perempuan,Angina Atipikal,Hungarian,110.0,344.0,TIDAK,Abnormalitas Gelombang ST-T,160.0,TIDAK,0.0,,,,0
+55.0,Perempuan,Angina Atipikal,Hungarian,122.0,320.0,TIDAK,Normal,155.0,TIDAK,0.0,,,,0
+55.0,Perempuan,Angina Atipikal,Hungarian,130.0,394.0,TIDAK,Hipertrofi Ventrikel Kiri,150.0,TIDAK,0.0,,,,0
+55.0,Laki-laki,Angina Atipikal,Hungarian,120.0,256.0,YA,Normal,137.0,TIDAK,0.0,,,Cacat Reversibel,0
+55.0,Laki-laki,Angina Atipikal,Hungarian,140.0,196.0,TIDAK,Normal,150.0,TIDAK,0.0,,,Cacat Reversibel,0
+55.0,Laki-laki,Angina Atipikal,Hungarian,145.0,326.0,TIDAK,Normal,155.0,TIDAK,0.0,,,,0
+55.0,Laki-laki,Non-Angina,Hungarian,110.0,277.0,TIDAK,Normal,160.0,TIDAK,0.0,,,,0
+55.0,Laki-laki,Non-Angina,Hungarian,120.0,220.0,TIDAK,Hipertrofi Ventrikel Kiri,134.0,TIDAK,0.0,,,,0
+55.0,Laki-laki,Asimtomatik,Hungarian,120.0,270.0,TIDAK,Normal,140.0,TIDAK,0.0,,,,0
+55.0,Laki-laki,Asimtomatik,Hungarian,140.0,229.0,TIDAK,Normal,110.0,YA,0.5,Datar,,,0
+56.0,Perempuan,Non-Angina,Hungarian,130.0,219.0,,Abnormalitas Gelombang ST-T,164.0,TIDAK,0.0,,,Cacat Reversibel,0
+56.0,Laki-laki,Angina Atipikal,Hungarian,130.0,184.0,TIDAK,Normal,100.0,TIDAK,0.0,,,,0
+56.0,Laki-laki,Non-Angina,Hungarian,130.0,,TIDAK,Normal,114.0,TIDAK,0.0,,,,0
+56.0,Laki-laki,Non-Angina,Hungarian,130.0,276.0,TIDAK,Normal,128.0,YA,1.0,Meningkat,,Cacat Tetap,0
+56.0,Laki-laki,Asimtomatik,Hungarian,120.0,85.0,TIDAK,Normal,140.0,TIDAK,0.0,,,,0
+57.0,Perempuan,Angina Tipikal,Hungarian,130.0,308.0,TIDAK,Normal,98.0,TIDAK,1.0,Datar,,,0
+57.0,Perempuan,Asimtomatik,Hungarian,180.0,347.0,TIDAK,Abnormalitas Gelombang ST-T,126.0,YA,0.8,Datar,,,0
+57.0,Laki-laki,Angina Atipikal,Hungarian,140.0,260.0,YA,Normal,140.0,TIDAK,0.0,,,Cacat Tetap,0
+58.0,Laki-laki,Angina Atipikal,Hungarian,130.0,230.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,0
+58.0,Laki-laki,Angina Atipikal,Hungarian,130.0,251.0,TIDAK,Normal,110.0,TIDAK,0.0,,,,0
+58.0,Laki-laki,Non-Angina,Hungarian,140.0,179.0,TIDAK,Normal,160.0,TIDAK,0.0,,,,0
+58.0,Laki-laki,Asimtomatik,Hungarian,135.0,222.0,TIDAK,Normal,100.0,TIDAK,0.0,,,,0
+59.0,Perempuan,Angina Atipikal,Hungarian,130.0,188.0,TIDAK,Normal,124.0,TIDAK,1.0,Datar,,,0
+59.0,Laki-laki,Angina Atipikal,Hungarian,140.0,287.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,0
+59.0,Laki-laki,Non-Angina,Hungarian,130.0,318.0,TIDAK,Normal,120.0,YA,1.0,Datar,,Normal,0
+59.0,Laki-laki,Non-Angina,Hungarian,180.0,213.0,TIDAK,Normal,100.0,TIDAK,0.0,,,,0
+59.0,Laki-laki,Asimtomatik,Hungarian,140.0,,TIDAK,Normal,140.0,TIDAK,0.0,,0.0,,0
+60.0,Laki-laki,Non-Angina,Hungarian,120.0,246.0,TIDAK,Hipertrofi Ventrikel Kiri,135.0,TIDAK,0.0,,,,0
+61.0,Perempuan,Asimtomatik,Hungarian,130.0,294.0,TIDAK,Abnormalitas Gelombang ST-T,120.0,YA,1.0,Datar,,,0
+61.0,Laki-laki,Asimtomatik,Hungarian,125.0,292.0,TIDAK,Abnormalitas Gelombang ST-T,115.0,YA,0.0,,,,0
+62.0,Perempuan,Angina Tipikal,Hungarian,160.0,193.0,TIDAK,Normal,116.0,TIDAK,0.0,,,,0
+62.0,Laki-laki,Angina Atipikal,Hungarian,140.0,271.0,TIDAK,Normal,152.0,TIDAK,1.0,Meningkat,,,0
+31.0,Laki-laki,Asimtomatik,Hungarian,120.0,270.0,TIDAK,Normal,153.0,YA,1.5,Datar,,,1
+33.0,Perempuan,Asimtomatik,Hungarian,100.0,246.0,TIDAK,Normal,150.0,YA,1.0,Datar,,,1
+34.0,Laki-laki,Angina Tipikal,Hungarian,140.0,156.0,TIDAK,Normal,180.0,TIDAK,0.0,,,,1
+35.0,Laki-laki,Angina Atipikal,Hungarian,110.0,257.0,TIDAK,Normal,140.0,TIDAK,0.0,,,,1
+36.0,Laki-laki,Angina Atipikal,Hungarian,120.0,267.0,TIDAK,Normal,160.0,TIDAK,3.0,Datar,,,1
+37.0,Laki-laki,Asimtomatik,Hungarian,140.0,207.0,TIDAK,Normal,130.0,YA,1.5,Datar,,,1
+38.0,Laki-laki,Asimtomatik,Hungarian,110.0,196.0,TIDAK,Normal,166.0,TIDAK,0.0,,,,1
+38.0,Laki-laki,Asimtomatik,Hungarian,120.0,282.0,TIDAK,Normal,170.0,TIDAK,0.0,,,,1
+38.0,Laki-laki,Asimtomatik,Hungarian,92.0,117.0,TIDAK,Normal,134.0,YA,2.5,Datar,,,1
+40.0,Laki-laki,Asimtomatik,Hungarian,120.0,466.0,,Normal,152.0,YA,1.0,Datar,,Cacat Tetap,1
+41.0,Laki-laki,Asimtomatik,Hungarian,110.0,289.0,TIDAK,Normal,170.0,TIDAK,0.0,,,Cacat Tetap,1
+41.0,Laki-laki,Asimtomatik,Hungarian,120.0,237.0,,Normal,138.0,YA,1.0,Datar,,,1
+43.0,Laki-laki,Asimtomatik,Hungarian,150.0,247.0,TIDAK,Normal,130.0,YA,2.0,Datar,,,1
+46.0,Laki-laki,Asimtomatik,Hungarian,110.0,202.0,TIDAK,Normal,150.0,YA,0.0,,,,1
+46.0,Laki-laki,Asimtomatik,Hungarian,118.0,186.0,TIDAK,Normal,124.0,TIDAK,0.0,,,Cacat Reversibel,1
+46.0,Laki-laki,Asimtomatik,Hungarian,120.0,277.0,TIDAK,Normal,125.0,YA,1.0,Datar,,,1
+47.0,Laki-laki,Non-Angina,Hungarian,140.0,193.0,TIDAK,Normal,145.0,YA,1.0,Datar,,,1
+47.0,Laki-laki,Asimtomatik,Hungarian,150.0,226.0,TIDAK,Normal,98.0,YA,1.5,Datar,0.0,Cacat Reversibel,1
+48.0,Laki-laki,Asimtomatik,Hungarian,106.0,263.0,YA,Normal,110.0,TIDAK,0.0,,,,1
+48.0,Laki-laki,Asimtomatik,Hungarian,120.0,260.0,TIDAK,Normal,115.0,TIDAK,2.0,Datar,,,1
+48.0,Laki-laki,Asimtomatik,Hungarian,160.0,268.0,TIDAK,Normal,103.0,YA,1.0,Datar,,,1
+49.0,Perempuan,Non-Angina,Hungarian,160.0,180.0,TIDAK,Normal,156.0,TIDAK,1.0,Datar,,,1
+49.0,Laki-laki,Non-Angina,Hungarian,115.0,265.0,TIDAK,Normal,175.0,TIDAK,0.0,,,,1
+49.0,Laki-laki,Asimtomatik,Hungarian,130.0,206.0,TIDAK,Normal,170.0,TIDAK,0.0,,,,1
+50.0,Perempuan,Non-Angina,Hungarian,140.0,288.0,TIDAK,Normal,140.0,YA,0.0,,,Cacat Reversibel,1
+50.0,Laki-laki,Asimtomatik,Hungarian,145.0,264.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,1
+51.0,Perempuan,Asimtomatik,Hungarian,160.0,303.0,TIDAK,Normal,150.0,YA,1.0,Datar,,,1
+52.0,Laki-laki,Asimtomatik,Hungarian,130.0,225.0,TIDAK,Normal,120.0,YA,2.0,Datar,,,1
+54.0,Laki-laki,Asimtomatik,Hungarian,125.0,216.0,TIDAK,Normal,140.0,TIDAK,0.0,,,,1
+54.0,Laki-laki,Asimtomatik,Hungarian,125.0,224.0,TIDAK,Normal,122.0,TIDAK,2.0,Datar,,,1
+55.0,Laki-laki,Asimtomatik,Hungarian,140.0,201.0,TIDAK,Normal,130.0,YA,3.0,Datar,,,1
+57.0,Laki-laki,Angina Atipikal,Hungarian,140.0,265.0,TIDAK,Abnormalitas Gelombang ST-T,145.0,YA,1.0,Datar,,,1
+58.0,Laki-laki,Non-Angina,Hungarian,130.0,213.0,TIDAK,Abnormalitas Gelombang ST-T,140.0,TIDAK,0.0,,,Cacat Tetap,1
+59.0,Perempuan,Asimtomatik,Hungarian,130.0,338.0,YA,Abnormalitas Gelombang ST-T,130.0,YA,1.5,Datar,,,1
+60.0,Laki-laki,Asimtomatik,Hungarian,100.0,248.0,TIDAK,Normal,125.0,TIDAK,1.0,Datar,,,1
+63.0,Laki-laki,Asimtomatik,Hungarian,150.0,223.0,TIDAK,Normal,115.0,TIDAK,0.0,,,,1
+65.0,Laki-laki,Asimtomatik,Hungarian,140.0,306.0,YA,Normal,87.0,YA,1.5,Datar,,,1
+32.0,Laki-laki,Asimtomatik,Hungarian,118.0,529.0,TIDAK,Normal,130.0,TIDAK,0.0,,,,1
+38.0,Laki-laki,Asimtomatik,Hungarian,110.0,,TIDAK,Normal,150.0,YA,1.0,Datar,,,1
+39.0,Laki-laki,Asimtomatik,Hungarian,110.0,280.0,TIDAK,Normal,150.0,TIDAK,0.0,,,Cacat Tetap,1
+40.0,Perempuan,Asimtomatik,Hungarian,150.0,392.0,TIDAK,Normal,130.0,TIDAK,2.0,Datar,,Cacat Tetap,1
+43.0,Laki-laki,Angina Tipikal,Hungarian,120.0,291.0,TIDAK,Abnormalitas Gelombang ST-T,155.0,TIDAK,0.0,,,,1
+45.0,Laki-laki,Asimtomatik,Hungarian,130.0,219.0,TIDAK,Abnormalitas Gelombang ST-T,130.0,YA,1.0,Datar,,,1
+46.0,Laki-laki,Asimtomatik,Hungarian,120.0,231.0,TIDAK,Normal,115.0,YA,0.0,,,,1
+46.0,Laki-laki,Asimtomatik,Hungarian,130.0,222.0,TIDAK,Normal,112.0,TIDAK,0.0,,,,1
+48.0,Laki-laki,Asimtomatik,Hungarian,122.0,275.0,YA,Abnormalitas Gelombang ST-T,150.0,YA,2.0,Menurun,,,1
+48.0,Laki-laki,Asimtomatik,Hungarian,160.0,193.0,TIDAK,Normal,102.0,YA,3.0,Datar,,,1
+48.0,Laki-laki,Asimtomatik,Hungarian,160.0,329.0,TIDAK,Normal,92.0,YA,1.5,Datar,,,1
+48.0,Laki-laki,Asimtomatik,Hungarian,160.0,355.0,TIDAK,Normal,99.0,YA,2.0,Datar,,,1
+50.0,Laki-laki,Asimtomatik,Hungarian,130.0,233.0,TIDAK,Normal,121.0,YA,2.0,Datar,,Cacat Reversibel,1
+52.0,Laki-laki,Asimtomatik,Hungarian,120.0,182.0,TIDAK,Normal,150.0,TIDAK,0.0,,,,1
+52.0,Laki-laki,Asimtomatik,Hungarian,170.0,,TIDAK,Normal,126.0,YA,1.5,Datar,,,1
+53.0,Laki-laki,Asimtomatik,Hungarian,120.0,246.0,TIDAK,Normal,116.0,YA,0.0,,,,1
+54.0,Laki-laki,Non-Angina,Hungarian,120.0,237.0,TIDAK,Normal,150.0,YA,1.5,,,Cacat Reversibel,1
+54.0,Laki-laki,Asimtomatik,Hungarian,130.0,242.0,TIDAK,Normal,91.0,YA,1.0,Datar,,,1
+54.0,Laki-laki,Asimtomatik,Hungarian,130.0,603.0,YA,Normal,125.0,YA,1.0,Datar,,,1
+54.0,Laki-laki,Asimtomatik,Hungarian,140.0,,TIDAK,Normal,118.0,YA,0.0,,,,1
+54.0,Laki-laki,Asimtomatik,Hungarian,200.0,198.0,TIDAK,Normal,142.0,YA,2.0,Datar,,,1
+55.0,Laki-laki,Asimtomatik,Hungarian,140.0,268.0,TIDAK,Normal,128.0,YA,1.5,Datar,,,1
+56.0,Laki-laki,Asimtomatik,Hungarian,150.0,213.0,YA,Normal,125.0,YA,1.0,Datar,,,1
+57.0,Laki-laki,Asimtomatik,Hungarian,150.0,255.0,TIDAK,Normal,92.0,YA,3.0,Datar,,,1
+58.0,Laki-laki,Non-Angina,Hungarian,160.0,211.0,YA,Abnormalitas Gelombang ST-T,92.0,TIDAK,0.0,,,,1
+58.0,Laki-laki,Asimtomatik,Hungarian,130.0,263.0,TIDAK,Normal,140.0,YA,2.0,Datar,,,1
+41.0,Laki-laki,Asimtomatik,Hungarian,130.0,172.0,TIDAK,Abnormalitas Gelombang ST-T,130.0,TIDAK,2.0,Datar,,,1
+43.0,Laki-laki,Asimtomatik,Hungarian,120.0,175.0,TIDAK,Normal,120.0,YA,1.0,Datar,,Cacat Reversibel,1
+44.0,Laki-laki,Angina Atipikal,Hungarian,150.0,288.0,TIDAK,Normal,150.0,YA,3.0,Datar,,,1
+44.0,Laki-laki,Asimtomatik,Hungarian,130.0,290.0,TIDAK,Normal,100.0,YA,2.0,Datar,,,1
+46.0,Laki-laki,Angina Tipikal,Hungarian,140.0,272.0,YA,Normal,175.0,TIDAK,2.0,Datar,,,1
+47.0,Perempuan,Non-Angina,Hungarian,135.0,248.0,YA,Normal,170.0,TIDAK,0.0,,,,1
+48.0,Perempuan,Asimtomatik,Hungarian,138.0,214.0,TIDAK,Normal,108.0,YA,1.5,Datar,,,1
+49.0,Laki-laki,Asimtomatik,Hungarian,130.0,341.0,TIDAK,Normal,120.0,YA,1.0,Datar,,,1
+49.0,Laki-laki,Asimtomatik,Hungarian,140.0,234.0,TIDAK,Normal,140.0,YA,1.0,Datar,,,1
+51.0,Laki-laki,Non-Angina,Hungarian,135.0,160.0,TIDAK,Normal,150.0,TIDAK,2.0,Datar,,,1
+52.0,Laki-laki,Asimtomatik,Hungarian,112.0,342.0,TIDAK,Abnormalitas Gelombang ST-T,96.0,YA,1.0,Datar,,,1
+52.0,Laki-laki,Asimtomatik,Hungarian,130.0,298.0,TIDAK,Normal,110.0,YA,1.0,Datar,,,1
+52.0,Laki-laki,Asimtomatik,Hungarian,140.0,404.0,TIDAK,Normal,124.0,YA,2.0,Datar,,,1
+52.0,Laki-laki,Asimtomatik,Hungarian,160.0,246.0,TIDAK,Abnormalitas Gelombang ST-T,82.0,YA,4.0,Datar,,,1
+53.0,Laki-laki,Non-Angina,Hungarian,145.0,518.0,TIDAK,Normal,130.0,TIDAK,0.0,,,,1
+53.0,Laki-laki,Asimtomatik,Hungarian,180.0,285.0,TIDAK,Abnormalitas Gelombang ST-T,120.0,YA,1.5,Datar,,,1
+54.0,Laki-laki,Asimtomatik,Hungarian,140.0,216.0,TIDAK,Normal,105.0,TIDAK,1.5,Datar,,,1
+55.0,Laki-laki,Angina Tipikal,Hungarian,140.0,295.0,TIDAK,,136.0,TIDAK,0.0,,,,1
+55.0,Laki-laki,Angina Atipikal,Hungarian,160.0,292.0,YA,Normal,143.0,YA,2.0,Datar,,,1
+55.0,Laki-laki,Asimtomatik,Hungarian,145.0,248.0,TIDAK,Normal,96.0,YA,2.0,Datar,,,1
+56.0,Perempuan,Angina Atipikal,Hungarian,120.0,279.0,TIDAK,Normal,150.0,TIDAK,1.0,Datar,,,1
+56.0,Laki-laki,Asimtomatik,Hungarian,150.0,230.0,TIDAK,Abnormalitas Gelombang ST-T,124.0,YA,1.5,Datar,,,1
+56.0,Laki-laki,Asimtomatik,Hungarian,170.0,388.0,TIDAK,Abnormalitas Gelombang ST-T,122.0,YA,2.0,Datar,,,1
+58.0,Laki-laki,Angina Atipikal,Hungarian,136.0,164.0,TIDAK,Abnormalitas Gelombang ST-T,99.0,YA,2.0,Datar,,,1
+59.0,Laki-laki,Asimtomatik,Hungarian,130.0,,TIDAK,Normal,125.0,TIDAK,0.0,,,,1
+59.0,Laki-laki,Asimtomatik,Hungarian,140.0,264.0,YA,Hipertrofi Ventrikel Kiri,119.0,YA,0.0,,,,1
+65.0,Laki-laki,Asimtomatik,Hungarian,170.0,263.0,YA,Normal,112.0,YA,2.0,Datar,,,1
+66.0,Laki-laki,Asimtomatik,Hungarian,140.0,,TIDAK,Normal,94.0,YA,1.0,Datar,,,1
+41.0,Laki-laki,Asimtomatik,Hungarian,120.0,336.0,TIDAK,Normal,118.0,YA,3.0,Datar,,,1
+43.0,Laki-laki,Asimtomatik,Hungarian,140.0,288.0,TIDAK,Normal,135.0,YA,2.0,Datar,,,1
+44.0,Laki-laki,Asimtomatik,Hungarian,135.0,491.0,TIDAK,Normal,135.0,TIDAK,0.0,,,,1
+47.0,Perempuan,Asimtomatik,Hungarian,120.0,205.0,TIDAK,Normal,98.0,YA,2.0,Datar,,Cacat Tetap,1
+47.0,Laki-laki,Asimtomatik,Hungarian,160.0,291.0,TIDAK,Abnormalitas Gelombang ST-T,158.0,YA,3.0,Datar,,,1
+49.0,Laki-laki,Asimtomatik,Hungarian,128.0,212.0,TIDAK,Normal,96.0,YA,0.0,,,,1
+49.0,Laki-laki,Asimtomatik,Hungarian,150.0,222.0,TIDAK,Normal,122.0,TIDAK,2.0,Datar,,,1
+50.0,Laki-laki,Asimtomatik,Hungarian,140.0,231.0,TIDAK,Abnormalitas Gelombang ST-T,140.0,YA,5.0,Datar,,,1
+50.0,Laki-laki,Asimtomatik,Hungarian,140.0,341.0,TIDAK,Abnormalitas Gelombang ST-T,125.0,YA,2.5,Datar,,,1
+52.0,Laki-laki,Asimtomatik,Hungarian,140.0,266.0,TIDAK,Normal,134.0,YA,2.0,Datar,,,1
+52.0,Laki-laki,Asimtomatik,Hungarian,160.0,331.0,TIDAK,Normal,94.0,YA,2.5,,,,1
+54.0,Perempuan,Non-Angina,Hungarian,130.0,294.0,TIDAK,Abnormalitas Gelombang ST-T,100.0,YA,0.0,Datar,,,1
+56.0,Laki-laki,Asimtomatik,Hungarian,155.0,342.0,YA,Normal,150.0,YA,3.0,Datar,,,1
+58.0,Perempuan,Angina Atipikal,Hungarian,180.0,393.0,TIDAK,Normal,110.0,YA,1.0,Datar,,Cacat Reversibel,1
+65.0,Laki-laki,Asimtomatik,Hungarian,130.0,275.0,TIDAK,Abnormalitas Gelombang ST-T,115.0,YA,1.0,Datar,,,1
+32.0,Laki-laki,Angina Tipikal,Switzerland,95.0,0.0,,Normal,127.0,TIDAK,0.7,Meningkat,,,1
+34.0,Laki-laki,Asimtomatik,Switzerland,115.0,0.0,,,154.0,TIDAK,0.2,Meningkat,,,1
+35.0,Laki-laki,Asimtomatik,Switzerland,,0.0,,Normal,130.0,YA,,,,Cacat Reversibel,3
+36.0,Laki-laki,Asimtomatik,Switzerland,110.0,0.0,,Normal,125.0,YA,1.0,Datar,,Cacat Tetap,1
+38.0,Perempuan,Asimtomatik,Switzerland,105.0,0.0,,Normal,166.0,TIDAK,2.8,Meningkat,,,2
+38.0,Perempuan,Asimtomatik,Switzerland,110.0,0.0,TIDAK,Normal,156.0,TIDAK,0.0,Datar,,Normal,1
+38.0,Laki-laki,Non-Angina,Switzerland,100.0,0.0,,Normal,179.0,TIDAK,-1.1,Meningkat,,,0
+38.0,Laki-laki,Non-Angina,Switzerland,115.0,0.0,TIDAK,Normal,128.0,YA,0.0,Datar,,Cacat Reversibel,1
+38.0,Laki-laki,Asimtomatik,Switzerland,135.0,0.0,,Normal,150.0,TIDAK,0.0,,,Normal,2
+38.0,Laki-laki,Asimtomatik,Switzerland,150.0,0.0,,Normal,120.0,YA,,,,Normal,1
+40.0,Laki-laki,Asimtomatik,Switzerland,95.0,0.0,,Abnormalitas Gelombang ST-T,144.0,TIDAK,0.0,Meningkat,,,2
+41.0,Laki-laki,Asimtomatik,Switzerland,125.0,0.0,,Normal,176.0,TIDAK,1.6,Meningkat,,,2
+42.0,Laki-laki,Asimtomatik,Switzerland,105.0,0.0,,Normal,128.0,YA,-1.5,Menurun,,,1
+42.0,Laki-laki,Asimtomatik,Switzerland,145.0,0.0,TIDAK,Normal,99.0,YA,0.0,Datar,,,2
+43.0,Laki-laki,Asimtomatik,Switzerland,100.0,0.0,,Normal,122.0,TIDAK,1.5,Menurun,,,3
+43.0,Laki-laki,Asimtomatik,Switzerland,115.0,0.0,TIDAK,Normal,145.0,YA,2.0,Datar,,Cacat Reversibel,4
+43.0,Laki-laki,Asimtomatik,Switzerland,140.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,140.0,YA,0.5,Meningkat,,Cacat Reversibel,2
+45.0,Laki-laki,Non-Angina,Switzerland,110.0,0.0,,Normal,138.0,TIDAK,-0.1,Meningkat,,,0
+46.0,Laki-laki,Asimtomatik,Switzerland,100.0,0.0,,Abnormalitas Gelombang ST-T,133.0,TIDAK,-2.6,Datar,,,1
+46.0,Laki-laki,Asimtomatik,Switzerland,115.0,0.0,TIDAK,Normal,113.0,YA,1.5,Datar,,Cacat Reversibel,1
+47.0,Laki-laki,Non-Angina,Switzerland,110.0,0.0,,Normal,120.0,YA,0.0,,,Normal,1
+47.0,Laki-laki,Non-Angina,Switzerland,155.0,0.0,TIDAK,Normal,118.0,YA,1.0,Datar,,Normal,3
+47.0,Laki-laki,Asimtomatik,Switzerland,110.0,0.0,,Abnormalitas Gelombang ST-T,149.0,TIDAK,2.1,Meningkat,,,2
+47.0,Laki-laki,Asimtomatik,Switzerland,160.0,0.0,TIDAK,Normal,124.0,YA,0.0,Datar,,Cacat Reversibel,1
+48.0,Laki-laki,Asimtomatik,Switzerland,115.0,0.0,,Normal,128.0,TIDAK,0.0,Datar,,Cacat Tetap,2
+50.0,Perempuan,Asimtomatik,Switzerland,160.0,0.0,,Normal,110.0,TIDAK,0.0,,,Normal,1
+50.0,Laki-laki,Asimtomatik,Switzerland,115.0,0.0,TIDAK,Normal,120.0,YA,0.5,Datar,,Cacat Tetap,3
+50.0,Laki-laki,Asimtomatik,Switzerland,120.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,156.0,YA,0.0,Meningkat,,Cacat Tetap,3
+50.0,Laki-laki,Asimtomatik,Switzerland,145.0,0.0,,Normal,139.0,YA,0.7,Datar,,,1
+51.0,Perempuan,Asimtomatik,Switzerland,120.0,0.0,,Normal,127.0,YA,1.5,Meningkat,,,2
+51.0,Laki-laki,Asimtomatik,Switzerland,110.0,0.0,,Normal,92.0,TIDAK,0.0,Datar,,,4
+51.0,Laki-laki,Asimtomatik,Switzerland,120.0,0.0,YA,Normal,104.0,TIDAK,0.0,Datar,,Normal,3
+51.0,Laki-laki,Asimtomatik,Switzerland,130.0,0.0,,Normal,170.0,TIDAK,-0.7,Meningkat,,,2
+51.0,Laki-laki,Asimtomatik,Switzerland,130.0,0.0,,Abnormalitas Gelombang ST-T,163.0,TIDAK,0.0,,,Cacat Reversibel,1
+51.0,Laki-laki,Asimtomatik,Switzerland,140.0,0.0,TIDAK,Normal,60.0,TIDAK,0.0,Datar,,Normal,2
+51.0,Laki-laki,Asimtomatik,Switzerland,95.0,0.0,,Normal,126.0,TIDAK,2.2,Datar,,,2
+52.0,Laki-laki,Asimtomatik,Switzerland,130.0,0.0,,Normal,120.0,TIDAK,0.0,Datar,,Cacat Reversibel,2
+52.0,Laki-laki,Asimtomatik,Switzerland,135.0,0.0,,Normal,128.0,YA,2.0,Datar,,Cacat Reversibel,2
+52.0,Laki-laki,Asimtomatik,Switzerland,165.0,0.0,,Normal,122.0,YA,1.0,Meningkat,,Cacat Reversibel,2
+52.0,Laki-laki,Asimtomatik,Switzerland,95.0,0.0,,Normal,82.0,YA,,,,,2
+53.0,Laki-laki,Angina Atipikal,Switzerland,120.0,0.0,TIDAK,Normal,95.0,TIDAK,0.0,Datar,,Normal,3
+53.0,Laki-laki,Angina Atipikal,Switzerland,130.0,0.0,,Abnormalitas Gelombang ST-T,120.0,TIDAK,0.7,Menurun,,,0
+53.0,Laki-laki,Non-Angina,Switzerland,105.0,0.0,TIDAK,Normal,115.0,TIDAK,0.0,Datar,,Cacat Reversibel,1
+53.0,Laki-laki,Non-Angina,Switzerland,160.0,0.0,,Hipertrofi Ventrikel Kiri,122.0,YA,0.0,,,Cacat Reversibel,1
+53.0,Laki-laki,Asimtomatik,Switzerland,120.0,0.0,,Normal,120.0,TIDAK,0.0,Datar,,Cacat Reversibel,1
+53.0,Laki-laki,Asimtomatik,Switzerland,125.0,0.0,,Normal,120.0,TIDAK,1.5,Meningkat,,,4
+53.0,Laki-laki,Asimtomatik,Switzerland,130.0,0.0,TIDAK,Hipertrofi Ventrikel Kiri,135.0,YA,1.0,Datar,,Cacat Reversibel,2
+53.0,Laki-laki,Asimtomatik,Switzerland,80.0,0.0,,Normal,141.0,YA,2.0,Menurun,,,0
+54.0,Laki-laki,Asimtomatik,Switzerland,120.0,0.0,TIDAK,Normal,155.0,TIDAK,0.0,Datar,,Cacat Reversibel,2
+54.0,Laki-laki,Asimtomatik,Switzerland,130.0,0.0,,Normal,110.0,YA,3.0,Datar,,Cacat Reversibel,3
+54.0,Laki-laki,Asimtomatik,Switzerland,180.0,0.0,,Normal,150.0,TIDAK,1.5,Datar,,Cacat Reversibel,1
+55.0,Laki-laki,Angina Atipikal,Switzerland,140.0,0.0,,Abnormalitas Gelombang ST-T,150.0,TIDAK,0.2,Meningkat,,,0
+55.0,Laki-laki,Asimtomatik,Switzerland,115.0,0.0,,Normal,155.0,TIDAK,0.1,Datar,,,1
+55.0,Laki-laki,Asimtomatik,Switzerland,120.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,92.0,TIDAK,0.3,Meningkat,,Cacat Reversibel,4
+55.0,Laki-laki,Asimtomatik,Switzerland,140.0,0.0,TIDAK,Normal,83.0,TIDAK,0.0,Datar,,Cacat Reversibel,2
+56.0,Laki-laki,Non-Angina,Switzerland,120.0,0.0,TIDAK,Normal,97.0,TIDAK,0.0,Datar,,Cacat Reversibel,0
+56.0,Laki-laki,Non-Angina,Switzerland,125.0,0.0,,Normal,98.0,TIDAK,-2.0,Datar,,Cacat Reversibel,2
+56.0,Laki-laki,Non-Angina,Switzerland,155.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,99.0,TIDAK,0.0,Datar,,Normal,2
+56.0,Laki-laki,Asimtomatik,Switzerland,115.0,0.0,,Abnormalitas Gelombang ST-T,82.0,TIDAK,-1.0,Meningkat,,,1
+56.0,Laki-laki,Asimtomatik,Switzerland,120.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,100.0,YA,-1.0,Menurun,,Cacat Reversibel,2
+56.0,Laki-laki,Asimtomatik,Switzerland,120.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,148.0,TIDAK,0.0,Datar,,,2
+56.0,Laki-laki,Asimtomatik,Switzerland,125.0,0.0,YA,Normal,103.0,YA,1.0,Datar,,Cacat Reversibel,3
+56.0,Laki-laki,Asimtomatik,Switzerland,140.0,0.0,,Normal,121.0,YA,1.8,Meningkat,,,1
+57.0,Laki-laki,Non-Angina,Switzerland,105.0,0.0,,Normal,148.0,TIDAK,0.3,Datar,,,1
+57.0,Laki-laki,Asimtomatik,Switzerland,110.0,0.0,,Abnormalitas Gelombang ST-T,131.0,YA,1.4,Meningkat,1.0,,3
+57.0,Laki-laki,Asimtomatik,Switzerland,140.0,0.0,TIDAK,Normal,120.0,YA,2.0,Datar,,Cacat Tetap,2
+57.0,Laki-laki,Asimtomatik,Switzerland,140.0,0.0,,Normal,100.0,YA,0.0,,,Cacat Tetap,3
+57.0,Laki-laki,Asimtomatik,Switzerland,160.0,0.0,,Normal,98.0,YA,2.0,Datar,,Cacat Reversibel,2
+57.0,Laki-laki,Asimtomatik,Switzerland,95.0,0.0,,Normal,182.0,TIDAK,0.7,Menurun,,,1
+58.0,Laki-laki,Asimtomatik,Switzerland,115.0,0.0,,Normal,138.0,TIDAK,0.5,Meningkat,,,1
+58.0,Laki-laki,Asimtomatik,Switzerland,130.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,100.0,YA,1.0,Datar,,Cacat Tetap,4
+58.0,Laki-laki,Asimtomatik,Switzerland,170.0,0.0,,Abnormalitas Gelombang ST-T,105.0,YA,0.0,,,Normal,1
+59.0,Laki-laki,Non-Angina,Switzerland,125.0,0.0,,Normal,175.0,TIDAK,2.6,Datar,,,1
+59.0,Laki-laki,Asimtomatik,Switzerland,110.0,0.0,,Normal,94.0,TIDAK,0.0,,,Cacat Tetap,3
+59.0,Laki-laki,Asimtomatik,Switzerland,120.0,0.0,TIDAK,Normal,115.0,TIDAK,0.0,Datar,,Normal,2
+59.0,Laki-laki,Asimtomatik,Switzerland,125.0,0.0,,Normal,119.0,YA,0.9,Meningkat,,,1
+59.0,Laki-laki,Asimtomatik,Switzerland,135.0,0.0,TIDAK,Normal,115.0,YA,1.0,Datar,,Cacat Reversibel,1
+60.0,Laki-laki,Non-Angina,Switzerland,115.0,0.0,,Normal,143.0,TIDAK,2.4,Meningkat,,,1
+60.0,Laki-laki,Asimtomatik,Switzerland,125.0,0.0,,Normal,110.0,TIDAK,0.1,Meningkat,2.0,,3
+60.0,Laki-laki,Asimtomatik,Switzerland,130.0,0.0,,Abnormalitas Gelombang ST-T,130.0,YA,1.1,Menurun,1.0,,1
+60.0,Laki-laki,Asimtomatik,Switzerland,135.0,0.0,TIDAK,Normal,63.0,YA,0.5,Meningkat,,Cacat Reversibel,3
+60.0,Laki-laki,Asimtomatik,Switzerland,160.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,99.0,YA,0.5,Datar,,Cacat Reversibel,3
+60.0,Laki-laki,Asimtomatik,Switzerland,160.0,0.0,,Normal,149.0,TIDAK,0.4,Datar,,,1
+61.0,Laki-laki,Non-Angina,Switzerland,200.0,0.0,,Abnormalitas Gelombang ST-T,70.0,TIDAK,0.0,,,Normal,3
+61.0,Laki-laki,Asimtomatik,Switzerland,105.0,0.0,,Normal,110.0,YA,1.5,Meningkat,,,1
+61.0,Laki-laki,Asimtomatik,Switzerland,110.0,0.0,,Normal,113.0,TIDAK,1.4,Datar,,,1
+61.0,Laki-laki,Asimtomatik,Switzerland,125.0,0.0,TIDAK,Normal,105.0,YA,0.0,Menurun,,Cacat Reversibel,3
+61.0,Laki-laki,Asimtomatik,Switzerland,130.0,0.0,TIDAK,Hipertrofi Ventrikel Kiri,115.0,TIDAK,0.0,Datar,,Cacat Reversibel,3
+61.0,Laki-laki,Asimtomatik,Switzerland,130.0,0.0,,Normal,77.0,TIDAK,2.5,Datar,,,3
+61.0,Laki-laki,Asimtomatik,Switzerland,150.0,0.0,TIDAK,Normal,105.0,YA,0.0,Datar,,Cacat Reversibel,1
+61.0,Laki-laki,Asimtomatik,Switzerland,150.0,0.0,TIDAK,Normal,117.0,YA,2.0,Datar,,Cacat Reversibel,2
+61.0,Laki-laki,Asimtomatik,Switzerland,160.0,0.0,YA,Abnormalitas Gelombang ST-T,145.0,TIDAK,1.0,Datar,,Cacat Reversibel,2
+62.0,Perempuan,Angina Tipikal,Switzerland,140.0,0.0,,Normal,143.0,TIDAK,0.0,,,Normal,2
+62.0,Perempuan,Asimtomatik,Switzerland,120.0,0.0,,Abnormalitas Gelombang ST-T,123.0,YA,1.7,Menurun,,,1
+62.0,Laki-laki,Angina Tipikal,Switzerland,120.0,0.0,,Hipertrofi Ventrikel Kiri,134.0,TIDAK,-0.8,Datar,2.0,,1
+62.0,Laki-laki,Non-Angina,Switzerland,160.0,0.0,TIDAK,Normal,72.0,YA,0.0,Datar,,Normal,3
+62.0,Laki-laki,Asimtomatik,Switzerland,115.0,0.0,,Normal,128.0,YA,2.5,Menurun,,,2
+62.0,Laki-laki,Asimtomatik,Switzerland,115.0,0.0,,Normal,72.0,YA,-0.5,Datar,,Normal,1
+62.0,Laki-laki,Asimtomatik,Switzerland,150.0,0.0,,Abnormalitas Gelombang ST-T,78.0,TIDAK,2.0,Datar,,Cacat Reversibel,3
+63.0,Laki-laki,Asimtomatik,Switzerland,100.0,0.0,,Normal,109.0,TIDAK,-0.9,Datar,,,1
+63.0,Laki-laki,Asimtomatik,Switzerland,140.0,0.0,,Hipertrofi Ventrikel Kiri,149.0,TIDAK,2.0,Meningkat,,,2
+63.0,Laki-laki,Asimtomatik,Switzerland,150.0,0.0,TIDAK,Normal,86.0,YA,2.0,Datar,,,3
+63.0,Laki-laki,Asimtomatik,Switzerland,150.0,0.0,,Abnormalitas Gelombang ST-T,154.0,TIDAK,3.7,Meningkat,,,3
+63.0,Laki-laki,Asimtomatik,Switzerland,185.0,0.0,TIDAK,Normal,98.0,YA,0.0,Meningkat,,Cacat Reversibel,1
+64.0,Perempuan,Asimtomatik,Switzerland,200.0,0.0,TIDAK,Normal,140.0,YA,1.0,Datar,,Normal,3
+64.0,Perempuan,Asimtomatik,Switzerland,95.0,0.0,,Normal,145.0,TIDAK,1.1,Menurun,,,1
+64.0,Laki-laki,Asimtomatik,Switzerland,110.0,0.0,,Normal,114.0,YA,1.3,Menurun,,,1
+65.0,Laki-laki,Asimtomatik,Switzerland,115.0,0.0,TIDAK,Normal,93.0,YA,0.0,Datar,,Cacat Reversibel,1
+65.0,Laki-laki,Asimtomatik,Switzerland,145.0,0.0,,Abnormalitas Gelombang ST-T,67.0,TIDAK,,,,Cacat Tetap,3
+65.0,Laki-laki,Asimtomatik,Switzerland,155.0,0.0,,Normal,154.0,TIDAK,1.0,Meningkat,,,0
+65.0,Laki-laki,Asimtomatik,Switzerland,160.0,0.0,YA,Abnormalitas Gelombang ST-T,122.0,TIDAK,,,,Cacat Reversibel,3
+66.0,Perempuan,Asimtomatik,Switzerland,155.0,0.0,,Normal,90.0,TIDAK,0.0,,,Cacat Reversibel,1
+66.0,Laki-laki,Asimtomatik,Switzerland,150.0,0.0,TIDAK,Normal,108.0,YA,2.0,Datar,,Cacat Reversibel,3
+67.0,Laki-laki,Angina Tipikal,Switzerland,145.0,0.0,TIDAK,Hipertrofi Ventrikel Kiri,125.0,TIDAK,0.0,Datar,,Normal,2
+68.0,Laki-laki,Asimtomatik,Switzerland,135.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,120.0,YA,0.0,Meningkat,,Cacat Reversibel,3
+68.0,Laki-laki,Asimtomatik,Switzerland,145.0,0.0,,Normal,136.0,TIDAK,1.8,Meningkat,,,1
+69.0,Laki-laki,Asimtomatik,Switzerland,135.0,0.0,TIDAK,Normal,130.0,TIDAK,0.0,Datar,,Cacat Tetap,1
+69.0,Laki-laki,Asimtomatik,Switzerland,,0.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,Cacat Reversibel,3
+70.0,Laki-laki,Asimtomatik,Switzerland,115.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,92.0,YA,0.0,Datar,,Cacat Reversibel,1
+70.0,Laki-laki,Asimtomatik,Switzerland,140.0,0.0,YA,Normal,157.0,YA,2.0,Datar,,Cacat Reversibel,3
+72.0,Laki-laki,Non-Angina,Switzerland,160.0,0.0,,Hipertrofi Ventrikel Kiri,114.0,TIDAK,1.6,Datar,2.0,,0
+73.0,Perempuan,Non-Angina,Switzerland,160.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,121.0,TIDAK,0.0,Meningkat,,Normal,1
+74.0,Laki-laki,Angina Atipikal,Switzerland,145.0,0.0,,Abnormalitas Gelombang ST-T,123.0,TIDAK,1.3,Meningkat,,,1
+63.0,Laki-laki,Asimtomatik,VA Long Beach,140.0,260.0,TIDAK,Abnormalitas Gelombang ST-T,112.0,YA,3.0,Datar,,,2
+44.0,Laki-laki,Asimtomatik,VA Long Beach,130.0,209.0,TIDAK,Abnormalitas Gelombang ST-T,127.0,TIDAK,0.0,,,,0
+60.0,Laki-laki,Asimtomatik,VA Long Beach,132.0,218.0,TIDAK,Abnormalitas Gelombang ST-T,140.0,YA,1.5,Menurun,,,2
+55.0,Laki-laki,Asimtomatik,VA Long Beach,142.0,228.0,TIDAK,Abnormalitas Gelombang ST-T,149.0,YA,2.5,Meningkat,,,1
+66.0,Laki-laki,Non-Angina,VA Long Beach,110.0,213.0,YA,Hipertrofi Ventrikel Kiri,99.0,YA,1.3,Datar,,,0
+66.0,Laki-laki,Non-Angina,VA Long Beach,120.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,120.0,TIDAK,-0.5,Meningkat,,,0
+65.0,Laki-laki,Asimtomatik,VA Long Beach,150.0,236.0,YA,Abnormalitas Gelombang ST-T,105.0,YA,0.0,,,,3
+60.0,Laki-laki,Non-Angina,VA Long Beach,180.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,140.0,YA,1.5,Datar,,,0
+60.0,Laki-laki,Non-Angina,VA Long Beach,120.0,0.0,,Normal,141.0,YA,2.0,Meningkat,,,3
+60.0,Laki-laki,Angina Atipikal,VA Long Beach,160.0,267.0,YA,Abnormalitas Gelombang ST-T,157.0,TIDAK,0.5,Datar,,,1
+56.0,Laki-laki,Angina Atipikal,VA Long Beach,126.0,166.0,TIDAK,Abnormalitas Gelombang ST-T,140.0,TIDAK,0.0,,,,0
+59.0,Laki-laki,Asimtomatik,VA Long Beach,140.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,117.0,YA,1.0,Datar,,,1
+62.0,Laki-laki,Asimtomatik,VA Long Beach,110.0,0.0,TIDAK,Normal,120.0,YA,0.5,Datar,,Normal,1
+63.0,Laki-laki,Non-Angina,VA Long Beach,,0.0,TIDAK,Hipertrofi Ventrikel Kiri,,,,,,,1
+57.0,Laki-laki,Asimtomatik,VA Long Beach,128.0,0.0,YA,Abnormalitas Gelombang ST-T,148.0,YA,1.0,Datar,,,1
+62.0,Laki-laki,Asimtomatik,VA Long Beach,120.0,220.0,TIDAK,Abnormalitas Gelombang ST-T,86.0,TIDAK,0.0,,,,0
+63.0,Laki-laki,Asimtomatik,VA Long Beach,170.0,177.0,TIDAK,Normal,84.0,YA,2.5,Menurun,,,4
+46.0,Laki-laki,Asimtomatik,VA Long Beach,110.0,236.0,TIDAK,Normal,125.0,YA,2.0,Datar,,,1
+63.0,Laki-laki,Asimtomatik,VA Long Beach,126.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,120.0,TIDAK,1.5,Menurun,,,0
+60.0,Laki-laki,Asimtomatik,VA Long Beach,152.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,118.0,YA,0.0,,,Cacat Reversibel,0
+58.0,Laki-laki,Asimtomatik,VA Long Beach,116.0,0.0,TIDAK,Normal,124.0,TIDAK,1.0,Meningkat,,,2
+64.0,Laki-laki,Asimtomatik,VA Long Beach,120.0,0.0,YA,Abnormalitas Gelombang ST-T,106.0,TIDAK,2.0,Datar,,,1
+63.0,Laki-laki,Non-Angina,VA Long Beach,130.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,111.0,YA,0.0,,,,3
+74.0,Laki-laki,Non-Angina,VA Long Beach,,0.0,TIDAK,Normal,,,,,,,0
+52.0,Laki-laki,Non-Angina,VA Long Beach,128.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,180.0,TIDAK,3.0,Meningkat,,,2
+69.0,Laki-laki,Asimtomatik,VA Long Beach,130.0,0.0,YA,Abnormalitas Gelombang ST-T,129.0,TIDAK,1.0,Datar,,Cacat Tetap,2
+51.0,Laki-laki,Asimtomatik,VA Long Beach,,0.0,YA,Abnormalitas Gelombang ST-T,,,,,,,2
+60.0,Laki-laki,Asimtomatik,VA Long Beach,130.0,186.0,YA,Abnormalitas Gelombang ST-T,140.0,YA,0.5,Datar,,,1
+56.0,Laki-laki,Asimtomatik,VA Long Beach,120.0,100.0,TIDAK,Normal,120.0,YA,1.5,Datar,0.0,Cacat Reversibel,1
+55.0,Laki-laki,Non-Angina,VA Long Beach,,228.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,3
+54.0,Laki-laki,Asimtomatik,VA Long Beach,,0.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,3
+77.0,Laki-laki,Asimtomatik,VA Long Beach,124.0,171.0,TIDAK,Abnormalitas Gelombang ST-T,110.0,YA,2.0,Meningkat,,,3
+63.0,Laki-laki,Asimtomatik,VA Long Beach,160.0,230.0,YA,Normal,105.0,YA,1.0,Datar,,,3
+55.0,Laki-laki,Non-Angina,VA Long Beach,0.0,0.0,TIDAK,Normal,155.0,TIDAK,1.5,Datar,,,3
+52.0,Laki-laki,Non-Angina,VA Long Beach,122.0,0.0,TIDAK,Normal,110.0,YA,2.0,Menurun,,,2
+64.0,Laki-laki,Asimtomatik,VA Long Beach,144.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,122.0,YA,1.0,Datar,,,3
+60.0,Laki-laki,Asimtomatik,VA Long Beach,,281.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,2
+60.0,Laki-laki,Asimtomatik,VA Long Beach,120.0,0.0,TIDAK,Normal,133.0,YA,2.0,Meningkat,,Cacat Reversibel,0
+58.0,Laki-laki,Asimtomatik,VA Long Beach,,203.0,YA,Normal,,,,,,,1
+59.0,Laki-laki,Asimtomatik,VA Long Beach,154.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,131.0,YA,1.5,,0.0,,0
+61.0,Laki-laki,Non-Angina,VA Long Beach,120.0,0.0,TIDAK,Normal,80.0,YA,0.0,Datar,,,3
+40.0,Laki-laki,Asimtomatik,VA Long Beach,125.0,0.0,YA,Normal,165.0,TIDAK,0.0,,,Cacat Reversibel,1
+61.0,Laki-laki,Asimtomatik,VA Long Beach,,0.0,YA,Abnormalitas Gelombang ST-T,86.0,TIDAK,1.5,Datar,,Cacat Reversibel,3
+41.0,Laki-laki,Asimtomatik,VA Long Beach,104.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,111.0,TIDAK,0.0,,,,0
+57.0,Laki-laki,Asimtomatik,VA Long Beach,,277.0,YA,Abnormalitas Gelombang ST-T,,,,,,,4
+63.0,Laki-laki,Asimtomatik,VA Long Beach,136.0,0.0,TIDAK,Normal,84.0,YA,0.0,,,Cacat Reversibel,2
+59.0,Laki-laki,Asimtomatik,VA Long Beach,122.0,233.0,TIDAK,Normal,117.0,YA,1.3,Menurun,,,1
+51.0,Laki-laki,Asimtomatik,VA Long Beach,128.0,0.0,TIDAK,Normal,107.0,TIDAK,0.0,,,,0
+59.0,Laki-laki,Non-Angina,VA Long Beach,,0.0,TIDAK,Normal,128.0,YA,2.0,Menurun,,,2
+42.0,Laki-laki,Non-Angina,VA Long Beach,134.0,240.0,,Normal,160.0,TIDAK,0.0,,,,0
+55.0,Laki-laki,Non-Angina,VA Long Beach,120.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,125.0,YA,2.5,Datar,,Cacat Reversibel,1
+63.0,Perempuan,Angina Atipikal,VA Long Beach,,0.0,TIDAK,Normal,,,,,,,0
+62.0,Laki-laki,Asimtomatik,VA Long Beach,152.0,153.0,TIDAK,Abnormalitas Gelombang ST-T,97.0,YA,1.6,Meningkat,,Cacat Reversibel,2
+56.0,Laki-laki,Angina Atipikal,VA Long Beach,124.0,224.0,YA,Normal,161.0,TIDAK,2.0,Datar,,,0
+53.0,Laki-laki,Asimtomatik,VA Long Beach,126.0,0.0,TIDAK,Normal,106.0,TIDAK,0.0,,,,1
+68.0,Laki-laki,Asimtomatik,VA Long Beach,138.0,0.0,TIDAK,Normal,130.0,YA,3.0,Datar,,,2
+53.0,Laki-laki,Asimtomatik,VA Long Beach,154.0,0.0,,Abnormalitas Gelombang ST-T,140.0,YA,1.5,Datar,,,2
+60.0,Laki-laki,Non-Angina,VA Long Beach,,316.0,YA,Abnormalitas Gelombang ST-T,,,,,,,3
+62.0,Laki-laki,Angina Atipikal,VA Long Beach,,0.0,TIDAK,Normal,,,,,,,0
+59.0,Laki-laki,Asimtomatik,VA Long Beach,178.0,0.0,YA,Hipertrofi Ventrikel Kiri,120.0,YA,0.0,,,Cacat Reversibel,1
+51.0,Laki-laki,Asimtomatik,VA Long Beach,,218.0,YA,Hipertrofi Ventrikel Kiri,,,,,,,0
+61.0,Laki-laki,Asimtomatik,VA Long Beach,110.0,0.0,,Normal,108.0,YA,2.0,Menurun,,,2
+57.0,Laki-laki,Asimtomatik,VA Long Beach,130.0,311.0,,Abnormalitas Gelombang ST-T,148.0,YA,2.0,Datar,,,1
+56.0,Laki-laki,Non-Angina,VA Long Beach,170.0,0.0,TIDAK,Hipertrofi Ventrikel Kiri,123.0,YA,2.5,,,,4
+58.0,Laki-laki,Angina Atipikal,VA Long Beach,126.0,0.0,YA,Normal,110.0,YA,2.0,Datar,,,2
+69.0,Laki-laki,Non-Angina,VA Long Beach,140.0,0.0,,Abnormalitas Gelombang ST-T,118.0,TIDAK,2.5,Menurun,,,2
+67.0,Laki-laki,Angina Tipikal,VA Long Beach,142.0,270.0,YA,Normal,125.0,TIDAK,2.5,Meningkat,,,3
+58.0,Laki-laki,Asimtomatik,VA Long Beach,120.0,0.0,TIDAK,Hipertrofi Ventrikel Kiri,106.0,YA,1.5,Menurun,,Cacat Reversibel,1
+65.0,Laki-laki,Asimtomatik,VA Long Beach,,0.0,TIDAK,Normal,,,,,,,1
+63.0,Laki-laki,Angina Atipikal,VA Long Beach,,217.0,YA,Abnormalitas Gelombang ST-T,,,,,,,1
+55.0,Laki-laki,Angina Atipikal,VA Long Beach,110.0,214.0,YA,Abnormalitas Gelombang ST-T,180.0,TIDAK,,,,,0
+57.0,Laki-laki,Asimtomatik,VA Long Beach,140.0,214.0,TIDAK,Abnormalitas Gelombang ST-T,144.0,YA,2.0,Datar,,Cacat Tetap,2
+65.0,Laki-laki,Angina Tipikal,VA Long Beach,,252.0,TIDAK,Normal,,,,,,,0
+54.0,Laki-laki,Asimtomatik,VA Long Beach,136.0,220.0,TIDAK,Normal,140.0,YA,3.0,Datar,,,3
+72.0,Laki-laki,Non-Angina,VA Long Beach,120.0,214.0,TIDAK,Normal,102.0,YA,1.0,Datar,,,3
+75.0,Laki-laki,Asimtomatik,VA Long Beach,170.0,203.0,YA,Abnormalitas Gelombang ST-T,108.0,TIDAK,0.0,,,Cacat Reversibel,1
+49.0,Laki-laki,Angina Tipikal,VA Long Beach,130.0,0.0,TIDAK,Abnormalitas Gelombang ST-T,145.0,TIDAK,3.0,Datar,,,2
+51.0,Laki-laki,Non-Angina,VA Long Beach,,339.0,TIDAK,Normal,,,,,,,3
+60.0,Laki-laki,Asimtomatik,VA Long Beach,142.0,216.0,TIDAK,Normal,110.0,YA,2.5,Datar,,,2
+64.0,Perempuan,Asimtomatik,VA Long Beach,142.0,276.0,TIDAK,Normal,140.0,YA,1.0,Datar,,Cacat Reversibel,1
+58.0,Laki-laki,Asimtomatik,VA Long Beach,132.0,458.0,YA,Normal,69.0,TIDAK,1.0,Menurun,,,0
+61.0,Laki-laki,Asimtomatik,VA Long Beach,146.0,241.0,TIDAK,Normal,148.0,YA,3.0,Menurun,,,2
+67.0,Laki-laki,Asimtomatik,VA Long Beach,160.0,384.0,YA,Abnormalitas Gelombang ST-T,130.0,YA,0.0,Datar,,,2
+62.0,Laki-laki,Asimtomatik,VA Long Beach,135.0,297.0,TIDAK,Normal,130.0,YA,1.0,Datar,,,2
+65.0,Laki-laki,Asimtomatik,VA Long Beach,136.0,248.0,TIDAK,Normal,140.0,YA,4.0,Menurun,,,4
+63.0,Laki-laki,Asimtomatik,VA Long Beach,130.0,308.0,TIDAK,Normal,138.0,YA,2.0,Datar,,,2
+69.0,Laki-laki,Asimtomatik,VA Long Beach,140.0,208.0,TIDAK,Abnormalitas Gelombang ST-T,140.0,YA,2.0,,,,3
+51.0,Laki-laki,Asimtomatik,VA Long Beach,,227.0,YA,Abnormalitas Gelombang ST-T,,,,,,,0
+62.0,Laki-laki,Asimtomatik,VA Long Beach,158.0,210.0,YA,Normal,112.0,YA,3.0,Menurun,,,1
+55.0,Laki-laki,Non-Angina,VA Long Beach,,245.0,YA,Abnormalitas Gelombang ST-T,,,,,,,1
+75.0,Laki-laki,Asimtomatik,VA Long Beach,136.0,225.0,TIDAK,Normal,112.0,YA,3.0,Datar,,,3
+40.0,Laki-laki,Non-Angina,VA Long Beach,106.0,240.0,TIDAK,Normal,80.0,YA,0.0,,,Cacat Reversibel,0
+67.0,Laki-laki,Asimtomatik,VA Long Beach,120.0,0.0,YA,Normal,150.0,TIDAK,1.5,Menurun,,,3
+58.0,Laki-laki,Asimtomatik,VA Long Beach,110.0,198.0,TIDAK,Normal,110.0,TIDAK,0.0,,,,1
+60.0,Laki-laki,Asimtomatik,VA Long Beach,,195.0,TIDAK,Normal,,,,,,,0
+63.0,Laki-laki,Asimtomatik,VA Long Beach,160.0,267.0,YA,Abnormalitas Gelombang ST-T,88.0,YA,2.0,,,,3
+35.0,Laki-laki,Non-Angina,VA Long Beach,,161.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,0
+62.0,Laki-laki,Angina Tipikal,VA Long Beach,112.0,258.0,TIDAK,Abnormalitas Gelombang ST-T,150.0,YA,,,,,1
+43.0,Laki-laki,Asimtomatik,VA Long Beach,122.0,0.0,TIDAK,Normal,120.0,TIDAK,0.5,Meningkat,,,1
+63.0,Laki-laki,Non-Angina,VA Long Beach,130.0,0.0,YA,Abnormalitas Gelombang ST-T,160.0,TIDAK,3.0,Datar,,,0
+68.0,Laki-laki,Non-Angina,VA Long Beach,150.0,195.0,YA,Normal,132.0,TIDAK,0.0,,,Cacat Tetap,1
+65.0,Laki-laki,Asimtomatik,VA Long Beach,150.0,235.0,TIDAK,Normal,120.0,YA,1.5,Datar,,,3
+48.0,Laki-laki,Non-Angina,VA Long Beach,102.0,0.0,,Abnormalitas Gelombang ST-T,110.0,YA,1.0,Menurun,,,1
+63.0,Laki-laki,Asimtomatik,VA Long Beach,96.0,305.0,TIDAK,Abnormalitas Gelombang ST-T,121.0,YA,1.0,Meningkat,,,1
+64.0,Laki-laki,Asimtomatik,VA Long Beach,130.0,223.0,TIDAK,Abnormalitas Gelombang ST-T,128.0,TIDAK,0.5,Datar,,,0
+61.0,Laki-laki,Asimtomatik,VA Long Beach,120.0,282.0,TIDAK,Abnormalitas Gelombang ST-T,135.0,YA,4.0,Menurun,,Cacat Tetap,3
+50.0,Laki-laki,Asimtomatik,VA Long Beach,144.0,349.0,TIDAK,Hipertrofi Ventrikel Kiri,120.0,YA,1.0,Meningkat,,Cacat Reversibel,1
+59.0,Laki-laki,Asimtomatik,VA Long Beach,124.0,,TIDAK,Normal,117.0,YA,1.0,Datar,,,1
+55.0,Laki-laki,Asimtomatik,VA Long Beach,150.0,160.0,TIDAK,Abnormalitas Gelombang ST-T,150.0,TIDAK,0.0,,,,0
+45.0,Laki-laki,Non-Angina,VA Long Beach,,236.0,TIDAK,Normal,,,,,,,0
+65.0,Laki-laki,Asimtomatik,VA Long Beach,,312.0,TIDAK,Hipertrofi Ventrikel Kiri,,,,,,,3
+61.0,Laki-laki,Angina Atipikal,VA Long Beach,,283.0,TIDAK,Normal,,,,,,,0
+49.0,Laki-laki,Non-Angina,VA Long Beach,,142.0,TIDAK,Normal,,,,,,,3
+72.0,Laki-laki,Asimtomatik,VA Long Beach,,211.0,TIDAK,Normal,,,,,,,1
+50.0,Laki-laki,Asimtomatik,VA Long Beach,,218.0,TIDAK,Normal,,,,,,,1
+64.0,Laki-laki,Asimtomatik,VA Long Beach,,306.0,YA,Abnormalitas Gelombang ST-T,,,,,,,3
+55.0,Laki-laki,Asimtomatik,VA Long Beach,116.0,186.0,YA,Abnormalitas Gelombang ST-T,102.0,TIDAK,0.0,,,,2
+63.0,Laki-laki,Asimtomatik,VA Long Beach,110.0,252.0,TIDAK,Abnormalitas Gelombang ST-T,140.0,YA,2.0,Datar,,,2
+59.0,Laki-laki,Asimtomatik,VA Long Beach,125.0,222.0,TIDAK,Normal,135.0,YA,2.5,Menurun,,,3
+56.0,Laki-laki,Asimtomatik,VA Long Beach,,0.0,TIDAK,Hipertrofi Ventrikel Kiri,,,,,,,1
+62.0,Laki-laki,Non-Angina,VA Long Beach,,0.0,YA,Abnormalitas Gelombang ST-T,,,,,,,2
+74.0,Laki-laki,Asimtomatik,VA Long Beach,150.0,258.0,YA,Abnormalitas Gelombang ST-T,130.0,YA,4.0,Menurun,,,3
+54.0,Laki-laki,Asimtomatik,VA Long Beach,130.0,202.0,YA,Normal,112.0,YA,2.0,Datar,,,1
+57.0,Laki-laki,Asimtomatik,VA Long Beach,110.0,197.0,TIDAK,Hipertrofi Ventrikel Kiri,100.0,TIDAK,0.0,,,,0
+62.0,Laki-laki,Non-Angina,VA Long Beach,,204.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,1
+76.0,Laki-laki,Non-Angina,VA Long Beach,104.0,,TIDAK,Hipertrofi Ventrikel Kiri,120.0,TIDAK,3.5,Menurun,,,4
+54.0,Perempuan,Asimtomatik,VA Long Beach,138.0,274.0,TIDAK,Normal,105.0,YA,1.5,Datar,,,1
+70.0,Laki-laki,Asimtomatik,VA Long Beach,170.0,192.0,TIDAK,Abnormalitas Gelombang ST-T,129.0,YA,3.0,Menurun,,,2
+61.0,Perempuan,Angina Atipikal,VA Long Beach,140.0,298.0,YA,Normal,120.0,YA,0.0,,,Cacat Reversibel,0
+48.0,Laki-laki,Asimtomatik,VA Long Beach,,272.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,0
+48.0,Laki-laki,Non-Angina,VA Long Beach,132.0,220.0,YA,Abnormalitas Gelombang ST-T,162.0,TIDAK,0.0,,,Cacat Tetap,1
+61.0,Laki-laki,Angina Tipikal,VA Long Beach,142.0,200.0,YA,Abnormalitas Gelombang ST-T,100.0,TIDAK,1.5,Menurun,,,3
+66.0,Laki-laki,Asimtomatik,VA Long Beach,112.0,261.0,TIDAK,Normal,140.0,TIDAK,1.5,Meningkat,,,1
+68.0,Laki-laki,Angina Tipikal,VA Long Beach,,181.0,YA,Abnormalitas Gelombang ST-T,,,,,,,0
+55.0,Laki-laki,Asimtomatik,VA Long Beach,172.0,260.0,TIDAK,Normal,73.0,TIDAK,2.0,,,,3
+62.0,Laki-laki,Non-Angina,VA Long Beach,120.0,220.0,TIDAK,Hipertrofi Ventrikel Kiri,86.0,TIDAK,0.0,,,,0
+71.0,Laki-laki,Non-Angina,VA Long Beach,,221.0,TIDAK,Normal,,,,,,,3
+74.0,Laki-laki,Angina Tipikal,VA Long Beach,,216.0,YA,Normal,,,,,,,3
+53.0,Laki-laki,Non-Angina,VA Long Beach,155.0,175.0,YA,Abnormalitas Gelombang ST-T,160.0,TIDAK,,,,Cacat Tetap,0
+58.0,Laki-laki,Non-Angina,VA Long Beach,150.0,219.0,TIDAK,Abnormalitas Gelombang ST-T,118.0,YA,0.0,,,,2
+75.0,Laki-laki,Asimtomatik,VA Long Beach,160.0,310.0,YA,Normal,112.0,YA,2.0,Menurun,,Cacat Reversibel,0
+56.0,Laki-laki,Non-Angina,VA Long Beach,,208.0,YA,Abnormalitas Gelombang ST-T,,,,,,,4
+58.0,Laki-laki,Non-Angina,VA Long Beach,,232.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,2
+64.0,Laki-laki,Asimtomatik,VA Long Beach,134.0,273.0,TIDAK,Normal,102.0,YA,4.0,Menurun,,,4
+54.0,Laki-laki,Non-Angina,VA Long Beach,,203.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,0
+54.0,Laki-laki,Angina Atipikal,VA Long Beach,,182.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,0
+59.0,Laki-laki,Asimtomatik,VA Long Beach,140.0,274.0,TIDAK,Normal,154.0,YA,2.0,Datar,,,0
+55.0,Laki-laki,Asimtomatik,VA Long Beach,,204.0,YA,Abnormalitas Gelombang ST-T,,,,,,,1
+57.0,Laki-laki,Asimtomatik,VA Long Beach,144.0,270.0,YA,Abnormalitas Gelombang ST-T,160.0,YA,2.0,Datar,,,3
+61.0,Laki-laki,Asimtomatik,VA Long Beach,,292.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,3
+41.0,Laki-laki,Asimtomatik,VA Long Beach,150.0,171.0,TIDAK,Normal,128.0,YA,1.5,Datar,,,0
+71.0,Laki-laki,Asimtomatik,VA Long Beach,130.0,221.0,TIDAK,Abnormalitas Gelombang ST-T,115.0,YA,0.0,,,,3
+38.0,Laki-laki,Asimtomatik,VA Long Beach,110.0,289.0,TIDAK,Normal,105.0,YA,1.5,Menurun,,,1
+55.0,Laki-laki,Asimtomatik,VA Long Beach,158.0,217.0,TIDAK,Normal,110.0,YA,2.5,Datar,,,1
+56.0,Laki-laki,Asimtomatik,VA Long Beach,128.0,223.0,TIDAK,Abnormalitas Gelombang ST-T,119.0,YA,2.0,Menurun,,,2
+69.0,Laki-laki,Asimtomatik,VA Long Beach,,,YA,Normal,,,,,,,2
+64.0,Laki-laki,Asimtomatik,VA Long Beach,150.0,193.0,TIDAK,Abnormalitas Gelombang ST-T,135.0,YA,0.5,Datar,,,2
+72.0,Laki-laki,Asimtomatik,VA Long Beach,160.0,,YA,Hipertrofi Ventrikel Kiri,130.0,TIDAK,1.5,,,,2
+69.0,Laki-laki,Asimtomatik,VA Long Beach,,210.0,YA,Abnormalitas Gelombang ST-T,,,,,,,2
+56.0,Laki-laki,Asimtomatik,VA Long Beach,,282.0,YA,Normal,,,,,,,1
+62.0,Laki-laki,Asimtomatik,VA Long Beach,,170.0,TIDAK,Abnormalitas Gelombang ST-T,120.0,YA,3.0,,,,4
+67.0,Laki-laki,Asimtomatik,VA Long Beach,,369.0,TIDAK,Normal,,,,,,,3
+57.0,Laki-laki,Asimtomatik,VA Long Beach,156.0,173.0,TIDAK,Hipertrofi Ventrikel Kiri,119.0,YA,3.0,Menurun,,,3
+69.0,Laki-laki,Asimtomatik,VA Long Beach,,289.0,YA,Abnormalitas Gelombang ST-T,,,,,,,3
+51.0,Laki-laki,Asimtomatik,VA Long Beach,,,YA,Hipertrofi Ventrikel Kiri,,,,,,Cacat Reversibel,1
+48.0,Laki-laki,Asimtomatik,VA Long Beach,140.0,,TIDAK,Normal,159.0,YA,1.5,Meningkat,,,3
+69.0,Laki-laki,Asimtomatik,VA Long Beach,122.0,216.0,YA,Hipertrofi Ventrikel Kiri,84.0,YA,0.0,,,Cacat Reversibel,2
+69.0,Laki-laki,Non-Angina,VA Long Beach,,271.0,TIDAK,Hipertrofi Ventrikel Kiri,,,,,,,0
+64.0,Laki-laki,Asimtomatik,VA Long Beach,,244.0,YA,Abnormalitas Gelombang ST-T,,,,,,,2
+57.0,Laki-laki,Angina Atipikal,VA Long Beach,180.0,285.0,YA,Abnormalitas Gelombang ST-T,120.0,TIDAK,0.8,,,,1
+53.0,Laki-laki,Asimtomatik,VA Long Beach,124.0,243.0,TIDAK,Normal,122.0,YA,2.0,Datar,,Cacat Reversibel,1
+37.0,Laki-laki,Non-Angina,VA Long Beach,118.0,240.0,TIDAK,Hipertrofi Ventrikel Kiri,165.0,TIDAK,1.0,Datar,,Normal,0
+67.0,Laki-laki,Asimtomatik,VA Long Beach,140.0,219.0,TIDAK,Abnormalitas Gelombang ST-T,122.0,YA,2.0,Datar,,Cacat Reversibel,3
+74.0,Laki-laki,Non-Angina,VA Long Beach,140.0,237.0,YA,Normal,94.0,TIDAK,0.0,,,,1
+63.0,Laki-laki,Angina Atipikal,VA Long Beach,,165.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,0
+58.0,Laki-laki,Asimtomatik,VA Long Beach,100.0,213.0,TIDAK,Abnormalitas Gelombang ST-T,110.0,TIDAK,0.0,,,,0
+61.0,Laki-laki,Asimtomatik,VA Long Beach,190.0,287.0,YA,Hipertrofi Ventrikel Kiri,150.0,YA,2.0,Menurun,,,4
+64.0,Laki-laki,Asimtomatik,VA Long Beach,130.0,258.0,YA,Hipertrofi Ventrikel Kiri,130.0,TIDAK,0.0,,,Cacat Tetap,2
+58.0,Laki-laki,Asimtomatik,VA Long Beach,160.0,256.0,YA,Hipertrofi Ventrikel Kiri,113.0,YA,1.0,Meningkat,,,3
+60.0,Laki-laki,Asimtomatik,VA Long Beach,130.0,186.0,YA,Hipertrofi Ventrikel Kiri,140.0,YA,0.5,Datar,,,1
+57.0,Laki-laki,Asimtomatik,VA Long Beach,122.0,264.0,TIDAK,Hipertrofi Ventrikel Kiri,100.0,TIDAK,0.0,,,,1
+55.0,Laki-laki,Non-Angina,VA Long Beach,,,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,0
+55.0,Laki-laki,Asimtomatik,VA Long Beach,120.0,226.0,TIDAK,Hipertrofi Ventrikel Kiri,127.0,YA,1.7,Menurun,,Cacat Reversibel,1
+56.0,Laki-laki,Asimtomatik,VA Long Beach,130.0,203.0,YA,Normal,98.0,TIDAK,1.5,Datar,,Cacat Reversibel,1
+57.0,Laki-laki,Asimtomatik,VA Long Beach,130.0,207.0,TIDAK,Abnormalitas Gelombang ST-T,96.0,YA,1.0,Datar,,,0
+61.0,Laki-laki,Non-Angina,VA Long Beach,,284.0,TIDAK,Normal,,,,,,,1
+61.0,Laki-laki,Non-Angina,VA Long Beach,120.0,337.0,TIDAK,Normal,98.0,YA,0.0,,,,3
+58.0,Laki-laki,Non-Angina,VA Long Beach,150.0,219.0,TIDAK,Abnormalitas Gelombang ST-T,118.0,YA,0.0,,,,2
+74.0,Laki-laki,Asimtomatik,VA Long Beach,155.0,310.0,TIDAK,Normal,112.0,YA,1.5,Menurun,,,2
+68.0,Laki-laki,Non-Angina,VA Long Beach,134.0,254.0,YA,Normal,151.0,YA,0.0,,,Normal,0
+51.0,Perempuan,Asimtomatik,VA Long Beach,114.0,258.0,YA,Hipertrofi Ventrikel Kiri,96.0,TIDAK,1.0,Meningkat,,,0
+62.0,Laki-laki,Asimtomatik,VA Long Beach,160.0,254.0,YA,Abnormalitas Gelombang ST-T,108.0,YA,3.0,Datar,,,4
+53.0,Laki-laki,Asimtomatik,VA Long Beach,144.0,300.0,YA,Abnormalitas Gelombang ST-T,128.0,YA,1.5,Datar,,,3
+62.0,Laki-laki,Asimtomatik,VA Long Beach,158.0,170.0,TIDAK,Abnormalitas Gelombang ST-T,138.0,YA,0.0,,,,1
+46.0,Laki-laki,Asimtomatik,VA Long Beach,134.0,310.0,TIDAK,Normal,126.0,TIDAK,0.0,,,Normal,2
+54.0,Perempuan,Asimtomatik,VA Long Beach,127.0,333.0,YA,Abnormalitas Gelombang ST-T,154.0,TIDAK,0.0,,,,1
+62.0,Laki-laki,Angina Tipikal,VA Long Beach,,139.0,TIDAK,Abnormalitas Gelombang ST-T,,,,,,,0
+55.0,Laki-laki,Asimtomatik,VA Long Beach,122.0,223.0,YA,Abnormalitas Gelombang ST-T,100.0,TIDAK,0.0,,,Cacat Tetap,2
+58.0,Laki-laki,Asimtomatik,VA Long Beach,,385.0,YA,Hipertrofi Ventrikel Kiri,,,,,,,0
+62.0,Laki-laki,Angina Atipikal,VA Long Beach,120.0,254.0,TIDAK,Hipertrofi Ventrikel Kiri,93.0,YA,0.0,,,,1
