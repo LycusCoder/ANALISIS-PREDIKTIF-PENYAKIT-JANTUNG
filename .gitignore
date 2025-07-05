@@ -1,6 +1,7 @@
 build
 venv
 frontend/node_modules
+datalama
 
 # Logs
 logs
