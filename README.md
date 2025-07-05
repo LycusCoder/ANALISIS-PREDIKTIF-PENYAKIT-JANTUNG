@@ -124,37 +124,47 @@ npm run start:dev
 
 Aplikasi akan otomatis berjalan dan bisa diakses di alamat yang ditampilkan oleh Vite (biasanya `http://localhost:5173` atau `http://localhost:8080`).
 
-## 📈 Hasil Evaluasi Model
+## 📈 Hasil Evaluasi & Performa Model
 
-Setelah melakukan perbandingan antara 4 model yang telah dioptimasi, **Support Vector Classifier (SVC)** terpilih sebagai model terbaik untuk di-deploy karena menunjukkan keseimbangan performa yang paling unggul pada data Non-PCA.
+Setelah melakukan perbandingan antara 4 model yang telah dioptimasi dalam dua skenario (Non-PCA dan PCA), **Support Vector Classifier (SVC)** dari **skenario Non-PCA** terpilih sebagai model terbaik untuk di-*deploy*. Model ini menunjukkan akurasi tertinggi serta keseimbangan performa yang paling unggul pada data uji.
 
 ### Model Terbaik: SVC (Optimized, Non-PCA)
 
-  * **F1-Score**: `0.818` (Keseimbangan terbaik antara Precision & Recall)
-  * **ROC-AUC**: `0.940` (Kemampuan membedakan kelas yang sangat baik)
-  * **Recall** (Sensitivitas): `0.771`
-  * **Precision** (Akurasi Prediksi Positif): `0.871`
-  * **Confusion Matrix**:
-    ```
-      Prediksi 0 | Prediksi 1
-    [[    39     |      5     ]]  <- Aktual 0 (Tidak Sakit)
-    [[     8     |     27     ]]  <- Aktual 1 (Sakit)
-    ```
-      * **True Negative**: 39
-      * **False Positive**: 5 (Alarm Palsu)
-      * **False Negative**: 8 (Kasus Terlewatkan)
-      * **True Positive**: 27
+Berikut adalah rincian performa dari model SVC yang terpilih:
 
-### Perbandingan dengan Model Lain
+  * **Accuracy**: `0.853` (Prediksi benar tertinggi secara keseluruhan)
+  * **F1-Score**: `0.836` (Keseimbangan terbaik antara Precision & Recall)
+  * **ROC-AUC**: `0.941` (Kemampuan membedakan kelas yang sangat baik)
+  * **Recall** (Sensitivitas): `0.800`
+  * **Precision** (Akurasi Prediksi Positif): `0.875`
 
-| Model                 | F1-Score | ROC-AUC | Recall | Precision |
-| --------------------- | -------- | ------- | ------ | --------- |
-| **SVC (Juara)** | **0.818**| 0.940   | 0.771  | 0.871     |
-| Logistic Regression   | 0.800    | 0.938   | 0.800  | 0.800     |
-| XGBoost               | 0.769    | 0.916   | 0.714  | 0.833     |
-| Random Forest         | 0.762    | 0.918   | 0.686  | 0.857     |
+#### Confusion Matrix (Model Juara)
 
-*(Catatan: Angka di atas adalah contoh, dari hasil akhir dari notebook `evaluate_model_jantung.ipynb` )*
+  * **True Negative**: 36
+  * **False Positive**: 4 (Kesalahan Tipe I: prediksi sakit, padahal tidak)
+  * **False Negative**: 7 (Kesalahan Tipe II: prediksi tidak sakit, padahal sakit)
+  * **True Positive**: 28
+
+![Confusion Matrix SVC Non-PCA](backend/hasil_gambar/confusion_matrix/CM_Non-PCA_SVC.png)
+
+### Grafik Perbandingan Performa (Skenario Non-PCA)
+
+Visualisasi di bawah ini merangkum perbandingan metrik evaluasi utama antara keempat model pada skenario Non-PCA, yang menghasilkan performa terbaik.
+
+![Perbandingan Kinerja Akhir Non-PCA](backend/hasil_gambar/Perbandingan_Kinerja_Akhir_Non-PCA.png)
+
+### Perbandingan dengan Model Lain (Skenario Non-PCA)
+
+Tabel berikut merangkum performa dari semua model yang diuji pada skenario Non-PCA.
+
+| Model | F1-Score | ROC-AUC | Recall | Precision |
+| :--- | :--- | :--- | :--- | :--- |
+| **SVC (Juara)** | **0.836** | **0.941** | **0.800** | **0.875** |
+| Logistic Regression | 0.824 | 0.931 | 0.800 | 0.848 |
+| Random Forest | 0.774 | 0.924 | 0.686 | 0.889 |
+| XGBoost | 0.730 | 0.871 | 0.657 | 0.821 |
+
+*(Catatan: Angka di atas adalah hasil akhir dari skenario Non-PCA yang menunjukkan performa terbaik, dieksekusi dari notebook `modelling.ipynb`)*
 
 ## 👨‍💻 Kontributor
 
