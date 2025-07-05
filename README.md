@@ -23,22 +23,31 @@ Aplikasi ini memungkinkan pengguna untuk memasukkan data medis dan memilih salah
 ```
 
 projek\_UAS/
-├── backend/
-│   ├── models/
+├── backend/                  # Direktori utama yang menampung seluruh kode dan aset terkait backend proyek.
+│   ├── __pycache__/          # Cache Python untuk kompilasi bytecode (dihasilkan otomatis).
+│   ├── data/                 # Berisi semua dataset yang digunakan dalam proyek.
+│   │   ├── dataset_prediksi_jantung_clean_dropna.csv # Dataset gabungan yang sudah dibersihkan (metode dropna).
+│   │   └── heart+disease/    # Direktori yang berisi dataset mentah asli penyakit jantung (file .data).
+│   ├── hasil_gambar/         # Direktori khusus untuk menyimpan semua visualisasi dan grafik hasil eksperimen.
+│   │   ├── Perbandingan_Kinerja_Akhir_Non-PCA.png # Grafik perbandingan kinerja model untuk skenario Non-PCA.
+│   │   ├── Perbandingan_Kinerja_Akhir_PCA.png     # Grafik perbandingan kinerja model untuk skenario PCA.
+│   │   └── confusion_matrix/ # Subdirektori ini menyimpan semua gambar Confusion Matrix dari model.
+│   ├── hasil_model/          # **[Catatan: Ini adalah lokasi penyimpanan model .pkl Anda saat ini.]**
+│   │   │                     # Berisi model-model yang telah dilatih (Non-PCA & PCA) dalam struktur datar.
+│   │   ├── Non-PCA_Logistic_Regression_model.pkl
+│   │   └── ... (file model .pkl lainnya)
+│   ├── models/               # Direktori alternatif (dan direkomendasikan) untuk menyimpan model Machine Learning.
 │   │   └── jantung/
-│   │       ├── optimize\_non\_pca/  \# Model terbaik (Non-PCA)
-│   │       │   ├── svc\_optimized.pkl
-│   │       │   └── ... (model lainnya)
-│   │       └── optimize\_pca/      \# Model eksperimen (PCA)
-│   ├── notebooks/
-│   │   ├── cek\_data\_jantung.ipynb
-│   │   ├── train\_model\_jantung\_NON\_PCA.ipynb
-│   │   ├── train\_model\_jantung\_DENGAN\_PCA.ipynb
-│   │   └── final\_report\_jantung.ipynb
-│   ├── training/
-│   │   ├── X\_test\_non\_pca.csv     \# Data uji untuk evaluasi
-│   │   └── y\_test\_non\_pca.csv
-│   └── main.py                    \# Script API Flask
+│   │       ├── belum-optimize/  # Model dasar (sebelum dioptimasi) dan gambar Confusion Matrix terkait.
+│   │       │   └── ... (model .pkl dan gambar CM dasar)
+│   │       └── optimize_pca/    # Model hasil optimasi dengan PCA dan gambar Confusion Matrix terkait.
+│   │           └── ... (model .pkl dan gambar CM optimized)
+│   ├── training/             # Direktori untuk menyimpan data uji (X_test, y_test) yang telah dipreproses.
+│   │   ├── X_test_non_pca.csv # Data uji setelah preprocessing tanpa PCA.
+│   │   ├── X_test_pca.csv     # Data uji setelah preprocessing dengan PCA.
+│   │   ├── y_test_non_pca.csv
+│   │   └── y_test_pca.csv
+│   └── modelling.ipynb 
 ├── frontend/
 │   ├── public/
 │   ├── src/
@@ -50,6 +59,7 @@ projek\_UAS/
 │   ├── package.json               \# KTP & skrip proyek frontend
 │   └── ... (file konfigurasi lainnya)
 ├── venv/                          \# Virtual environment Python (di luar folder ini)
+├── main.py                          \# sebagai script API Flask
 └── README.md                      \# File ini
 
 ````
