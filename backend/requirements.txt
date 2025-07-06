@@ -1,0 +1,16 @@
+pandas
+numpy
+scikit-learn==1.7.0
+xgboost
+matplotlib
+fastapi
+flask
+flask_cors
+uvicorn[standard]
+pydantic
+python-multipart
+streamlit
+requests
+jsonify
+pyinstaller
+seaborn

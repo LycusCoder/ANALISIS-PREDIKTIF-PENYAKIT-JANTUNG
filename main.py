@@ -1,101 +1,146 @@
-# ====================================================================
-# main.py - Backend Flask API (Final & Sinkron dengan Frontend)
-# ====================================================================
+# main.py
+# Backend API menggunakan Flask untuk prediksi penyakit jantung.
+# Script ini akan memuat semua model yang telah dilatih dan menyediakan
+# endpoint untuk melakukan prediksi berdasarkan input dari pengguna.
 
-# 🚀 1. Import Library
-import pandas as pd
-import numpy as np
-import pickle
 import os
+import joblib
+import pandas as pd
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-print("Library berhasil di-import.")
-
-# 🧠 2. Inisialisasi Aplikasi Flask
+# --- Inisialisasi Aplikasi Flask ---
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}}) 
+# Mengaktifkan CORS (Cross-Origin Resource Sharing) agar bisa diakses dari frontend React
+CORS(app)
 
-# --- Muat Semua Model Saat Startup ---
-MODELS = {}
-script_dir = os.path.dirname(__file__)
-# Perhatikan path ini, disesuaikan dengan struktur di mana main.py ada di root projek
-MODELS_DIR = os.path.join(script_dir, 'backend/models/jantung/optimize_non_pca')
+# --- Pemuatan Model ---
+# Definisikan path ke folder tempat model disimpan
+# Ambil path direktori tempat main.py berada
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# Gabungkan dengan path ke folder model
+MODEL_DIR = os.path.join(BASE_DIR, 'backend', 'hasil_model')
 
-def load_models():
-    if not os.path.exists(MODELS_DIR):
-        print(f"ERROR: Direktori model '{MODELS_DIR}' tidak ditemukan!")
-        return
-    for file in sorted(os.listdir(MODELS_DIR)):
-        if file.endswith('.pkl'):
-            model_name = file.replace('_optimized.pkl', '').replace('_', ' ').title()
-            try:
-                with open(os.path.join(MODELS_DIR, file), 'rb') as f:
-                    MODELS[model_name] = pickle.load(f)
-                print(f"Model '{model_name}' berhasil dimuat.")
-            except Exception as e:
-                print(f"Gagal memuat model {file}: {e}")
+# Dictionary untuk menyimpan semua model yang telah dimuat
+# Ini dilakukan agar model tidak perlu di-load setiap kali ada request,
+# sehingga lebih efisien.
+models = {}
 
-# 📌 3. Definisikan Kolom & Kamus Penerjemah
-COLUMN_NAMES = [
-    'age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 
-    'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal'
-]
-VALUE_MAPPINGS = {
-    'sex': {'Male': 1.0, 'Female': 0.0},
-    'cp': {'typical angina': 1.0, 'atypical angina': 2.0, 'non-anginal': 3.0, 'asymptomatic': 4.0},
-    'fbs': {True: 1.0, False: 0.0},
-    'restecg': {'normal': 0.0, 'st-t abnormality': 1.0, 'lv hypertrophy': 2.0},
-    'exang': {True: 1.0, False: 0.0},
-    'slope': {'upsloping': 1.0, 'flat': 2.0, 'downsloping': 3.0},
-    'thal': {'normal': 3.0, 'fixed defect': 6.0, 'reversable defect': 7.0} # 'reversable' typo dari dataset asli
+# Daftar nama model yang diharapkan sesuai dengan file yang disimpan
+model_files = {
+    # Skenario Non-PCA
+    'Non-PCA_Logistic_Regression': 'Non-PCA_Logistic_Regression_model.pkl',
+    'Non-PCA_Random_Forest': 'Non-PCA_Random_Forest_model.pkl',
+    'Non-PCA_XGBoost': 'Non-PCA_XGBoost_model.pkl',
+    'Non-PCA_SVC': 'Non-PCA_SVC_model.pkl',
+    # Skenario PCA
+    'PCA_Logistic_Regression': 'PCA_Logistic_Regression_model.pkl',
+    'PCA_Random_Forest': 'PCA_Random_Forest_model.pkl',
+    'PCA_XGBoost': 'PCA_XGBoost_model.pkl',
+    'PCA_SVC': 'PCA_SVC_model.pkl'
 }
 
-# 📡 4. Buat Endpoints API
-@app.route('/models', methods=['GET'])
-def get_models():
-    if not MODELS: return jsonify({"error": "Model tidak dimuat"}), 404
-    return jsonify(sorted(list(MODELS.keys())))
+# Fungsi untuk memuat semua model saat aplikasi pertama kali dijalankan
+def load_all_models():
+    """Memuat semua file model .pkl dari direktori dan menyimpannya dalam dictionary."""
+    print("Memuat semua model...")
+    for model_name, file_name in model_files.items():
+        path = os.path.join(MODEL_DIR, file_name)
+        try:
+            with open(path, 'rb') as f:
+                models[model_name] = joblib.load(f)
+            print(f"Model '{model_name}' berhasil dimuat.")
+        except FileNotFoundError:
+            print(f"Peringatan: File model tidak ditemukan di '{path}'. Model '{model_name}' tidak akan tersedia.")
+        except Exception as e:
+            print(f"Error saat memuat model '{model_name}': {e}")
 
+# --- Definisi Fitur ---
+# Urutan fitur ini HARUS SAMA dengan urutan saat melatih model
+# karena pipeline Scikit-learn mengharapkan urutan kolom yang konsisten.
+FEATURE_ORDER = [
+    'age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 
+    'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal'
+]
+
+# --- Endpoint API untuk Prediksi ---
 @app.route('/predict', methods=['POST'])
 def predict():
-    if not MODELS: return jsonify({"error": "Model tidak tersedia"}), 500
-    data = request.get_json()
-    if not data or 'model_choice' not in data or 'patient_data' not in data:
-        return jsonify({"error": "Request JSON tidak valid"}), 400
-
-    model_choice = data['model_choice']
-    patient_data = data['patient_data']
-    selected_model = MODELS.get(model_choice)
-    if not selected_model:
-        return jsonify({"error": f"Model '{model_choice}' tidak ditemukan."}), 400
-        
-    try:
-        processed_data = patient_data.copy()
-        for key, mapping in VALUE_MAPPINGS.items():
-            if key in processed_data:
-                processed_data[key] = mapping.get(processed_data[key], processed_data[key])
-        
-        input_df = pd.DataFrame([processed_data])[COLUMN_NAMES]
-        prediction = selected_model.predict(input_df)[0]
-        probability = selected_model.predict_proba(input_df)[0]
-        confidence_score = probability[1]
-
-        # --- PERBAIKAN UTAMA DI SINI ---
-        # Kita sesuaikan nama kunci (key) di response agar sama persis
-        # dengan yang diharapkan oleh interface 'PredictionResponse' di frontend.
-        response = {
-            'model_used': model_choice, # Ini bonus, bisa dipakai atau tidak di frontend
-            'predicted_class': int(prediction), # Diubah dari 'prediction'
-            'prediction_label': "Berisiko Penyakit Jantung" if prediction == 1 else "Risiko Rendah", # Diubah dari 'prediction_label'
-            'probability_score_class_1': float(confidence_score) # Diubah dari 'confidence_score'
+    """
+    Endpoint untuk menerima data pasien dan mengembalikan hasil prediksi.
+    Request body harus dalam format JSON, contoh:
+    {
+        "model_name": "Non-PCA_SVC",
+        "data": {
+            "age": 63, "sex": 1, "cp": 1, "trestbps": 145, "chol": 233,
+            "fbs": 1, "restecg": 2, "thalach": 150, "exang": 0,
+            "oldpeak": 2.3, "slope": 3, "ca": 0, "thal": 6
         }
-        return jsonify(response)
+    }
+    """
+    try:
+        # 1. Ambil data JSON dari request
+        json_data = request.get_json()
+        if not json_data:
+            return jsonify({'error': 'Request body tidak valid atau kosong.'}), 400
+
+        model_name = json_data.get('model_name')
+        input_data = json_data.get('data')
+
+        # 2. Validasi input
+        if not model_name or not input_data:
+            return jsonify({'error': 'Request harus menyertakan "model_name" dan "data".'}), 400
+
+        if model_name not in models:
+            return jsonify({'error': f"Model '{model_name}' tidak ditemukan atau tidak berhasil dimuat."}), 404
+
+        # 3. Siapkan data untuk prediksi
+        # Ubah dictionary input menjadi DataFrame dengan urutan kolom yang benar
+        # Ini penting karena pipeline model sangat bergantung pada urutan fitur.
+        input_df = pd.DataFrame([input_data])
+        # Pastikan urutan kolom sesuai dengan saat training
+        input_df = input_df[FEATURE_ORDER] 
+
+        # 4. Lakukan Prediksi
+        model = models[model_name]
+        
+        # Dapatkan hasil prediksi (kelas 0 atau 1)
+        prediction_result = model.predict(input_df)
+        
+        # Dapatkan probabilitas prediksi
+        # predict_proba mengembalikan array [[prob_kelas_0, prob_kelas_1]]
+        prediction_proba = model.predict_proba(input_df)
+        
+        # Ambil probabilitas untuk kelas 1 (berisiko sakit)
+        probability_of_risk = prediction_proba[0][1]
+
+        # 5. Format dan kirim response
+        # Ubah hasil prediksi numpy menjadi tipe data Python standar
+        output_class = int(prediction_result[0])
+        
+        # Tentukan label hasil untuk kemudahan pembacaan di frontend
+        result_label = "Berisiko Penyakit Jantung" if output_class == 1 else "Tidak Berisiko Penyakit Jantung"
+
+        return jsonify({
+            'model_used': model_name,
+            'prediction': output_class,
+            'result_label': result_label,
+            'probability_of_risk': float(probability_of_risk)
+        })
 
     except Exception as e:
-        return jsonify({"error": f"Terjadi error saat prediksi: {str(e)}"}), 500
+        # Tangani error tak terduga
+        return jsonify({'error': f'Terjadi kesalahan internal: {str(e)}'}), 500
 
-# ⚡ 5. Jalankan Aplikasi Flask
+# --- Menjalankan Aplikasi ---
 if __name__ == '__main__':
-    load_models()
-    app.run(debug=True, port=8000)
+    # Pastikan folder 'hasil_model' ada
+    if not os.path.exists(MODEL_DIR):
+        print(f"Error: Direktori '{MODEL_DIR}' tidak ditemukan. Pastikan semua file .pkl ada di dalamnya.")
+    else:
+        # Muat semua model saat startup
+        load_all_models()
+        # Jalankan server Flask
+        # host='0.0.0.0' agar bisa diakses dari luar container (jika pakai Docker)
+        # atau dari jaringan lokal.
+        app.run(host='0.0.0.0', port=5000, debug=True)

@@ -1,4 +1,7 @@
-import { useState, useEffect } from 'react';
+// HeartPredictionForm.tsx (Versi Lengkap & Sudah Diperbaiki)
+// Kode ini sudah disesuaikan untuk berkomunikasi dengan backend Flask di main.py
+
+import { useState } from 'react';
 import axios from 'axios';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -10,7 +13,33 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Separator } from '@/components/ui/separator';
 import { Search, RotateCcw, Activity, BrainCircuit, Star } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { PredictionData, PredictionResponse } from '@/pages/Index';
+
+// --- Tipe Data untuk Payload dan Response ---
+// Ini untuk memastikan data yang dikirim dan diterima sesuai
+export interface PredictionData {
+  age: number;
+  sex: number;
+  cp: number;
+  trestbps: number;
+  chol: number;
+  fbs: number;
+  restecg: number;
+  thalach: number;
+  exang: number;
+  oldpeak: number;
+  slope: number;
+  ca: number;
+  thal: number;
+}
+
+export interface PredictionResponse {
+  model_used: string;
+  prediction: number;
+  result_label: string;
+  probability_of_risk: number;
+}
+// --- Akhir Tipe Data ---
+
 
 interface HeartPredictionFormProps {
   onPredictionComplete: (result: PredictionResponse) => void;
@@ -19,10 +48,17 @@ interface HeartPredictionFormProps {
   setIsLoading: (loading: boolean) => void;
 }
 
-const API_URL = 'http://127.0.0.1:8000';
+// [FIX 1] URL API disesuaikan dengan port Flask (default: 5000)
+const API_URL = 'http://127.0.0.1:5000'; 
 
-// Definisikan model yang direkomendasikan secara lokal
-const RECOMMENDED_MODEL = 'Svc'; // Model yang dianggap memiliki akurasi tertinggi
+// [FIX 2] Nama model terbaik disesuaikan dengan nama file dari notebook
+const RECOMMENDED_MODEL = 'Non-PCA_SVC';
+
+// [FIX 3] Daftar model didefinisikan secara statis di frontend
+const AVAILABLE_MODELS = [
+  'Non-PCA_SVC', 'Non-PCA_Logistic_Regression', 'Non-PCA_Random_Forest', 'Non-PCA_XGBoost',
+  'PCA_SVC', 'PCA_Logistic_Regression', 'PCA_Random_Forest', 'PCA_XGBoost'
+];
 
 export const HeartPredictionForm = ({ 
   onPredictionComplete, 
@@ -32,84 +68,53 @@ export const HeartPredictionForm = ({
 }: HeartPredictionFormProps) => {
   const { toast } = useToast();
   
+  // [FIX 4] Initial state diubah menjadi numerik agar sesuai dengan model
   const initialFormData: PredictionData = {
     age: 50,
-    sex: 'Male',
-    cp: 'asymptomatic',
+    sex: 1,        // 1: Laki-laki, 0: Perempuan
+    cp: 1,         // 1: typical angina, 2: atypical angina, 3: non-anginal, 4: asymptomatic
     trestbps: 120,
     chol: 200,
-    fbs: false,
-    restecg: 'normal',
+    fbs: 1,        // 1: True (> 120 mg/dl), 0: False
+    restecg: 2,    // 0: normal, 1: st-t abnormality, 2: lv hypertrophy
     thalach: 150,
-    exang: false,
+    exang: 0,      // 0: No, 1: Yes
     oldpeak: 1.0,
-    slope: 'upsloping',
+    slope: 3,      // 1: upsloping, 2: flat, 3: downsloping
     ca: 0,
-    thal: 'normal'
+    thal: 6        // 3: normal, 6: fixed defect, 7: reversable defect
   };
   
   const [formData, setFormData] = useState<PredictionData>(initialFormData);
-  const [availableModels, setAvailableModels] = useState<string[]>([]);
-  const [selectedModel, setSelectedModel] = useState<string>('');
-
-  useEffect(() => {
-    const fetchModels = async () => {
-      try {
-        const response = await axios.get(`${API_URL}/models`);
-        if (response.data && Array.isArray(response.data) && response.data.length > 0) {
-          setAvailableModels(response.data);
-          // Prioritaskan model yang direkomendasikan jika tersedia
-          setSelectedModel(response.data.includes(RECOMMENDED_MODEL) ? RECOMMENDED_MODEL : response.data[0]);
-        } else {
-          throw new Error('No models available');
-        }
-      } catch (error) {
-        console.error('Error fetching models:', error);
-        toast({
-          title: "Gagal Memuat Model",
-          description: "Server backend tidak merespons atau tidak ada model yang tersedia. Pastikan backend berjalan.",
-          variant: "destructive",
-        });
-      }
-    };
-    fetchModels();
-  }, [toast]);
+  const [selectedModel, setSelectedModel] = useState<string>(RECOMMENDED_MODEL);
 
   const handleInputChange = (field: keyof PredictionData, value: any) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => ({ ...prev, [field]: Number(value) }));
   };
 
   const handleReset = () => {
     setFormData(initialFormData);
-    setSelectedModel(availableModels.includes(RECOMMENDED_MODEL) ? RECOMMENDED_MODEL : availableModels[0] || '');
+    setSelectedModel(RECOMMENDED_MODEL);
     onReset();
     toast({ title: "Form Direset", description: "Semua data telah kembali ke nilai awal." });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedModel) {
-      toast({
-        title: "Model Tidak Dipilih",
-        description: "Silakan pilih model algoritma terlebih dahulu.",
-        variant: "destructive",
-      });
-      return;
-    }
-
     setIsLoading(true);
 
+    // [FIX 5] Struktur payload disesuaikan dengan backend
     const payload = {
-      model_choice: selectedModel,
-      patient_data: formData
+      model_name: selectedModel,
+      data: formData
     };
 
     try {
-      const response = await axios.post(`${API_URL}/predict`, payload);
+      const response = await axios.post<PredictionResponse>(`${API_URL}/predict`, payload);
       onPredictionComplete(response.data);
       toast({
         title: "Prediksi Berhasil!",
-        description: `Model ${selectedModel} telah menganalisis data pasien.`,
+        description: `Model ${selectedModel} telah menganalisis data.`,
       });
     } catch (error: any) {
       console.error('Prediction error:', error);
@@ -132,15 +137,15 @@ export const HeartPredictionForm = ({
             <BrainCircuit className="w-5 h-5 mr-2" />
             Pilih Model Algoritma
           </CardTitle>
-          <CardDescription>Pilih algoritma untuk prediksi. Model dengan <Star className="w-4 h-4 inline text-yellow-500" /> direkomendasikan karena akurasi tertinggi.</CardDescription>
+          <CardDescription>Pilih algoritma untuk prediksi. Model dengan <Star className="w-4 h-4 inline text-yellow-500" /> direkomendasikan.</CardDescription>
         </CardHeader>
         <CardContent>
-          <Select value={selectedModel} onValueChange={setSelectedModel} disabled={availableModels.length === 0}>
+          <Select value={selectedModel} onValueChange={setSelectedModel}>
             <SelectTrigger className="bg-white">
-              <SelectValue placeholder={availableModels.length === 0 ? "Memuat model..." : "Pilih model"} />
+              <SelectValue placeholder="Pilih model" />
             </SelectTrigger>
             <SelectContent>
-              {availableModels.map(modelName => (
+              {AVAILABLE_MODELS.map(modelName => (
                 <SelectItem key={modelName} value={modelName}>
                   {modelName} {modelName === RECOMMENDED_MODEL && <Star className="w-4 h-4 inline text-yellow-500 ml-1" />}
                 </SelectItem>
@@ -160,15 +165,15 @@ export const HeartPredictionForm = ({
             <div className="space-y-2">
               <Label htmlFor="age" className="text-sm font-medium">Umur (tahun)</Label>
               <Input id="age" type="number" min="1" max="120" value={formData.age}
-                onChange={(e) => handleInputChange('age', parseInt(e.target.value) || 0)} className="bg-white"/>
+                onChange={(e) => handleInputChange('age', e.target.value)} className="bg-white"/>
             </div>
             <div className="space-y-2">
               <Label htmlFor="sex" className="text-sm font-medium">Jenis Kelamin</Label>
-              <Select value={formData.sex} onValueChange={(value) => handleInputChange('sex', value)}>
+              <Select value={String(formData.sex)} onValueChange={(value) => handleInputChange('sex', value)}>
                 <SelectTrigger className="bg-white"><SelectValue /></SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="Male">Laki-laki</SelectItem>
-                  <SelectItem value="Female">Perempuan</SelectItem>
+                  <SelectItem value="1">Laki-laki</SelectItem>
+                  <SelectItem value="0">Perempuan</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -183,25 +188,25 @@ export const HeartPredictionForm = ({
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="cp" className="text-sm font-medium">Tipe Nyeri Dada</Label>
-            <Select value={formData.cp} onValueChange={(value) => handleInputChange('cp', value)}>
+            <Label htmlFor="cp" className="text-sm font-medium">Tipe Nyeri Dada (cp)</Label>
+            <Select value={String(formData.cp)} onValueChange={(value) => handleInputChange('cp', value)}>
               <SelectTrigger className="bg-white"><SelectValue /></SelectTrigger>
               <SelectContent>
-                <SelectItem value="typical angina">Angina Tipikal</SelectItem>
-                <SelectItem value="atypical angina">Angina Atipikal</SelectItem>
-                <SelectItem value="non-anginal">Non-Anginal</SelectItem>
-                <SelectItem value="asymptomatic">Asimptomatik</SelectItem>
+                <SelectItem value="1">1: Angina Tipikal</SelectItem>
+                <SelectItem value="2">2: Angina Atipikal</SelectItem>
+                <SelectItem value="3">3: Nyeri Non-Anginal</SelectItem>
+                <SelectItem value="4">4: Asimptomatik</SelectItem>
               </SelectContent>
             </Select>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex items-center justify-between space-x-2 rounded-md border p-4 bg-white/50">
-              <Label htmlFor="fbs" className="text-sm font-medium">Gula Darah Puasa > 120 mg/dl</Label>
-              <Switch id="fbs" checked={formData.fbs} onCheckedChange={(value) => handleInputChange('fbs', value)} />
+              <Label htmlFor="fbs" className="text-sm font-medium">Gula Darah Puasa > 120 mg/dl (fbs)</Label>
+              <Switch id="fbs" checked={Boolean(formData.fbs)} onCheckedChange={(value) => handleInputChange('fbs', value ? 1 : 0)} />
             </div>
             <div className="flex items-center justify-between space-x-2 rounded-md border p-4 bg-white/50">
-              <Label htmlFor="exang" className="text-sm font-medium">Angina Akibat Olahraga</Label>
-              <Switch id="exang" checked={formData.exang} onCheckedChange={(value) => handleInputChange('exang', value)} />
+              <Label htmlFor="exang" className="text-sm font-medium">Angina Akibat Olahraga (exang)</Label>
+              <Switch id="exang" checked={Boolean(formData.exang)} onCheckedChange={(value) => handleInputChange('exang', value ? 1 : 0)} />
             </div>
           </div>
         </CardContent>
@@ -224,8 +229,8 @@ export const HeartPredictionForm = ({
             </div>
           </div>
           <div className="space-y-2">
-            <Label className="text-sm font-medium">Detak Jantung Maksimum: {formData.thalch} bpm</Label>
-            <Slider value={[formData.thalch]} onValueChange={(value) => handleInputChange('thalch', value[0])} min={50} max={220} step={1} />
+            <Label className="text-sm font-medium">Detak Jantung Maksimum: {formData.thalach} bpm</Label>
+            <Slider value={[formData.thalach]} onValueChange={(value) => handleInputChange('thalach', value[0])} min={50} max={220} step={1} />
           </div>
         </CardContent>
       </Card>
@@ -239,46 +244,46 @@ export const HeartPredictionForm = ({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="restecg" className="text-sm font-medium">Hasil EKG Istirahat</Label>
-              <Select value={formData.restecg} onValueChange={(value) => handleInputChange('restecg', value)}>
+              <Select value={String(formData.restecg)} onValueChange={(value) => handleInputChange('restecg', value)}>
                 <SelectTrigger className="bg-white"><SelectValue /></SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="normal">Normal</SelectItem>
-                  <SelectItem value="st-t abnormality">Abnormalitas ST-T</SelectItem>
-                  <SelectItem value="lv hypertrophy">Hipertrofi LV</SelectItem>
+                  <SelectItem value="0">0: Normal</SelectItem>
+                  <SelectItem value="1">1: Abnormalitas ST-T</SelectItem>
+                  <SelectItem value="2">2: Hipertrofi LV</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             <div className="space-y-2">
               <Label htmlFor="slope" className="text-sm font-medium">Kemiringan Segmen ST</Label>
-              <Select value={formData.slope} onValueChange={(value) => handleInputChange('slope', value)}>
+              <Select value={String(formData.slope)} onValueChange={(value) => handleInputChange('slope', value)}>
                 <SelectTrigger className="bg-white"><SelectValue /></SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="upsloping">Upsloping</SelectItem>
-                  <SelectItem value="flat">Flat</SelectItem>
-                  <SelectItem value="downsloping">Downsloping</SelectItem>
+                  <SelectItem value="1">1: Upsloping</SelectItem>
+                  <SelectItem value="2">2: Flat</SelectItem>
+                  <SelectItem value="3">3: Downsloping</SelectItem>
                 </SelectContent>
               </Select>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label className="text-sm font-medium">Depresi ST: {formData.oldpeak}</Label>
+              <Label className="text-sm font-medium">Depresi ST (oldpeak): {formData.oldpeak}</Label>
               <Slider value={[formData.oldpeak]} onValueChange={(value) => handleInputChange('oldpeak', value[0])} min={0} max={7} step={0.1} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="ca" className="text-sm font-medium">Pembuluh Darah Besar (0-3)</Label>
               <Input id="ca" type="number" min="0" max="3" value={formData.ca}
-                onChange={(e) => handleInputChange('ca', parseInt(e.target.value) || 0)} className="bg-white" />
+                onChange={(e) => handleInputChange('ca', e.target.value)} className="bg-white" />
             </div>
           </div>
           <div className="space-y-2">
             <Label htmlFor="thal" className="text-sm font-medium">Kelainan Thalassemia</Label>
-            <Select value={formData.thal} onValueChange={(value) => handleInputChange('thal', value)}>
+            <Select value={String(formData.thal)} onValueChange={(value) => handleInputChange('thal', value)}>
               <SelectTrigger className="bg-white"><SelectValue /></SelectTrigger>
               <SelectContent>
-                <SelectItem value="normal">Normal</SelectItem>
-                <SelectItem value="fixed defect">Fixed Defect</SelectItem>
-                <SelectItem value="reversable defect">Reversible Defect</SelectItem>
+                <SelectItem value="3">3: Normal</SelectItem>
+                <SelectItem value="6">6: Fixed Defect</SelectItem>
+                <SelectItem value="7">7: Reversible Defect</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -288,7 +293,7 @@ export const HeartPredictionForm = ({
       <Separator />
 
       <div className="flex gap-4 pt-4">
-        <Button type="submit" disabled={isLoading || !selectedModel} className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg">
+        <Button type="submit" disabled={isLoading} className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg">
           {isLoading ? (
             <><Activity className="w-4 h-4 mr-2 animate-spin" /> Menganalisis...</>
           ) : (

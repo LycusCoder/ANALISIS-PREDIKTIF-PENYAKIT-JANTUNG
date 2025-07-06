@@ -47,13 +47,14 @@ export const PredictionResult = ({ result, isLoading }: PredictionResultProps) =
     );
   }
 
-  const isHighRisk = result.predicted_class === 1;
-  const riskPercentage = (result.probability_score_class_1 * 100).toFixed(1);
-  const lowRiskPercentage = ((1 - result.probability_score_class_1) * 100).toFixed(1);
+  // --- Perubahan di sini: Sesuaikan nama properti dengan respons dari main.py ---
+  const isHighRisk = result.prediction === 1; // Menggunakan 'prediction'
+  const riskPercentage = (result.probability_of_risk * 100).toFixed(1); // Menggunakan 'probability_of_risk'
+  const lowRiskPercentage = ((1 - result.probability_of_risk) * 100).toFixed(1); // Menggunakan 'probability_of_risk'
 
   const pieData = [
-    { name: 'Risiko Tinggi', value: result.probability_score_class_1 * 100, color: '#ef4444' },
-    { name: 'Risiko Rendah', value: (1 - result.probability_score_class_1) * 100, color: '#10b981' }
+    { name: 'Risiko Tinggi', value: result.probability_of_risk * 100, color: '#ef4444' }, // Menggunakan 'probability_of_risk'
+    { name: 'Risiko Rendah', value: (1 - result.probability_of_risk) * 100, color: '#10b981' } // Menggunakan 'probability_of_risk'
   ];
 
   const barData = [
@@ -95,13 +96,13 @@ export const PredictionResult = ({ result, isLoading }: PredictionResultProps) =
             </div>
             <div>
               <h3 className="text-2xl font-bold text-gray-800">
-                {result.prediction_label}
+                {result.result_label} {/* Menggunakan 'result_label' */}
               </h3>
-              <Badge 
-                variant={isHighRisk ? "destructive" : "default"} 
+              <Badge
+                variant={isHighRisk ? "destructive" : "default"}
                 className={`mt-2 text-sm ${isHighRisk ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}`}
               >
-                Kelas Prediksi: {result.predicted_class}
+                Kelas Prediksi: {result.prediction} {/* Menggunakan 'prediction' */}
               </Badge>
               {result.model_used && (
                 <div className="mt-2">
@@ -133,8 +134,8 @@ export const PredictionResult = ({ result, isLoading }: PredictionResultProps) =
               <span>Probabilitas Risiko</span>
               <span className="font-semibold">{riskPercentage}%</span>
             </div>
-            <Progress 
-              value={parseFloat(riskPercentage)} 
+            <Progress
+              value={parseFloat(riskPercentage)}
               className="h-3"
             />
           </div>
@@ -215,8 +216,8 @@ export const PredictionResult = ({ result, isLoading }: PredictionResultProps) =
         <CardContent className="space-y-3">
           <div className="text-sm text-blue-800 space-y-2">
             <p>
-              <strong>Hasil Prediksi:</strong> Model {result.model_used || 'terpilih'} mengklasifikasikan pasien ke dalam 
-              kategori <span className="font-semibold">{result.prediction_label}</span> 
+              <strong>Hasil Prediksi:</strong> Model {result.model_used || 'terpilih'} mengklasifikasikan pasien ke dalam
+              kategori <span className="font-semibold">{result.result_label}</span> {/* Menggunakan 'result_label' */}
               dengan tingkat kepercayaan {riskPercentage}%.
             </p>
             {isHighRisk ? (

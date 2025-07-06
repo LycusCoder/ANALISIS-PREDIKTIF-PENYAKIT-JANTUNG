@@ -99,14 +99,16 @@ git clone [https://github.com/LycusCoder/ANALISIS-PREDIKTIF-PENYAKIT-JANTUNG.git
 cd ANALISIS-PREDIKTIF-PENYAKIT-JANTUNG
 
 # Setup virtual environment untuk Python di luar folder proyek
-python -m venv ../venv 
+python -m venv venv 
 # (Sesuaikan path jika perlu)
 
 # Aktifkan virtual environment
 # Windows:
-# ../venv/Scripts/activate
+# venv/Scripts/activate
+# GitBash:
+# source venv/scripts/activate
 # macOS/Linux:
-# source ../venv/bin/activate
+# source venv/bin/activate
 
 # Install dependencies untuk backend dari dalam folder 'backend'
 cd backend
